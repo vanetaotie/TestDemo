@@ -26,8 +26,7 @@
     CFDictionaryRef proxySettings = CFNetworkCopySystemProxySettings();
     NSLog(@"%@",proxySettings);
     
-    
-    
+    NSLog(@"For test2 branch");
     
     //***********************语法测试***********************
     
