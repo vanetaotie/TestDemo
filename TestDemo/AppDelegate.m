@@ -28,6 +28,8 @@
     
     NSLog(@"For test2 branch");
     
+    NSLog(@"test22222");
+    
     //***********************语法测试***********************
     
     [self.window setRootViewController:mainNav];
