@@ -26,6 +26,7 @@
     CFDictionaryRef proxySettings = CFNetworkCopySystemProxySettings();
     NSLog(@"%@",proxySettings);
     
+    NSLog(@"xx");
     //***********************语法测试***********************
     
     [self.window setRootViewController:mainNav];
