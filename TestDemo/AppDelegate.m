@@ -24,7 +24,7 @@
     
     //***********************语法测试***********************
     CFDictionaryRef proxySettings = CFNetworkCopySystemProxySettings();
-    
+    NSLog(@"%@",proxySettings);
     
     
     
