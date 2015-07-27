@@ -22,6 +22,10 @@
     MainViewController *mainVC = [[MainViewController alloc] init];
     UINavigationController *mainNav = [[UINavigationController alloc] initWithRootViewController:mainVC];
     
+    
+    CFDictionaryRef proxySettings = CFNetworkCopySystemProxySettings();
+    
+    
     //***********************语法测试***********************
     NSString *a = @"html&amp;html";
     NSString *b = [a stringByReplacingOccurrencesOfString:@"&amp;" withString:@"&"];

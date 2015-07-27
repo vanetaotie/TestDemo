@@ -55,11 +55,11 @@
     }
     
     if (indexPath.row == 0) {
-        cell.textLabel.text = @"SKStoreProductViewController";
+        cell.textLabel.text = @"SKStoreProductViewController";//StoreKit
     } else if (indexPath.row == 1) {
-        cell.textLabel.text = @"FloatWindow";
+        cell.textLabel.text = @"FloatWindow";//浮动窗口
     } else if (indexPath.row == 2) {
-        cell.textLabel.text = @"EventKitTest";
+        cell.textLabel.text = @"EventKitTest";//日历事件
     } else if (indexPath.row == 3) {
         cell.textLabel.text = @"CollectionViewTest";
     } else if (indexPath.row == 4) {
