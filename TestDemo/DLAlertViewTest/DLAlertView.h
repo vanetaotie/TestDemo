@@ -46,7 +46,7 @@ typedef void(^DLAlertViewCompletionHandler) (BOOL isConfirm, DLAlertView *view);
             andType:(DLAlertViewType)type
               title:(NSString *)title
               image:(UIImage *)image
-            content:(NSString *)content;
+            content:(NSString *)content NS_DESIGNATED_INITIALIZER;
 
 /**
  *  @author vane

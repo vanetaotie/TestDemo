@@ -14,6 +14,7 @@
 #import "KeyBoardViewController.h"
 #import "DLAlertViewController.h"
 #import "GAndATestViewController.h"
+#import "LimitInputViewController.h"
 
 @implementation MainViewController
 {
@@ -42,7 +43,7 @@
 #pragma mark - UITableViewDelegate & UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 8;
+    return 9;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -70,6 +71,8 @@
         cell.textLabel.text = @"DLAlertViewTest";
     } else if (indexPath.row == 7) {
         cell.textLabel.text = @"GraphicAndAnimation";
+    } else if (indexPath.row == 8) {
+        cell.textLabel.text = @"LimitInputTest";
     }
     
     return cell;
@@ -120,6 +123,9 @@
     } else if (indexPath.row == 7) {
         GAndATestViewController *gAndAVC = [[GAndATestViewController alloc] init];
         [[self navigationController] pushViewController:gAndAVC animated:YES];
+    } else if (indexPath.row == 8) {
+        LimitInputViewController *limitInputVC = [[LimitInputViewController alloc] init];
+        [[self navigationController] pushViewController:limitInputVC animated:YES];
     }
 }
 
