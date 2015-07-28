@@ -41,6 +41,7 @@
     [self.view addSubview:_textField];
     
     [_keyboard1 setTextInput:_textField];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(randomTextFieldChanged:) name:UITextFieldTextDidChangeNotification object:_textField];
     
     //-------------------------------------

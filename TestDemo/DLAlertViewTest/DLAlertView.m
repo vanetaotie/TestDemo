@@ -33,11 +33,6 @@ static const CGFloat kAlertViewWidth = 270;
     NSString *_currentContent;
 }
 
-- (id)init
-{
-    @throw [NSException exceptionWithName:NSInternalInconsistencyException reason:[NSString stringWithFormat:@"%@ Failed to call designated initializer. Invoke `initWithBlock:andType:title:image:content:` instead.", NSStringFromClass([self class])] userInfo:nil];
-}
-
 //Designated Initializer
 - (id)initWithBlock:(DLAlertViewCompletionHandler)complition
             andType:(DLAlertViewType)type
