@@ -32,8 +32,6 @@
     [mainTableView setDataSource:self];
     
     [self.view addSubview:mainTableView];
-    
-    NSLog(@"For test2 branch");
 }
 
 - (void)didReceiveMemoryWarning
