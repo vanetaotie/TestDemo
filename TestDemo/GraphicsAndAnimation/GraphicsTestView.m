@@ -10,20 +10,34 @@
 
 @implementation GraphicsTestView
 
+- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self)
+    {
+        self.backgroundColor = [UIColor clearColor];
+    }
+    return self;
+}
+
 - (void)drawRect:(CGRect)rect
 {
+    [super drawRect:rect];
+
     CGContextRef context = UIGraphicsGetCurrentContext();
 
     CGContextSetRGBFillColor(context, 1, 0, 0, 1.0);
     
     [self drawStar:context];
+    
+    [self drawGradient];
 }
 
 //绘制五角星
 - (void)drawStar:(CGContextRef)context
 {
     //确定中心点
-    CGPoint centerPoint = CGPointMake(160, 230);
+    CGPoint centerPoint = self.center;
     //确定半径
     CGFloat radius = 100.0;
     //五角星到顶点
@@ -39,6 +53,26 @@
     }
     CGContextEOFillPath(context);
 //    CGContextDrawPath(context, kCGPathFillStroke);
+}
+
+//绘制渐变
+- (void)drawGradient
+{
+    CAGradientLayer *colorLayer = [CAGradientLayer layer];
+    colorLayer.backgroundColor = [UIColor clearColor].CGColor;
+    colorLayer.frame = (CGRect){CGPointZero, CGSizeMake(200, 200)};
+    colorLayer.position = self.center;
+    [self.layer addSublayer:colorLayer];
+    
+    // 颜色分配
+    colorLayer.colors = @[(__bridge id)[UIColor blackColor].CGColor,
+                          (__bridge id)[UIColor clearColor].CGColor];
+    
+    // 起始点
+    colorLayer.startPoint = CGPointMake(0, 0);
+    
+    // 结束点
+    colorLayer.endPoint   = CGPointMake(0, 1);
 }
 
 @end
