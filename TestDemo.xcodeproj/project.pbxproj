@@ -594,11 +594,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iOS Development: jing wang (7SQQU9T2P8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iOS Development: jing wang (7SQQU9T2P8)";
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = TestDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "280ade36-e96b-4322-9b24-8ad2ab495d42";
+				PROVISIONING_PROFILE = "91ac90ea-9596-43f4-9e5d-fd9a03956e70";
 			};
 			name = Debug;
 		};
@@ -610,11 +611,12 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iOS Development: jing wang (7SQQU9T2P8)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iOS Development: jing wang (7SQQU9T2P8)";
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = TestDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "280ade36-e96b-4322-9b24-8ad2ab495d42";
+				PROVISIONING_PROFILE = "91ac90ea-9596-43f4-9e5d-fd9a03956e70";
 			};
 			name = Release;
 		};
