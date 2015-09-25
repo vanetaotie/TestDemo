@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "AFHTTPSessionManager.h"
 
 @interface AppDelegate ()
 
@@ -35,6 +36,8 @@
     
     //***********************语法测试***********************
     
+    [self networkTest];
+    
     [self.window setRootViewController:mainNav];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
@@ -61,6 +64,23 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+//网络测试
+- (void)networkTest
+{
+    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://mam.sgcc.com.cn/netplatform-node/service/"]]];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
+    manager.requestSerializer.timeoutInterval = 15.0;
+    [manager GET:@"node/getNode.do" parameters:nil
+         success:^(NSURLSessionDataTask *task, id responseObject)
+     {
+         NSLog(@"%@",responseObject);
+     }
+         failure:^(NSURLSessionDataTask *task, NSError *error)
+     {
+         NSLog(@"%@",error);
+     }];
 }
 
 @end
