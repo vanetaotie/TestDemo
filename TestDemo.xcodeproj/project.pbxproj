@@ -26,6 +26,7 @@
 		33166CB11B09AF6A0033DE81 /* DLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33166CB01B09AF6A0033DE81 /* DLAlertView.m */; };
 		3376D7651B67564F00B0DE06 /* LimitTextInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 3376D7641B67564F00B0DE06 /* LimitTextInput.m */; };
 		3376D7711B6766FD00B0DE06 /* LimitInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3376D7701B6766FD00B0DE06 /* LimitInputViewController.m */; };
+		33E8B5B91BE0A43A00A27367 /* ScrollTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E8B5B81BE0A43A00A27367 /* ScrollTextViewController.m */; settings = {ASSET_TAGS = (); }; };
 		33FCD6201B146919008A0292 /* TestFiles in Resources */ = {isa = PBXBuildFile; fileRef = 33FCD61F1B146919008A0292 /* TestFiles */; };
 		33FCD6261B1D37DA008A0292 /* GAndATestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FCD6251B1D37DA008A0292 /* GAndATestViewController.m */; };
 		33FCD6291B1D3833008A0292 /* GraphicsTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FCD6281B1D3833008A0292 /* GraphicsTestView.m */; };
@@ -87,6 +88,8 @@
 		3376D7641B67564F00B0DE06 /* LimitTextInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LimitTextInput.m; sourceTree = "<group>"; };
 		3376D76F1B6766FD00B0DE06 /* LimitInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LimitInputViewController.h; sourceTree = "<group>"; };
 		3376D7701B6766FD00B0DE06 /* LimitInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LimitInputViewController.m; sourceTree = "<group>"; };
+		33E8B5B71BE0A43A00A27367 /* ScrollTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollTextViewController.h; sourceTree = "<group>"; };
+		33E8B5B81BE0A43A00A27367 /* ScrollTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollTextViewController.m; sourceTree = "<group>"; };
 		33FCD61F1B146919008A0292 /* TestFiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TestFiles; sourceTree = "<group>"; };
 		33FCD6241B1D37DA008A0292 /* GAndATestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAndATestViewController.h; sourceTree = "<group>"; };
 		33FCD6251B1D37DA008A0292 /* GAndATestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GAndATestViewController.m; sourceTree = "<group>"; };
@@ -154,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				33FCD61F1B146919008A0292 /* TestFiles */,
+				33E8B5B61BE0A3BA00A27367 /* ScrollTextLabel */,
 				3376D7621B67562B00B0DE06 /* LimitTextInput */,
 				33FCD6231B1D37AA008A0292 /* GraphicsAndAnimation */,
 				33166CAB1B0990940033DE81 /* DLAlertViewTest */,
@@ -273,6 +277,15 @@
 				3376D7701B6766FD00B0DE06 /* LimitInputViewController.m */,
 			);
 			path = LimitTextInput;
+			sourceTree = "<group>";
+		};
+		33E8B5B61BE0A3BA00A27367 /* ScrollTextLabel */ = {
+			isa = PBXGroup;
+			children = (
+				33E8B5B71BE0A43A00A27367 /* ScrollTextViewController.h */,
+				33E8B5B81BE0A43A00A27367 /* ScrollTextViewController.m */,
+			);
+			path = ScrollTextLabel;
 			sourceTree = "<group>";
 		};
 		33FCD6231B1D37AA008A0292 /* GraphicsAndAnimation */ = {
@@ -462,6 +475,7 @@
 				23927EAB1A7F4538009ABF38 /* AppDelegate.m in Sources */,
 				239F7F461AA042E100BC7FF1 /* CollectionTestViewController.m in Sources */,
 				B5A981801AB82C3700EDFAD1 /* KeyBoardViewController.m in Sources */,
+				33E8B5B91BE0A43A00A27367 /* ScrollTextViewController.m in Sources */,
 				3376D7711B6766FD00B0DE06 /* LimitInputViewController.m in Sources */,
 				23927EC71A7F457D009ABF38 /* MainViewController.m in Sources */,
 				B574EF6F1ABC076C0046F300 /* PlayerViewController.m in Sources */,
