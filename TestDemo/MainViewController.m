@@ -26,7 +26,7 @@
 {
     [super viewDidLoad];
     
-    [self.view setBackgroundColor:[UIColor whiteColor]];
+    [self.view setBackgroundColor:[UIColor blackColor]];
     
     mainTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [mainTableView setDelegate:self];
@@ -44,7 +44,7 @@
 #pragma mark - UITableViewDelegate & UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return 18;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -54,6 +54,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentify];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentify];
+        [cell setBackgroundColor:[UIColor greenColor]];
     }
     
     if (indexPath.row == 0) {
@@ -76,6 +77,8 @@
         cell.textLabel.text = @"LimitInputTest";
     } else if (indexPath.row == 9) {
         cell.textLabel.text = @"ScrollTextLabel";
+    } else {
+        cell.textLabel.text = @"aaaa";
     }
     
     return cell;
