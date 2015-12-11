@@ -25,23 +25,14 @@
     
     MainViewController *mainVC = [[MainViewController alloc] init];
     UINavigationController *mainNav = [[UINavigationController alloc] initWithRootViewController:mainVC];
-    
-    
+
     [tabVC setViewControllers:@[mainNav]];
     
     //***********************语法测试***********************
-    CFDictionaryRef proxySettings = CFNetworkCopySystemProxySettings();
-    NSLog(@"%@",proxySettings);
-    
-    NSDate *date = [NSDate date];
-    NSDateFormatter *f = [[NSDateFormatter alloc] init];
-    [f setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    NSString *a = [f stringFromDate:date];
-    NSLog(@"%@",a);
-    
+
     //***********************语法测试***********************
     
-    [self networkTest];
+//    [self networkTest];
     
     [self.window setRootViewController:tabVC];
     self.window.backgroundColor = [UIColor whiteColor];
