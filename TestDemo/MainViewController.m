@@ -42,6 +42,12 @@
 }
 
 #pragma mark - UITableViewDelegate & UITableViewDataSource
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"cell---------------------------------------------1");
+    return 35;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 18;
@@ -49,6 +55,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"cell---------------------------------------------2");
     static NSString *cellIdentify = @"cellIdentify";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentify];
