@@ -140,6 +140,9 @@
         LimitInputViewController *limitInputVC = [[LimitInputViewController alloc] init];
         [[self navigationController] pushViewController:limitInputVC animated:YES];
     } else if (indexPath.row == 9) {
+
+        NSLog(@"%d_%d_%d_%d_%d_%d",ktesttypeA,ktesttypeB,ktesttypeC,ktesttypeD,ktesttypeE,ktesttypeF);
+        
         ScrollTextViewController *scrollTextVC = [[ScrollTextViewController alloc] init];
         [[self navigationController] pushViewController:scrollTextVC animated:YES];
     }
