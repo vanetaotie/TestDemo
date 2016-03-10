@@ -16,6 +16,7 @@
 #import "GAndATestViewController.h"
 #import "LimitInputViewController.h"
 #import "ScrollTextViewController.h"
+#import "QCodeTestViewController.h"
 
 @implementation MainViewController
 {
@@ -25,8 +26,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self.view setBackgroundColor:[UIColor blackColor]];
     
     mainTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [mainTableView setDelegate:self];
@@ -44,24 +43,21 @@
 #pragma mark - UITableViewDelegate & UITableViewDataSource
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"cell---------------------------------------------1");
     return 35;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 18;
+    return 11;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"cell---------------------------------------------2");
     static NSString *cellIdentify = @"cellIdentify";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentify];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentify];
-        [cell setBackgroundColor:[UIColor greenColor]];
     }
     
     if (indexPath.row == 0) {
@@ -84,8 +80,8 @@
         cell.textLabel.text = @"LimitInputTest";
     } else if (indexPath.row == 9) {
         cell.textLabel.text = @"ScrollTextLabel";
-    } else {
-        cell.textLabel.text = @"aaaa";
+    } else if (indexPath.row == 10) {
+        cell.textLabel.text = @"QCodeTest";
     }
     
     return cell;
@@ -140,11 +136,11 @@
         LimitInputViewController *limitInputVC = [[LimitInputViewController alloc] init];
         [[self navigationController] pushViewController:limitInputVC animated:YES];
     } else if (indexPath.row == 9) {
-
-        NSLog(@"%d_%d_%d_%d_%d_%d",ktesttypeA,ktesttypeB,ktesttypeC,ktesttypeD,ktesttypeE,ktesttypeF);
-        
         ScrollTextViewController *scrollTextVC = [[ScrollTextViewController alloc] init];
         [[self navigationController] pushViewController:scrollTextVC animated:YES];
+    } else if (indexPath.row == 10) {
+        QCodeTestViewController *qCodeVC = [[QCodeTestViewController alloc] init];
+        [[self navigationController] pushViewController:qCodeVC animated:YES];
     }
 }
 

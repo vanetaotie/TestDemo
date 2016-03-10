@@ -26,6 +26,7 @@
 		33166CB11B09AF6A0033DE81 /* DLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33166CB01B09AF6A0033DE81 /* DLAlertView.m */; };
 		3376D7651B67564F00B0DE06 /* LimitTextInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 3376D7641B67564F00B0DE06 /* LimitTextInput.m */; };
 		3376D7711B6766FD00B0DE06 /* LimitInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3376D7701B6766FD00B0DE06 /* LimitInputViewController.m */; };
+		33AAC12A1C90FDF300AC1504 /* QCodeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AAC1291C90FDF300AC1504 /* QCodeTestViewController.m */; };
 		33E8B5B91BE0A43A00A27367 /* ScrollTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E8B5B81BE0A43A00A27367 /* ScrollTextViewController.m */; };
 		33FCD6201B146919008A0292 /* TestFiles in Resources */ = {isa = PBXBuildFile; fileRef = 33FCD61F1B146919008A0292 /* TestFiles */; };
 		33FCD6261B1D37DA008A0292 /* GAndATestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FCD6251B1D37DA008A0292 /* GAndATestViewController.m */; };
@@ -88,6 +89,8 @@
 		3376D7641B67564F00B0DE06 /* LimitTextInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LimitTextInput.m; sourceTree = "<group>"; };
 		3376D76F1B6766FD00B0DE06 /* LimitInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LimitInputViewController.h; sourceTree = "<group>"; };
 		3376D7701B6766FD00B0DE06 /* LimitInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LimitInputViewController.m; sourceTree = "<group>"; };
+		33AAC1281C90FDF300AC1504 /* QCodeTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCodeTestViewController.h; sourceTree = "<group>"; };
+		33AAC1291C90FDF300AC1504 /* QCodeTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCodeTestViewController.m; sourceTree = "<group>"; };
 		33E8B5B71BE0A43A00A27367 /* ScrollTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollTextViewController.h; sourceTree = "<group>"; };
 		33E8B5B81BE0A43A00A27367 /* ScrollTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollTextViewController.m; sourceTree = "<group>"; };
 		33FCD61F1B146919008A0292 /* TestFiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TestFiles; sourceTree = "<group>"; };
@@ -157,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				33FCD61F1B146919008A0292 /* TestFiles */,
+				33AAC1271C90FDBD00AC1504 /* QCodeTest */,
 				33E8B5B61BE0A3BA00A27367 /* ScrollTextLabel */,
 				3376D7621B67562B00B0DE06 /* LimitTextInput */,
 				33FCD6231B1D37AA008A0292 /* GraphicsAndAnimation */,
@@ -279,6 +283,15 @@
 			path = LimitTextInput;
 			sourceTree = "<group>";
 		};
+		33AAC1271C90FDBD00AC1504 /* QCodeTest */ = {
+			isa = PBXGroup;
+			children = (
+				33AAC1281C90FDF300AC1504 /* QCodeTestViewController.h */,
+				33AAC1291C90FDF300AC1504 /* QCodeTestViewController.m */,
+			);
+			path = QCodeTest;
+			sourceTree = "<group>";
+		};
 		33E8B5B61BE0A3BA00A27367 /* ScrollTextLabel */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,6 +396,7 @@
 				TargetAttributes = {
 					23927EA11A7F4538009ABF38 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 632DMS4H45;
 					};
 					23927EB41A7F4538009ABF38 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -491,6 +505,7 @@
 				33FCD6261B1D37DA008A0292 /* GAndATestViewController.m in Sources */,
 				239F7F531AA06E2D00BC7FF1 /* PlayerView.m in Sources */,
 				239F7F491AA043BC00BC7FF1 /* CollectionCell.m in Sources */,
+				33AAC12A1C90FDF300AC1504 /* QCodeTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,7 +626,7 @@
 				INFOPLIST_FILE = TestDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.innerapns.pubtest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vane.testdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -628,7 +643,7 @@
 				INFOPLIST_FILE = TestDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.innerapns.pubtest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vane.testdemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

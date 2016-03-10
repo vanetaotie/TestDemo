@@ -20,13 +20,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    
-    UITabBarController *tabVC = [[UITabBarController alloc] init];
-    
+
     MainViewController *mainVC = [[MainViewController alloc] init];
     UINavigationController *mainNav = [[UINavigationController alloc] initWithRootViewController:mainVC];
-
-    [tabVC setViewControllers:@[mainNav]];
     
     //***********************语法测试***********************
 
@@ -34,9 +30,10 @@
     
 //    [self networkTest];
     
-    [self.window setRootViewController:tabVC];
+    [self.window setRootViewController:mainNav];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
