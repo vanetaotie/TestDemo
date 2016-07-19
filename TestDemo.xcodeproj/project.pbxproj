@@ -396,7 +396,7 @@
 				TargetAttributes = {
 					23927EA11A7F4538009ABF38 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = 632DMS4H45;
+						DevelopmentTeam = 3DAB9SV4LD;
 					};
 					23927EB41A7F4538009ABF38 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -626,7 +626,7 @@
 				INFOPLIST_FILE = TestDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vane.testdemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.innerapns.pubtest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -643,7 +643,7 @@
 				INFOPLIST_FILE = TestDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.vane.testdemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.innerapns.pubtest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
