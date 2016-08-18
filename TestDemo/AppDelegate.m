@@ -37,7 +37,7 @@
     
     //***********************语法测试***********************
     
-//    [self networkTest];
+    [self networkTest];
     
     [self.window setRootViewController:mainNav];
     self.window.backgroundColor = [UIColor whiteColor];
@@ -71,16 +71,20 @@
 //网络测试
 - (void)networkTest
 {
-    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://mam.sgcc.com.cn/netplatform-node/service/"]]];
+    AFHTTPSessionManager *manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://mam1.ft-power.com.cn:10013/netplatform-node/service/"]]];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/json", @"text/javascript",@"text/html", nil];
     manager.requestSerializer.timeoutInterval = 15.0;
     [manager GET:@"node/getNode.do" parameters:nil
          success:^(NSURLSessionDataTask *task, id responseObject)
      {
+         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"成功" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+         [alert show];
          NSLog(@"%@",responseObject);
      }
          failure:^(NSURLSessionDataTask *task, NSError *error)
      {
+         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"失败" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+         [alert show];
          NSLog(@"%@",error);
      }];
 }
