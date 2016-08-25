@@ -33,6 +33,14 @@ static const CGFloat kAlertViewWidth = 270;
     NSString *_currentContent;
 }
 
+- (id)initWithFrame:(CGRect)frame {
+    return [self initWithBlock:_complitionHandler andType:_currentType title:_currentTitle image:_currentImage content:_currentContent];
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    return [self initWithBlock:_complitionHandler andType:_currentType title:_currentTitle image:_currentImage content:_currentContent];
+}
+
 //Designated Initializer
 - (id)initWithBlock:(DLAlertViewCompletionHandler)complition
             andType:(DLAlertViewType)type
@@ -40,7 +48,7 @@ static const CGFloat kAlertViewWidth = 270;
               image:(UIImage *)image
             content:(NSString *)content
 {
-    self = [super init];
+    self = [super initWithFrame:[UIScreen mainScreen].bounds];
     if (self) {
         _complitionHandler = complition;
         _currentType = type;
@@ -55,8 +63,6 @@ static const CGFloat kAlertViewWidth = 270;
 
 - (void)initUI
 {
-    [self setFrame:[UIScreen mainScreen].bounds];
-    
     _coverView = [[UIView alloc] initWithFrame:self.frame];
     [_coverView setBackgroundColor:[UIColor blackColor]];
     [_coverView setAlpha:0.5];

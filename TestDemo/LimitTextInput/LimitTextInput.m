@@ -17,6 +17,14 @@
 @synthesize textInput = _textInput;
 
 #pragma mark - life cycle
+- (id)initWithFrame:(CGRect)frame {
+    return [self initWithFrame:frame withLimitCount:0];
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    return [self initWithFrame:self.frame withLimitCount:0];
+}
+
 - (id)initWithFrame:(CGRect)frame withLimitCount:(NSInteger)count
 {
     self = [super initWithFrame:frame];

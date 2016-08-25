@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
-#import "AFHTTPSessionManager.h"
+#import "AFNetWorking.h"
 
 @interface AppDelegate ()
 
