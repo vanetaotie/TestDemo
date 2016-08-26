@@ -1,1 +1,0 @@
-PODS_TESTDEMO_REACTIVECOCOA_OTHER_LDFLAGS = -framework "Foundation"
