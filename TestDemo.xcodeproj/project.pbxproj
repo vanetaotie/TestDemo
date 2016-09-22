@@ -29,6 +29,8 @@
 		3376D7711B6766FD00B0DE06 /* LimitInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3376D7701B6766FD00B0DE06 /* LimitInputViewController.m */; };
 		33AAC12A1C90FDF300AC1504 /* QCodeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AAC1291C90FDF300AC1504 /* QCodeTestViewController.m */; };
 		33E8B5B91BE0A43A00A27367 /* ScrollTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E8B5B81BE0A43A00A27367 /* ScrollTextViewController.m */; };
+		33F0B47A1D88EC60002A63E6 /* NetworkTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F0B4791D88EC60002A63E6 /* NetworkTest.m */; };
+		33F0B47F1D8926C7002A63E6 /* ftserver.cer in Resources */ = {isa = PBXBuildFile; fileRef = 33F0B47E1D8926C7002A63E6 /* ftserver.cer */; };
 		33FCD6201B146919008A0292 /* TestFiles in Resources */ = {isa = PBXBuildFile; fileRef = 33FCD61F1B146919008A0292 /* TestFiles */; };
 		33FCD6261B1D37DA008A0292 /* GAndATestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FCD6251B1D37DA008A0292 /* GAndATestViewController.m */; };
 		33FCD6291B1D3833008A0292 /* GraphicsTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FCD6281B1D3833008A0292 /* GraphicsTestView.m */; };
@@ -95,6 +97,9 @@
 		33AAC1291C90FDF300AC1504 /* QCodeTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCodeTestViewController.m; sourceTree = "<group>"; };
 		33E8B5B71BE0A43A00A27367 /* ScrollTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollTextViewController.h; sourceTree = "<group>"; };
 		33E8B5B81BE0A43A00A27367 /* ScrollTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollTextViewController.m; sourceTree = "<group>"; };
+		33F0B4781D88EC60002A63E6 /* NetworkTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTest.h; sourceTree = "<group>"; };
+		33F0B4791D88EC60002A63E6 /* NetworkTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTest.m; sourceTree = "<group>"; };
+		33F0B47E1D8926C7002A63E6 /* ftserver.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = ftserver.cer; sourceTree = "<group>"; };
 		33FCD61F1B146919008A0292 /* TestFiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TestFiles; sourceTree = "<group>"; };
 		33FCD6241B1D37DA008A0292 /* GAndATestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAndATestViewController.h; sourceTree = "<group>"; };
 		33FCD6251B1D37DA008A0292 /* GAndATestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GAndATestViewController.m; sourceTree = "<group>"; };
@@ -173,6 +178,7 @@
 				239F7F431AA042BB00BC7FF1 /* CollectionViewTest */,
 				239F7F381AA020A000BC7FF1 /* EventKitTest */,
 				239F7F311AA0184100BC7FF1 /* FloatWindow */,
+				33F0B4771D88EC04002A63E6 /* NetworkTest */,
 				23927EC51A7F457D009ABF38 /* MainViewController.h */,
 				23927EC61A7F457D009ABF38 /* MainViewController.m */,
 				23927EA91A7F4538009ABF38 /* AppDelegate.h */,
@@ -187,6 +193,7 @@
 		23927EA51A7F4538009ABF38 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				33F0B47E1D8926C7002A63E6 /* ftserver.cer */,
 				23927EA61A7F4538009ABF38 /* Info.plist */,
 				23927EA71A7F4538009ABF38 /* main.m */,
 			);
@@ -303,6 +310,15 @@
 				33E8B5B81BE0A43A00A27367 /* ScrollTextViewController.m */,
 			);
 			path = ScrollTextLabel;
+			sourceTree = "<group>";
+		};
+		33F0B4771D88EC04002A63E6 /* NetworkTest */ = {
+			isa = PBXGroup;
+			children = (
+				33F0B4781D88EC60002A63E6 /* NetworkTest.h */,
+				33F0B4791D88EC60002A63E6 /* NetworkTest.m */,
+			);
+			path = NetworkTest;
 			sourceTree = "<group>";
 		};
 		33FCD6231B1D37AA008A0292 /* GraphicsAndAnimation */ = {
@@ -438,6 +454,7 @@
 				33FCD6201B146919008A0292 /* TestFiles in Resources */,
 				B574EF6B1ABBEA4D0046F300 /* capsLock@2x.png in Resources */,
 				239BD3121AA5B64F0028ED05 /* playerviewlib.bundle in Resources */,
+				33F0B47F1D8926C7002A63E6 /* ftserver.cer in Resources */,
 				23927EAD1A7F4538009ABF38 /* Images.xcassets in Resources */,
 				B574EF671ABBE95C0046F300 /* deleteChar@2x.png in Resources */,
 			);
@@ -519,6 +536,7 @@
 				23927EA81A7F4538009ABF38 /* main.m in Sources */,
 				33FCD62C1B1D3843008A0292 /* AnimationTestView.m in Sources */,
 				239F7F341AA018A600BC7FF1 /* FloatWindowViewController.m in Sources */,
+				33F0B47A1D88EC60002A63E6 /* NetworkTest.m in Sources */,
 				33166CB11B09AF6A0033DE81 /* DLAlertView.m in Sources */,
 				33166CAE1B0990B50033DE81 /* DLAlertViewController.m in Sources */,
 				239F7F371AA018EA00BC7FF1 /* PopView.m in Sources */,

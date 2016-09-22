@@ -17,6 +17,7 @@
 #import "LimitInputViewController.h"
 #import "ScrollTextViewController.h"
 #import "QCodeTestViewController.h"
+#import "NetworkTest.h"
 
 @implementation MainViewController
 {
@@ -61,7 +62,8 @@
     }
     
     if (indexPath.row == 0) {
-        cell.textLabel.text = @"SKStoreProductViewController";//StoreKit
+//        cell.textLabel.text = @"SKStoreProductViewController";//StoreKit
+        cell.textLabel.text = @"NetworkTest";
     } else if (indexPath.row == 1) {
         cell.textLabel.text = @"FloatWindow";//浮动窗口
     } else if (indexPath.row == 2) {
@@ -92,22 +94,24 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.row == 0) {
-//        SKStoreProductViewController *storeProductVC = [[SKStoreProductViewController alloc] init];
-//        [storeProductVC setDelegate:self];
-//        [self presentViewController:storeProductVC animated:YES completion:nil];
-//        [storeProductVC loadProductWithParameters:@{SKStoreProductParameterITunesItemIdentifier:@461703208}
-//                                  completionBlock:^(BOOL result, NSError *error){
-//                                      if (error) {
-//                                          NSLog(@"Error %@ with User Info %@", error, [error userInfo]);
-//                                      }
-//                                  }];
+////        SKStoreProductViewController *storeProductVC = [[SKStoreProductViewController alloc] init];
+////        [storeProductVC setDelegate:self];
+////        [self presentViewController:storeProductVC animated:YES completion:nil];
+////        [storeProductVC loadProductWithParameters:@{SKStoreProductParameterITunesItemIdentifier:@461703208}
+////                                  completionBlock:^(BOOL result, NSError *error){
+////                                      if (error) {
+////                                          NSLog(@"Error %@ with User Info %@", error, [error userInfo]);
+////                                      }
+////                                  }];
+//        
+//        //企业级app无法使用StoreKit
+//        UIWebView *myWebView = [[UIWebView alloc] init];
+//        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://itunes.apple.com/cn/app/wan-bu/id638808347?mt=8"]];
+//        [self.view addSubview:myWebView];
+//        [myWebView loadRequest:request];
         
-        //企业级app无法使用StoreKit
-        UIWebView *myWebView = [[UIWebView alloc] init];
-        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://itunes.apple.com/cn/app/wan-bu/id638808347?mt=8"]];
-        [self.view addSubview:myWebView];
-        [myWebView loadRequest:request];
-        
+        NetworkTest *test = [[NetworkTest alloc] init];
+        [test startNetworkTest];
     } else if (indexPath.row == 1) {
         FloatWindowViewController *floatWindowVC = [[FloatWindowViewController alloc] init];
         [[self navigationController] pushViewController:floatWindowVC animated:YES];
