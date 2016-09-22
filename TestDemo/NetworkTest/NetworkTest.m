@@ -20,9 +20,14 @@
 - (void)startNetworkTest
 {
     manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://mam1.ft-power.com.cn:10001/netplatform-node/service/"]]];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    manager.responseSerializer =  [AFJSONResponseSerializer serializer];
+    
     manager.requestSerializer.timeoutInterval = 15.0;
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/plain", @"text/javascript", @"text/json", @"text/html", nil];
-    manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
+    
+    NSSet <NSData *> *cerSet = [AFSecurityPolicy certificatesInBundle:[NSBundle mainBundle]];
+    manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate withPinnedCertificates:cerSet];
     
     //AFN测试
     //    [manager GET:@"node/getNode.do" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
