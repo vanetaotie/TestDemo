@@ -39,9 +39,10 @@
     //        [alert show];
     //        NSLog(@"%@",error);
     //    }];
+    NSDictionary *param = @{@"appStoreFlag":@"1",@"osType":@"1",@"userType":@"0",@"curVersion":[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]};
     
-    [self addDLHeaderWithPath:@"category/getapptype.do" andParm:@{@"userType":@"allapp"} andIsIMServer:NO];
-    [manager POST:@"category/getapptype.do" parameters:@{@"userType":@"allapp"} progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [self addDLHeaderWithPath:@"app/getappversion.do" andParm:param andIsIMServer:NO];
+    [manager POST:@"app/getappversion.do" parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"成功" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [alert show];
         NSLog(@"%@",responseObject);
