@@ -22,11 +22,13 @@
 @property (nonatomic, strong) UIButton *deleteAppButton;
 @property (nonatomic, assign) BOOL canDelete;
 
-@property (nonatomic, assign) BOOL isDeleteButtonVisible;//设置删除按钮的可见性
-@property (nonatomic, retain) NSDictionary *cellData;//设置cell数据，根据实际传值格式更改
+//@property (nonatomic, assign) BOOL isDeleteButtonVisible;//设置删除按钮的可见性
+//@property (nonatomic, retain) NSDictionary *cellData;//设置cell数据，根据实际传值格式更改
 
 @property (nonatomic, weak) id <CollectionCellDelegate> delegate;
 
-- (void)setIndexPathID:(NSUInteger)index;//根据cell设置删除按钮index
+//- (void)setIndexPathID:(NSUInteger)index;//根据cell设置删除按钮index
+
+- (void)setCellData:(NSDictionary *)cellData withMode:(BOOL)isEditing;
 
 @end

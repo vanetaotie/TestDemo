@@ -13,7 +13,7 @@
 {
     UICollectionView *myCollectionView;
     NSMutableArray *webAppData; //存储获取的数据源
-    NSMutableArray *appsCells; //存储生成的cell用于遍历
+//    NSMutableArray *appsCells; //存储生成的cell用于遍历
     
     UIBarButtonItem *finishEditItem;//完成编辑模式
     UIPanGestureRecognizer *panGesture;//移动cell手势

@@ -13,6 +13,9 @@
 @end
 
 @implementation CollectionTestViewController
+{
+    BOOL isEditingMode;//编辑模式
+}
 
 - (id)init
 {
@@ -22,7 +25,7 @@
         [finishEditItem setEnabled:NO];
         
         webAppData = [[NSMutableArray alloc] init];
-        appsCells = [[NSMutableArray alloc] init];
+//        appsCells = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -30,7 +33,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [super viewDidLoad];
     [self setWebAppsData];
     [self initCollectionView];
     //注册cell,设置重用标识符
@@ -40,7 +42,7 @@
 - (void)initCollectionView
 {
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-    myCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, 320, [UIScreen mainScreen].bounds.size.height) collectionViewLayout:flowLayout];
+    myCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height) collectionViewLayout:flowLayout];
     [myCollectionView setBackgroundColor:[UIColor whiteColor]];
     [myCollectionView setDelegate:self];
     [myCollectionView setDataSource:self];
@@ -66,14 +68,15 @@
     CollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentify forIndexPath:indexPath];
     [cell setDelegate:self];
     
-    if (indexPath == 0) {
-        [appsCells removeAllObjects];
-    }
-    [appsCells addObject:cell];
+//    if (indexPath == 0) {
+//        [appsCells removeAllObjects];
+//    }
+//    [appsCells addObject:cell];
     
     NSDictionary *cellData = (NSDictionary *)[webAppData objectAtIndex:indexPath.row];
-    [cell setCellData:cellData];
-    [cell setIndexPathID:indexPath.row];
+//    [cell setCellData:cellData];
+    [cell setCellData:cellData withMode:isEditingMode];
+//    [cell setIndexPathID:indexPath.row];
     
     return cell;
 }
@@ -102,14 +105,16 @@
 
 - (void)longPress:(CollectionCell *)cell
 {
-    for (CollectionCell *cell in appsCells)
-    {
-        [cell setIsDeleteButtonVisible:NO];
-    }
+//    for (CollectionCell *cell in appsCells)
+//    {
+//        [cell setIsDeleteButtonVisible:YES];
+//    }
+    isEditingMode = YES;
+    [myCollectionView reloadData];
     
     //长按进入编辑模式，启动cell手动排序功能
     panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGestureRecognizer:)];
-    //    [panGesture setCancelsTouchesInView:NO];
+//    [panGesture setCancelsTouchesInView:NO];
     [myCollectionView addGestureRecognizer:panGesture];
     
     [finishEditItem setEnabled:YES];
@@ -139,15 +144,26 @@
 
 - (void)finishEdit:(id)sender
 {
-    for (CollectionCell *cell in appsCells)
-    {
-        [cell setIsDeleteButtonVisible:YES];
-    }
+//    for (CollectionCell *cell in appsCells)
+//    {
+//        [cell setIsDeleteButtonVisible:NO];
+//    }
     
-    //移除所有手势
-    while (myCollectionView.gestureRecognizers.count) {
-        //        NSLog(@"手势数量 %lu",(unsigned long)myCollectionView.gestureRecognizers.count);
-        [myCollectionView removeGestureRecognizer:[myCollectionView.gestureRecognizers objectAtIndex:0]];
+    isEditingMode = NO;
+    [myCollectionView reloadData];
+    
+//    //移除所有手势
+//    while (myCollectionView.gestureRecognizers.count) {
+////        NSLog(@"手势数量 %lu",(unsigned long)myCollectionView.gestureRecognizers.count);
+//        [myCollectionView removeGestureRecognizer:[myCollectionView.gestureRecognizers objectAtIndex:0]];
+//    }
+    
+    int i = 0;
+    for (UIGestureRecognizer *gesture in myCollectionView.gestureRecognizers) {
+        if (i > 1 && [gesture isKindOfClass:[UIPanGestureRecognizer class]]) {
+            [myCollectionView removeGestureRecognizer:gesture];
+        }
+        i++;
     }
     
     [finishEditItem setEnabled:NO];
@@ -158,33 +174,109 @@
 - (void)panGestureRecognizer:(UIPanGestureRecognizer *)sender
 {
     UIPanGestureRecognizer *pan = sender;
-    UIGestureRecognizerState state = pan.state;
-    
-    CGPoint location = [pan locationInView:myCollectionView];
-    NSIndexPath *indexPath = [myCollectionView indexPathForItemAtPoint:location];
-    
+   
+#if 0
+    //iOS9以下
     static NSIndexPath *sourceIndexPath = nil;
+    static UIView *mappingImageCell = nil;
     
-    switch (state) {
+    switch (pan.state) {
         case UIGestureRecognizerStateBegan:{
-            if (indexPath) {
-                sourceIndexPath = indexPath;
-            }
-            break;
+            CGPoint location = [pan locationInView:myCollectionView];
+            NSIndexPath* indexPath = [myCollectionView indexPathForItemAtPoint:location];
+            if (!indexPath) return;
+            
+            sourceIndexPath = indexPath;
+            UICollectionViewCell* targetCell = [myCollectionView cellForItemAtIndexPath:sourceIndexPath];
+            //得到当前cell的映射(截图)
+            UIView* cellView = [targetCell snapshotViewAfterScreenUpdates:YES];
+            mappingImageCell = cellView;
+            mappingImageCell.frame = cellView.frame;
+            targetCell.hidden = YES;
+            [myCollectionView addSubview:mappingImageCell];
+            
+            cellView.center = targetCell.center;
         }
+            break;
         case UIGestureRecognizerStateChanged:{
-            if (indexPath && ![indexPath isEqual:sourceIndexPath]) {
+            CGPoint point = [pan locationInView:myCollectionView];
+            //更新cell的位置
+            mappingImageCell.center = point;
+            NSIndexPath * indexPath = [myCollectionView indexPathForItemAtPoint:point];
+            if (indexPath == nil) return;
+            
+            if (![indexPath isEqual:sourceIndexPath])
+            {
+                //改变数据源
                 [webAppData exchangeObjectAtIndex:indexPath.row withObjectAtIndex:sourceIndexPath.row];
                 [myCollectionView moveItemAtIndexPath:sourceIndexPath toIndexPath:indexPath];
                 sourceIndexPath = indexPath;
             }
-            break;
         }
-        default:{
+            break;
+        case UIGestureRecognizerStateEnded: {
+            UICollectionViewCell *cell = [myCollectionView cellForItemAtIndexPath:sourceIndexPath];
+            
+            [UIView animateWithDuration:0.25 animations:^{
+                mappingImageCell.center = cell.center;
+            } completion:^(BOOL finished) {
+                [mappingImageCell removeFromSuperview];
+                cell.hidden = NO;
+                mappingImageCell = nil;
+                sourceIndexPath = nil;
+            }];
+        }
+            break;
+        default:
+            mappingImageCell = nil;
             sourceIndexPath = nil;
             break;
-        }
     }
+#else
+    //iOS9以上
+    switch (pan.state) {
+        case UIGestureRecognizerStateBegan:{
+            //判断手势落点位置是否在路径上
+            NSIndexPath *indexPath = [myCollectionView indexPathForItemAtPoint:[pan locationInView:myCollectionView]];
+            if (indexPath == nil) {
+                break;
+            }
+            //在路径上则开始移动该路径上的cell
+            [myCollectionView beginInteractiveMovementForItemAtIndexPath:indexPath];
+            NSLog(@"1111");
+        }
+            break;
+        case UIGestureRecognizerStateChanged:
+            //移动过程当中随时更新cell位置
+            [myCollectionView updateInteractiveMovementTargetPosition:[pan locationInView:myCollectionView]];
+            NSLog(@"2222");
+            break;
+        case UIGestureRecognizerStateEnded:
+            //移动结束后关闭cell移动
+            [myCollectionView endInteractiveMovement];
+            NSLog(@"3333");
+            break;
+        default:
+            [myCollectionView cancelInteractiveMovement];
+            NSLog(@"4444");
+            break;
+    }
+#endif
+}
+
+#pragma mark - iOS9以上UICollectionViewDataSource代理
+- (BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath{
+    //返回YES允许其item移动
+    return YES;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView moveItemAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath*)destinationIndexPath {
+    //取出源item数据
+    id objc = [webAppData objectAtIndex:sourceIndexPath.item];
+    //从资源数组中移除该数据
+    [webAppData removeObject:objc];
+    //将数据插入到资源数组中的目标位置上
+    [webAppData insertObject:objc atIndex:destinationIndexPath.item];
 }
 
 #pragma mark TEST webappsdata
@@ -208,6 +300,11 @@
     [webAppData addObject:cell6];
     [webAppData addObject:cell7];
     [webAppData addObject:cell8];
+    
+    for (int i = 9; i < 50; i++) {
+        NSDictionary *cell = @{@"appImage": [UIImage imageNamed:@"page"],@"appTitle":[NSString stringWithFormat:@"测试%d",i],@"canDelete":[NSNumber numberWithBool:YES]};
+        [webAppData addObject:cell];
+    }
 }
 
 @end
