@@ -175,7 +175,7 @@
 {
     UIPanGestureRecognizer *pan = sender;
    
-#if 0
+#if 1
     //iOS9以下
     static NSIndexPath *sourceIndexPath = nil;
     static UIView *mappingImageCell = nil;
