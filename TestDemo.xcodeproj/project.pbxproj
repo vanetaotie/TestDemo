@@ -31,6 +31,7 @@
 		33E8B5B91BE0A43A00A27367 /* ScrollTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E8B5B81BE0A43A00A27367 /* ScrollTextViewController.m */; };
 		33F0B47A1D88EC60002A63E6 /* NetworkTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F0B4791D88EC60002A63E6 /* NetworkTest.m */; };
 		33F0B47F1D8926C7002A63E6 /* ftserver.cer in Resources */ = {isa = PBXBuildFile; fileRef = 33F0B47E1D8926C7002A63E6 /* ftserver.cer */; };
+		33FCCA6D1DD9A2130001BD27 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FCCA6C1DD9A2130001BD27 /* WebViewController.m */; };
 		33FCD6201B146919008A0292 /* TestFiles in Resources */ = {isa = PBXBuildFile; fileRef = 33FCD61F1B146919008A0292 /* TestFiles */; };
 		33FCD6261B1D37DA008A0292 /* GAndATestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FCD6251B1D37DA008A0292 /* GAndATestViewController.m */; };
 		33FCD6291B1D3833008A0292 /* GraphicsTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FCD6281B1D3833008A0292 /* GraphicsTestView.m */; };
@@ -100,6 +101,8 @@
 		33F0B4781D88EC60002A63E6 /* NetworkTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTest.h; sourceTree = "<group>"; };
 		33F0B4791D88EC60002A63E6 /* NetworkTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTest.m; sourceTree = "<group>"; };
 		33F0B47E1D8926C7002A63E6 /* ftserver.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = ftserver.cer; sourceTree = "<group>"; };
+		33FCCA6B1DD9A2130001BD27 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		33FCCA6C1DD9A2130001BD27 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		33FCD61F1B146919008A0292 /* TestFiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TestFiles; sourceTree = "<group>"; };
 		33FCD6241B1D37DA008A0292 /* GAndATestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAndATestViewController.h; sourceTree = "<group>"; };
 		33FCD6251B1D37DA008A0292 /* GAndATestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GAndATestViewController.m; sourceTree = "<group>"; };
@@ -167,6 +170,7 @@
 		23927EA41A7F4538009ABF38 /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				33FCCA6A1DD9A1F90001BD27 /* WebViewTest */,
 				33FCD61F1B146919008A0292 /* TestFiles */,
 				33AAC1271C90FDBD00AC1504 /* QCodeTest */,
 				33E8B5B61BE0A3BA00A27367 /* ScrollTextLabel */,
@@ -319,6 +323,15 @@
 				33F0B4791D88EC60002A63E6 /* NetworkTest.m */,
 			);
 			path = NetworkTest;
+			sourceTree = "<group>";
+		};
+		33FCCA6A1DD9A1F90001BD27 /* WebViewTest */ = {
+			isa = PBXGroup;
+			children = (
+				33FCCA6B1DD9A2130001BD27 /* WebViewController.h */,
+				33FCCA6C1DD9A2130001BD27 /* WebViewController.m */,
+			);
+			path = WebViewTest;
 			sourceTree = "<group>";
 		};
 		33FCD6231B1D37AA008A0292 /* GraphicsAndAnimation */ = {
@@ -541,6 +554,7 @@
 				33166CAE1B0990B50033DE81 /* DLAlertViewController.m in Sources */,
 				239F7F371AA018EA00BC7FF1 /* PopView.m in Sources */,
 				33FCD6261B1D37DA008A0292 /* GAndATestViewController.m in Sources */,
+				33FCCA6D1DD9A2130001BD27 /* WebViewController.m in Sources */,
 				239F7F531AA06E2D00BC7FF1 /* PlayerView.m in Sources */,
 				239F7F491AA043BC00BC7FF1 /* CollectionCell.m in Sources */,
 				33AAC12A1C90FDF300AC1504 /* QCodeTestViewController.m in Sources */,

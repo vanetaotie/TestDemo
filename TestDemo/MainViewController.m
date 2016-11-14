@@ -18,6 +18,7 @@
 #import "ScrollTextViewController.h"
 #import "QCodeTestViewController.h"
 #import "NetworkTest.h"
+#import "WebViewController.h"
 
 @implementation MainViewController
 {
@@ -33,6 +34,14 @@
     [mainTableView setDataSource:self];
     
     [self.view addSubview:mainTableView];
+    
+    UIButton *addBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+    [addBtn setImage:[UIImage imageNamed:@"fox"] forState:UIControlStateNormal];
+    [addBtn setImage:[UIImage imageNamed:@"feiji"] forState:UIControlStateHighlighted];
+//    [addBtn addTarget:self action:@selector(rightBarButtonItemClip:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *backBtnItem = [[UIBarButtonItem alloc] initWithCustomView:addBtn];
+    NSArray *buttonArr = [[NSArray alloc]initWithObjects:backBtnItem, nil];
+    self.navigationItem.rightBarButtonItems = buttonArr;
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,7 +58,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 11;
+    return 12;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -84,6 +93,8 @@
         cell.textLabel.text = @"ScrollTextLabel";
     } else if (indexPath.row == 10) {
         cell.textLabel.text = @"QCodeTest";
+    } else if (indexPath.row == 11) {
+        cell.textLabel.text = @"UIWebViewTest";
     }
     
     return cell;
@@ -145,6 +156,9 @@
     } else if (indexPath.row == 10) {
         QCodeTestViewController *qCodeVC = [[QCodeTestViewController alloc] init];
         [[self navigationController] pushViewController:qCodeVC animated:YES];
+    } else if (indexPath.row == 11) {
+        WebViewController *webVC = [[WebViewController alloc] init];
+        [[self navigationController] pushViewController:webVC animated:YES];
     }
 }
 
