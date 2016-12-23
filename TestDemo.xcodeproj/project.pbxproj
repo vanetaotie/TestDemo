@@ -25,6 +25,7 @@
 		33166CAE1B0990B50033DE81 /* DLAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33166CAD1B0990B50033DE81 /* DLAlertViewController.m */; };
 		33166CB11B09AF6A0033DE81 /* DLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33166CB01B09AF6A0033DE81 /* DLAlertView.m */; };
 		3318A32A1D52CA2C003FBF6A /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3318A3291D52CA2C003FBF6A /* JavaScriptCore.framework */; };
+		336137991E0BCB1B001E4A6E /* SugerNetworkFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 336137981E0BCB1B001E4A6E /* SugerNetworkFramework.framework */; };
 		3376D7651B67564F00B0DE06 /* LimitTextInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 3376D7641B67564F00B0DE06 /* LimitTextInput.m */; };
 		3376D7711B6766FD00B0DE06 /* LimitInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3376D7701B6766FD00B0DE06 /* LimitInputViewController.m */; };
 		33AAC12A1C90FDF300AC1504 /* QCodeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AAC1291C90FDF300AC1504 /* QCodeTestViewController.m */; };
@@ -32,6 +33,7 @@
 		33F0B47A1D88EC60002A63E6 /* NetworkTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F0B4791D88EC60002A63E6 /* NetworkTest.m */; };
 		33F0B47F1D8926C7002A63E6 /* ftserver.cer in Resources */ = {isa = PBXBuildFile; fileRef = 33F0B47E1D8926C7002A63E6 /* ftserver.cer */; };
 		33FCCA6D1DD9A2130001BD27 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FCCA6C1DD9A2130001BD27 /* WebViewController.m */; };
+		33FCCA6F1DDAEE1F0001BD27 /* gwmamserver.cer in Resources */ = {isa = PBXBuildFile; fileRef = 33FCCA6E1DDAEE1F0001BD27 /* gwmamserver.cer */; };
 		33FCD6201B146919008A0292 /* TestFiles in Resources */ = {isa = PBXBuildFile; fileRef = 33FCD61F1B146919008A0292 /* TestFiles */; };
 		33FCD6261B1D37DA008A0292 /* GAndATestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FCD6251B1D37DA008A0292 /* GAndATestViewController.m */; };
 		33FCD6291B1D3833008A0292 /* GraphicsTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FCD6281B1D3833008A0292 /* GraphicsTestView.m */; };
@@ -90,6 +92,7 @@
 		33166CAF1B09AF6A0033DE81 /* DLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAlertView.h; sourceTree = "<group>"; };
 		33166CB01B09AF6A0033DE81 /* DLAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAlertView.m; sourceTree = "<group>"; };
 		3318A3291D52CA2C003FBF6A /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		336137981E0BCB1B001E4A6E /* SugerNetworkFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SugerNetworkFramework.framework; sourceTree = "<group>"; };
 		3376D7631B67564F00B0DE06 /* LimitTextInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LimitTextInput.h; sourceTree = "<group>"; };
 		3376D7641B67564F00B0DE06 /* LimitTextInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LimitTextInput.m; sourceTree = "<group>"; };
 		3376D76F1B6766FD00B0DE06 /* LimitInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LimitInputViewController.h; sourceTree = "<group>"; };
@@ -103,6 +106,7 @@
 		33F0B47E1D8926C7002A63E6 /* ftserver.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = ftserver.cer; sourceTree = "<group>"; };
 		33FCCA6B1DD9A2130001BD27 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		33FCCA6C1DD9A2130001BD27 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		33FCCA6E1DDAEE1F0001BD27 /* gwmamserver.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = gwmamserver.cer; sourceTree = "<group>"; };
 		33FCD61F1B146919008A0292 /* TestFiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TestFiles; sourceTree = "<group>"; };
 		33FCD6241B1D37DA008A0292 /* GAndATestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAndATestViewController.h; sourceTree = "<group>"; };
 		33FCD6251B1D37DA008A0292 /* GAndATestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GAndATestViewController.m; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				336137991E0BCB1B001E4A6E /* SugerNetworkFramework.framework in Frameworks */,
 				3318A32A1D52CA2C003FBF6A /* JavaScriptCore.framework in Frameworks */,
 				B56CFB761ACABE0F000DFE62 /* StoreKit.framework in Frameworks */,
 				239F7F4A1AA0470600BC7FF1 /* EventKit.framework in Frameworks */,
@@ -197,6 +202,7 @@
 		23927EA51A7F4538009ABF38 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				33FCCA6E1DDAEE1F0001BD27 /* gwmamserver.cer */,
 				33F0B47E1D8926C7002A63E6 /* ftserver.cer */,
 				23927EA61A7F4538009ABF38 /* Info.plist */,
 				23927EA71A7F4538009ABF38 /* main.m */,
@@ -244,6 +250,7 @@
 		239F7F401AA040F500BC7FF1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				336137981E0BCB1B001E4A6E /* SugerNetworkFramework.framework */,
 				3318A3291D52CA2C003FBF6A /* JavaScriptCore.framework */,
 				B56CFB751ACABE0F000DFE62 /* StoreKit.framework */,
 				239F7F3C1AA03ECB00BC7FF1 /* EventKit.framework */,
@@ -469,6 +476,7 @@
 				239BD3121AA5B64F0028ED05 /* playerviewlib.bundle in Resources */,
 				33F0B47F1D8926C7002A63E6 /* ftserver.cer in Resources */,
 				23927EAD1A7F4538009ABF38 /* Images.xcassets in Resources */,
+				33FCCA6F1DDAEE1F0001BD27 /* gwmamserver.cer in Resources */,
 				B574EF671ABBE95C0046F300 /* deleteChar@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -675,6 +683,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TestDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -694,6 +706,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = TestDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

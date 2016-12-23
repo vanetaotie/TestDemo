@@ -39,18 +39,33 @@
     //        [alert show];
     //        NSLog(@"%@",error);
     //    }];
-    NSDictionary *param = @{@"appStoreFlag":@"1",@"osType":@"1",@"userType":@"0",@"curVersion":[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]};
     
-    [self addDLHeaderWithPath:@"app/getappversion.do" andParm:param andIsIMServer:NO];
-    [manager POST:@"app/getappversion.do" parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"成功" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-        [alert show];
-        NSLog(@"%@",responseObject);
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"失败" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-        [alert show];
-        NSLog(@"%@",error);
+//    NSDictionary *param = @{@"appStoreFlag":@"1",@"osType":@"1",@"userType":@"0",@"curVersion":[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]};
+//    
+//    [self addDLHeaderWithPath:@"app/getappversion.do" andParm:param andIsIMServer:NO];
+//    [manager POST:@"app/getappversion.do" parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"成功" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+//        [alert show];
+//        NSLog(@"%@",responseObject);
+//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"失败" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+//        [alert show];
+//        NSLog(@"%@",error);
+//    }];
+    
+    NSURL *URL = [NSURL URLWithString:@"https://mam.sgcc.com.cn:443/netplatform-im/category/download.do?fileId=090f1bf980047c51"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    
+    NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
+        NSLog(@"%@",downloadProgress);
+    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+        NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
+        return [documentsDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];
+    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+        NSLog(@"File downloaded to: %@", filePath);
+        NSLog(@"error:%@",error);
     }];
+    [downloadTask resume];
 }
 
 - (void)addDLHeaderWithPath:(NSString *)path andParm:(NSDictionary*)parmDic andIsIMServer:(BOOL)isIMServer
@@ -97,7 +112,8 @@
         [manager.requestSerializer setValue:bodyStr forHTTPHeaderField:@"HASHDATA"];
     }
     
-    [manager.requestSerializer setValue:@"Encryption_None" forHTTPHeaderField:@"Accept-Encoding"];
+//    [manager.requestSerializer setValue:@"Encryption_None" forHTTPHeaderField:@"Accept-Encoding"];
+    [manager.requestSerializer setValue:@"" forHTTPHeaderField:@"Accept-Encoding"];
 }
 
 - (NSString *)sortAndHashCoder:(NSArray *)array
