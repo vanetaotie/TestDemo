@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #define kDefaultTheme           @"DefaultTheme"   //默认主题
 
@@ -16,17 +17,6 @@
 
 
 @interface ThemeManager : NSObject
-
-@property (strong, nonatomic) NSString *theme;
-@property (strong, nonatomic) UIColor *mainTitleColor;
-@property (strong, nonatomic) UIColor *commonColor;
-@property (strong, nonatomic) UIColor *topBarDownColor;
-@property (strong, nonatomic) UIColor *bottomBarDownColor;
-@property (assign, nonatomic) NSInteger fontType;
-@property (strong, nonatomic) NSString *colorType;
-@property (strong, nonatomic) UIColor *segmentedControlColor;
-@property (strong, nonatomic) UIColor *backGroundColor;
-@property (strong, nonatomic) UIColor *commonDownColor;
 
 + (ThemeManager *)sharedInstance;
 

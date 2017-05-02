@@ -10,4 +10,10 @@
 
 @interface TestManager : AFHTTPSessionManager
 
++ (instancetype)sharedClient;
+
+- (instancetype)initWithTestBaseURL:(NSURL *)url;
+
+- (void)setDefaultHeader:(NSString*)header value:(NSString*)value;
+
 @end

@@ -33,6 +33,9 @@
     
     NSLog(@"%d",s);
     
+    NSString *urlString = @"http://robocob.tp-ecp.com:8081/robocop-web/appview/action.do?method=linkFileContextURL&pass=1490860436963&ID=1074755&pub=0&UUID=b7d4869c-2d01-47cc-b15d-60017cc97c68";
+    NSURL *url = [NSURL URLWithString:urlString];
+    
     //***********************语法测试***********************
     
     [self.window setRootViewController:mainNav];

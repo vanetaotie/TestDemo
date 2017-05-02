@@ -10,6 +10,8 @@
 
 @interface NetworkTest : NSObject
 
+- (void)startTestManager;
+
 //网络测试
 - (void)startNetworkTest;
 

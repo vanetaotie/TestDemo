@@ -8,7 +8,8 @@
 
 #import "NetworkTest.h"
 #import "AFNetWorking.h"
-
+//#import <SugerNetworkFramework/SugerHttpManager.h>
+#import "TestManager.h"
 #import <CommonCrypto/CommonDigest.h>
 
 @implementation NetworkTest
@@ -16,10 +17,18 @@
     AFHTTPSessionManager *manager;
 }
 
+- (void)startTestManager {
+    for (int i = 0; i < 2; i++) {
+        TestManager *testManager = [[TestManager sharedClient] initWithTestBaseURL:[NSURL URLWithString:@"http://blog.cnbang.net/"]];
+//        TestManager *testManager = [TestManager sharedClient];
+        [testManager setDefaultHeader:@"aaa" value:@"bbb"];
+    }
+}
+
 //网络测试
 - (void)startNetworkTest
 {
-    manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://mam1.ft-power.com.cn:10001/netplatform-node/service/"]]];
+    manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://mam.sgcc.com.cn/netplatform-node/service/"]]];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     manager.responseSerializer =  [AFJSONResponseSerializer serializer];
     
@@ -27,7 +36,8 @@
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/plain", @"text/javascript", @"text/json", @"text/html", nil];
     
     NSSet <NSData *> *cerSet = [AFSecurityPolicy certificatesInBundle:[NSBundle mainBundle]];
-    manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate withPinnedCertificates:cerSet];
+//    manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate withPinnedCertificates:cerSet];
+//    manager.securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
     
     //AFN测试
     //    [manager GET:@"node/getNode.do" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -40,32 +50,35 @@
     //        NSLog(@"%@",error);
     //    }];
     
-//    NSDictionary *param = @{@"appStoreFlag":@"1",@"osType":@"1",@"userType":@"0",@"curVersion":[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]};
-//    
-//    [self addDLHeaderWithPath:@"app/getappversion.do" andParm:param andIsIMServer:NO];
-//    [manager POST:@"app/getappversion.do" parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"成功" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-//        [alert show];
-//        NSLog(@"%@",responseObject);
-//    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"失败" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-//        [alert show];
-//        NSLog(@"%@",error);
-//    }];
+    NSDictionary *param = @{@"appStoreFlag":@"1",@"osType":@"1",@"userType":@"0",@"curVersion":[[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]};
     
-    NSURL *URL = [NSURL URLWithString:@"https://mam.sgcc.com.cn:443/netplatform-im/category/download.do?fileId=090f1bf980047c51"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    NSString *path = @"node/getNode.do";//@"app/getappversion.do"
     
-    NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
-        NSLog(@"%@",downloadProgress);
-    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
-        NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
-        return [documentsDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];
-    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
-        NSLog(@"File downloaded to: %@", filePath);
-        NSLog(@"error:%@",error);
+    
+//    [self addDLHeaderWithPath:path andParm:param andIsIMServer:NO];
+    [manager POST:path parameters:param progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"成功" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alert show];
+        NSLog(@"%@",responseObject);
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"" message:@"失败" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alert show];
+        NSLog(@"%@",error);
     }];
-    [downloadTask resume];
+    
+//    NSURL *URL = [NSURL URLWithString:@"https://mam.sgcc.com.cn:443/netplatform-im/category/download.do?fileId=090f1bf980047c51"];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+//    
+//    NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
+//        NSLog(@"%@",downloadProgress);
+//    } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
+//        NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
+//        return [documentsDirectoryURL URLByAppendingPathComponent:[response suggestedFilename]];
+//    } completionHandler:^(NSURLResponse * _Nonnull response, NSURL * _Nullable filePath, NSError * _Nullable error) {
+//        NSLog(@"File downloaded to: %@", filePath);
+//        NSLog(@"error:%@",error);
+//    }];
+//    [downloadTask resume];
 }
 
 - (void)addDLHeaderWithPath:(NSString *)path andParm:(NSDictionary*)parmDic andIsIMServer:(BOOL)isIMServer
@@ -87,7 +100,7 @@
     NSString *preHash = @"jsepc";
     NSString *appClientCode = @"511";
     NSString *appCode = @"NETPLAT";
-    NSString *appServerCode = @"GETAPPTYPE";
+    NSString *appServerCode = @"GETAPPVERSION";
     
     UInt64 recordTime = [[NSDate date] timeIntervalSince1970]*1000;
     NSString *timeStamp = [NSString stringWithFormat:@"%llu",recordTime];

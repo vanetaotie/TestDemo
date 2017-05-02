@@ -20,6 +20,9 @@
 #import "NetworkTest.h"
 #import "WebViewController.h"
 
+#import "DLImage.h"
+#import "ThemeManager.h"
+
 @implementation MainViewController
 {
     UITableView *mainTableView;
@@ -36,7 +39,7 @@
     [self.view addSubview:mainTableView];
     
     UIButton *addBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
-    [addBtn setImage:[UIImage imageNamed:@"fox"] forState:UIControlStateNormal];
+    [addBtn setImage:IMG_ACCOUNT_HEAD forState:UIControlStateNormal];
     [addBtn setImage:[UIImage imageNamed:@"feiji"] forState:UIControlStateHighlighted];
 //    [addBtn addTarget:self action:@selector(rightBarButtonItemClip:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *backBtnItem = [[UIBarButtonItem alloc] initWithCustomView:addBtn];
@@ -123,6 +126,7 @@
         
         NetworkTest *test = [[NetworkTest alloc] init];
         [test startNetworkTest];
+//        [test startTestManager];
     } else if (indexPath.row == 1) {
         FloatWindowViewController *floatWindowVC = [[FloatWindowViewController alloc] init];
         [[self navigationController] pushViewController:floatWindowVC animated:YES];
