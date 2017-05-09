@@ -18,10 +18,11 @@
 #import "ScrollTextViewController.h"
 #import "QCodeTestViewController.h"
 #import "NetworkTest.h"
-#import "WebViewController.h"
+//#import "WebViewController.h"
 
 #import "DLImage.h"
 #import "ThemeManager.h"
+#import "UITabBar+Utility.h"
 
 @implementation MainViewController
 {
@@ -45,6 +46,8 @@
     UIBarButtonItem *backBtnItem = [[UIBarButtonItem alloc] initWithCustomView:addBtn];
     NSArray *buttonArr = [[NSArray alloc]initWithObjects:backBtnItem, nil];
     self.navigationItem.rightBarButtonItems = buttonArr;
+    
+//    [self.tabBarController.tabBar showBadgeOnItmIndex:0 tabbarNum:2];
 }
 
 - (void)didReceiveMemoryWarning
@@ -107,6 +110,8 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    [self.tabBarController.tabBar hideBadgeOnItemIndex:0];
+    
     if (indexPath.row == 0) {
 ////        SKStoreProductViewController *storeProductVC = [[SKStoreProductViewController alloc] init];
 ////        [storeProductVC setDelegate:self];
@@ -129,6 +134,7 @@
 //        [test startTestManager];
     } else if (indexPath.row == 1) {
         FloatWindowViewController *floatWindowVC = [[FloatWindowViewController alloc] init];
+        [floatWindowVC setHidesBottomBarWhenPushed:YES];
         [[self navigationController] pushViewController:floatWindowVC animated:YES];
     } else if (indexPath.row == 2) {
         EventKitTestViewController *eventKitTestVC = [[EventKitTestViewController alloc] init];
@@ -161,8 +167,26 @@
         QCodeTestViewController *qCodeVC = [[QCodeTestViewController alloc] init];
         [[self navigationController] pushViewController:qCodeVC animated:YES];
     } else if (indexPath.row == 11) {
-        WebViewController *webVC = [[WebViewController alloc] init];
-        [[self navigationController] pushViewController:webVC animated:YES];
+//        WebViewController *webVC = [[WebViewController alloc] init];
+//        [[self navigationController] pushViewController:webVC animated:YES];
+        
+        //实例方法
+//        id webViewController;
+//        Class myClass = NSClassFromString(@"WebViewController");
+//        if (myClass) {
+//            webViewController = [myClass new];
+//        }
+//        SEL sel = NSSelectorFromString(@"cleanWebViewCache:withText:");
+//        if (webViewController && [webViewController respondsToSelector:sel]) {
+//            [webViewController performSelector:sel withObject:@"aaaaa" withObject:@"bbbbb"];
+//        }
+        
+        //类方法
+        Class myClass = NSClassFromString(@"WebViewController");
+        SEL sel = NSSelectorFromString(@"testMethod:withText:");
+        if (myClass && [myClass respondsToSelector:sel]) {
+            [[myClass class] performSelector:sel withObject:@"aaa" withObject:@"bbb"];
+        }
     }
 }
 

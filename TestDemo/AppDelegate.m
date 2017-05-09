@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "UITabBar+Utility.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +22,22 @@
 
     MainViewController *mainVC = [[MainViewController alloc] init];
     UINavigationController *mainNav = [[UINavigationController alloc] initWithRootViewController:mainVC];
+    mainNav.tabBarItem.title = @"main";
     
+    UIViewController *testVC = [[UIViewController alloc] init];
+    testVC.tabBarItem.title = @"test";
+    
+    UIViewController *testVC2 = [[UIViewController alloc] init];
+    testVC2.tabBarItem.title = @"test2";
+    
+    UITabBarController *mainTabBarVC = [[UITabBarController alloc] init];
+    mainTabBarVC.viewControllers = [NSArray arrayWithObjects:mainNav, testVC, testVC2, nil];
+    
+    [mainTabBarVC.tabBar showBadgeOnItmIndex:0 tabbarNum:3];
+    [mainTabBarVC.tabBar showBadgeOnItmIndex:1 tabbarNum:3];
+    
+    UINavigationController *appNav = [[UINavigationController alloc] initWithRootViewController:mainTabBarVC];
+    appNav.navigationBarHidden = YES;
     //***********************语法测试***********************
 
     int x = 12345;
@@ -32,13 +48,10 @@
     }
     
     NSLog(@"%d",s);
-    
-    NSString *urlString = @"http://robocob.tp-ecp.com:8081/robocop-web/appview/action.do?method=linkFileContextURL&pass=1490860436963&ID=1074755&pub=0&UUID=b7d4869c-2d01-47cc-b15d-60017cc97c68";
-    NSURL *url = [NSURL URLWithString:urlString];
-    
+
     //***********************语法测试***********************
     
-    [self.window setRootViewController:mainNav];
+    [self.window setRootViewController:appNav];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     

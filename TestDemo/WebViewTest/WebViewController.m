@@ -34,7 +34,9 @@
 //    [self.view addSubview:btn];
 }
 
-- (void)cleanWebViewCache {
+- (void)cleanWebViewCache:(NSString *)testA withText:(NSString *)testB {
+    NSLog(@"调用cleanWebViewCache成功--%@--%@",testA,testB);
+    
     NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
     for (NSHTTPCookie *each in cookieStorage.cookies) {
         [cookieStorage deleteCookie:each];
@@ -47,6 +49,10 @@
     
     UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"清除成功" message:@"" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:nil, nil];
     [av show];
+}
+
++ (void)testMethod:(NSString *)testA withText:(NSString *)testB {
+    NSLog(@"调用testMethod成功--%@--%@",testA,testB);
 }
 
 - (void)didReceiveMemoryWarning {
