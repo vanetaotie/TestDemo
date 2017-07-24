@@ -42,7 +42,6 @@
 		33FCD6261B1D37DA008A0292 /* GAndATestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FCD6251B1D37DA008A0292 /* GAndATestViewController.m */; };
 		33FCD6291B1D3833008A0292 /* GraphicsTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FCD6281B1D3833008A0292 /* GraphicsTestView.m */; };
 		33FCD62C1B1D3843008A0292 /* AnimationTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FCD62B1B1D3843008A0292 /* AnimationTestView.m */; };
-		B56CFB761ACABE0F000DFE62 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B56CFB751ACABE0F000DFE62 /* StoreKit.framework */; };
 		B574EF671ABBE95C0046F300 /* deleteChar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B574EF661ABBE95C0046F300 /* deleteChar@2x.png */; };
 		B574EF6B1ABBEA4D0046F300 /* capsLock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B574EF6A1ABBEA4D0046F300 /* capsLock@2x.png */; };
 		B574EF6F1ABC076C0046F300 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B574EF6E1ABC076C0046F300 /* PlayerViewController.m */; };
@@ -128,7 +127,6 @@
 		33FCD62B1B1D3843008A0292 /* AnimationTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationTestView.m; sourceTree = "<group>"; };
 		5AC49E93A86483F91B43BF97 /* Pods-TestDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestDemo/Pods-TestDemo.release.xcconfig"; sourceTree = "<group>"; };
 		698D173C9C8E567866D59F88 /* Pods_TestDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B56CFB751ACABE0F000DFE62 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		B574EF661ABBE95C0046F300 /* deleteChar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deleteChar@2x.png"; sourceTree = "<group>"; };
 		B574EF6A1ABBEA4D0046F300 /* capsLock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "capsLock@2x.png"; sourceTree = "<group>"; };
 		B574EF6E1ABC076C0046F300 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
@@ -147,7 +145,6 @@
 			files = (
 				336137991E0BCB1B001E4A6E /* SugerNetworkFramework.framework in Frameworks */,
 				3318A32A1D52CA2C003FBF6A /* JavaScriptCore.framework in Frameworks */,
-				B56CFB761ACABE0F000DFE62 /* StoreKit.framework in Frameworks */,
 				239F7F4A1AA0470600BC7FF1 /* EventKit.framework in Frameworks */,
 				239F7F4B1AA0470600BC7FF1 /* EventKitUI.framework in Frameworks */,
 				C9D42F76A3677742264BF9A3 /* Pods_TestDemo.framework in Frameworks */,
@@ -269,7 +266,6 @@
 			children = (
 				336137981E0BCB1B001E4A6E /* SugerNetworkFramework.framework */,
 				3318A3291D52CA2C003FBF6A /* JavaScriptCore.framework */,
-				B56CFB751ACABE0F000DFE62 /* StoreKit.framework */,
 				239F7F3C1AA03ECB00BC7FF1 /* EventKit.framework */,
 				239F7F3D1AA03ECB00BC7FF1 /* EventKitUI.framework */,
 				698D173C9C8E567866D59F88 /* Pods_TestDemo.framework */,
@@ -465,10 +461,17 @@
 				TargetAttributes = {
 					23927EA11A7F4538009ABF38 = {
 						CreatedOnToolsVersion = 6.1.1;
-						DevelopmentTeam = 3DAB9SV4LD;
+						DevelopmentTeam = 9TKN35AMC4;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 					23927EB41A7F4538009ABF38 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = 9TKN35AMC4;
 						TestTargetID = 23927EA11A7F4538009ABF38;
 					};
 				};
@@ -715,6 +718,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9TKN35AMC4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -723,7 +727,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = com.innerapns.pubtest;
+				PRODUCT_BUNDLE_IDENTIFIER = vane.Test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -738,6 +742,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 9TKN35AMC4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -745,7 +750,7 @@
 				INFOPLIST_FILE = TestDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.innerapns.pubtest;
+				PRODUCT_BUNDLE_IDENTIFIER = vane.Test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -756,6 +761,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9TKN35AMC4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -775,6 +781,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9TKN35AMC4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

@@ -31,7 +31,7 @@
     [btn setTitle:@"清除缓存" forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(cleanWebViewCache) forControlEvents:UIControlEventTouchUpInside];
-//    [self.view addSubview:btn];
+    [self.view addSubview:btn];
 }
 
 - (void)cleanWebViewCache:(NSString *)testA withText:(NSString *)testB {
