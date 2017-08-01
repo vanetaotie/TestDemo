@@ -9,8 +9,9 @@
 #import "AppDelegate.h"
 #import "MainViewController.h"
 #import "UITabBar+Utility.h"
+#import "DLApi.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <DLApiDelegate>
 
 @end
 
@@ -56,6 +57,19 @@
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    if ([url.scheme isEqualToString:@"123456"]) {
+        return [DLApi handleOpenURL:url delegate:self];
+    }
+    
+    return YES;
+}
+
+- (void)respAuthCode:(NSString *)authCode errorString:(NSString *)errorStr {
+    NSLog(@"authCode==================%@",authCode);
+    NSLog(@"errorStr==================%@",errorStr);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

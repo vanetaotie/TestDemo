@@ -23,6 +23,7 @@
 #import "DLImage.h"
 #import "ThemeManager.h"
 #import "UITabBar+Utility.h"
+#import "DLApi.h"
 
 @implementation MainViewController
 {
@@ -64,7 +65,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 12;
+    return 13;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -101,6 +102,8 @@
         cell.textLabel.text = @"QCodeTest";
     } else if (indexPath.row == 11) {
         cell.textLabel.text = @"UIWebViewTest";
+    } else if (indexPath.row == 12) {
+        cell.textLabel.text = @"SkipTest";
     }
     
     return cell;
@@ -187,6 +190,12 @@
         if (myClass && [myClass respondsToSelector:sel]) {
             [[myClass class] performSelector:sel withObject:@"aaa" withObject:@"bbb"];
         }
+    } else if (indexPath.row == 12) {
+        [DLApi registerApp:@"123456"];
+        DLApiObject *obj = [DLApiObject new];
+        obj.appID = @"123456";
+        obj.state = @"1221";
+        [DLApi sendOAuthReq:obj];
     }
 }
 

@@ -34,6 +34,8 @@
 		33DC64FB1EAEEB8B008BFD65 /* ThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DC64F91EAEEB8B008BFD65 /* ThemeManager.m */; };
 		33DCA5291EB88746008BFD65 /* UITabBar+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DCA5281EB88746008BFD65 /* UITabBar+Utility.m */; };
 		33E8B5B91BE0A43A00A27367 /* ScrollTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E8B5B81BE0A43A00A27367 /* ScrollTextViewController.m */; };
+		33ECBDF31F304C7E0063A3A8 /* DLApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 33ECBDF21F304C7E0063A3A8 /* DLApi.m */; };
+		33ECBDF61F304EB90063A3A8 /* DLApiObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 33ECBDF51F304EB90063A3A8 /* DLApiObject.m */; };
 		33F0B47A1D88EC60002A63E6 /* NetworkTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F0B4791D88EC60002A63E6 /* NetworkTest.m */; };
 		33F0B47F1D8926C7002A63E6 /* ftserver.cer in Resources */ = {isa = PBXBuildFile; fileRef = 33F0B47E1D8926C7002A63E6 /* ftserver.cer */; };
 		33FCCA6D1DD9A2130001BD27 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FCCA6C1DD9A2130001BD27 /* WebViewController.m */; };
@@ -112,6 +114,10 @@
 		33DCA5281EB88746008BFD65 /* UITabBar+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+Utility.m"; sourceTree = "<group>"; };
 		33E8B5B71BE0A43A00A27367 /* ScrollTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollTextViewController.h; sourceTree = "<group>"; };
 		33E8B5B81BE0A43A00A27367 /* ScrollTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollTextViewController.m; sourceTree = "<group>"; };
+		33ECBDF11F304C7E0063A3A8 /* DLApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLApi.h; sourceTree = "<group>"; };
+		33ECBDF21F304C7E0063A3A8 /* DLApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLApi.m; sourceTree = "<group>"; };
+		33ECBDF41F304EB90063A3A8 /* DLApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLApiObject.h; sourceTree = "<group>"; };
+		33ECBDF51F304EB90063A3A8 /* DLApiObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLApiObject.m; sourceTree = "<group>"; };
 		33F0B4781D88EC60002A63E6 /* NetworkTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTest.h; sourceTree = "<group>"; };
 		33F0B4791D88EC60002A63E6 /* NetworkTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTest.m; sourceTree = "<group>"; };
 		33F0B47E1D8926C7002A63E6 /* ftserver.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = ftserver.cer; sourceTree = "<group>"; };
@@ -189,6 +195,7 @@
 				33DC64F71EAEEB8B008BFD65 /* DLImage.h */,
 				33DC64F81EAEEB8B008BFD65 /* ThemeManager.h */,
 				33DC64F91EAEEB8B008BFD65 /* ThemeManager.m */,
+				33ECBDF01F304C3C0063A3A8 /* OAuth2.0 */,
 				33FCCA6A1DD9A1F90001BD27 /* WebViewTest */,
 				33FCD61F1B146919008A0292 /* TestFiles */,
 				33AAC1271C90FDBD00AC1504 /* QCodeTest */,
@@ -343,6 +350,17 @@
 				33E8B5B81BE0A43A00A27367 /* ScrollTextViewController.m */,
 			);
 			path = ScrollTextLabel;
+			sourceTree = "<group>";
+		};
+		33ECBDF01F304C3C0063A3A8 /* OAuth2.0 */ = {
+			isa = PBXGroup;
+			children = (
+				33ECBDF11F304C7E0063A3A8 /* DLApi.h */,
+				33ECBDF21F304C7E0063A3A8 /* DLApi.m */,
+				33ECBDF41F304EB90063A3A8 /* DLApiObject.h */,
+				33ECBDF51F304EB90063A3A8 /* DLApiObject.m */,
+			);
+			path = OAuth2.0;
 			sourceTree = "<group>";
 		};
 		33F0B4771D88EC04002A63E6 /* NetworkTest */ = {
@@ -588,8 +606,10 @@
 				B574EF6F1ABC076C0046F300 /* PlayerViewController.m in Sources */,
 				33FCD6291B1D3833008A0292 /* GraphicsTestView.m in Sources */,
 				3376D7651B67564F00B0DE06 /* LimitTextInput.m in Sources */,
+				33ECBDF61F304EB90063A3A8 /* DLApiObject.m in Sources */,
 				239F7F3B1AA020C300BC7FF1 /* EventKitTestViewController.m in Sources */,
 				23927EA81A7F4538009ABF38 /* main.m in Sources */,
+				33ECBDF31F304C7E0063A3A8 /* DLApi.m in Sources */,
 				33FCD62C1B1D3843008A0292 /* AnimationTestView.m in Sources */,
 				239F7F341AA018A600BC7FF1 /* FloatWindowViewController.m in Sources */,
 				33F0B47A1D88EC60002A63E6 /* NetworkTest.m in Sources */,

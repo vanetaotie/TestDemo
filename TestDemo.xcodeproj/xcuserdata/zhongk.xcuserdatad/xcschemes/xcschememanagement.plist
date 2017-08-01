@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>DLSDKExport.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>TestDemo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>23927EB41A7F4538009ABF38</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>33ECBDFA1F3070960063A3A8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
