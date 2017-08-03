@@ -37,6 +37,21 @@
     [self.view addSubview:_textView];
     LimitTextInput *limitTextInput2 = [[LimitTextInput alloc] initWithFrame:CGRectMake(20, 20, 20, 20) withLimitCount:40];
     [limitTextInput2 setTextInput:_textView];
+    
+    UITextField *textfield2 = [[UITextField alloc] initWithFrame:CGRectMake(65, 300, 200, 25)];
+    textfield2.keyboardType = UIKeyboardTypeNumberPad;
+    textfield2.delegate = self;
+    textfield2.placeholder = @"请输入密码";
+    textfield2.secureTextEntry = YES;
+    textfield2.clearButtonMode = UITextFieldViewModeWhileEditing;
+    textfield2.autocorrectionType = YES;
+    [textfield2 addTarget:self action:@selector(textFieldChanged) forControlEvents:UIControlEventEditingChanged];
+    [self.view addSubview:textfield2];
+}
+
+- (void)textFieldChanged
+{
+    
 }
 
 - (void)didReceiveMemoryWarning {
