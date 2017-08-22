@@ -50,6 +50,7 @@
 		B574EF751ABFAD470046F300 /* capsLockUpper@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B574EF741ABFAD470046F300 /* capsLockUpper@2x.png */; };
 		B5A981801AB82C3700EDFAD1 /* KeyBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A9817F1AB82C3700EDFAD1 /* KeyBoardViewController.m */; };
 		B5A981831AB84A0E00EDFAD1 /* RandomKeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A981821AB84A0E00EDFAD1 /* RandomKeyBoardView.m */; };
+		C24CB2FA1F4AB1FB00610C6B /* UIImageTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24CB2F91F4AB1FB00610C6B /* UIImageTestViewController.m */; };
 		C9D42F76A3677742264BF9A3 /* Pods_TestDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 698D173C9C8E567866D59F88 /* Pods_TestDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -141,6 +142,8 @@
 		B5A9817F1AB82C3700EDFAD1 /* KeyBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyBoardViewController.m; sourceTree = "<group>"; };
 		B5A981811AB84A0E00EDFAD1 /* RandomKeyBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomKeyBoardView.h; sourceTree = "<group>"; };
 		B5A981821AB84A0E00EDFAD1 /* RandomKeyBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomKeyBoardView.m; sourceTree = "<group>"; };
+		C24CB2F81F4AB1FB00610C6B /* UIImageTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageTestViewController.h; sourceTree = "<group>"; };
+		C24CB2F91F4AB1FB00610C6B /* UIImageTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageTestViewController.m; sourceTree = "<group>"; };
 		DC46164237DCA7E733FF48F3 /* Pods-TestDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestDemo/Pods-TestDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -190,6 +193,7 @@
 		23927EA41A7F4538009ABF38 /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C24CB2F71F4AB1D700610C6B /* UIImageTest */,
 				33DCA5261EB885DA008BFD65 /* Utility */,
 				33DC64F61EAEEB8B008BFD65 /* CommonResource.bundle */,
 				33DC64F71EAEEB8B008BFD65 /* DLImage.h */,
@@ -418,6 +422,15 @@
 			path = KeyBoardTest;
 			sourceTree = "<group>";
 		};
+		C24CB2F71F4AB1D700610C6B /* UIImageTest */ = {
+			isa = PBXGroup;
+			children = (
+				C24CB2F81F4AB1FB00610C6B /* UIImageTestViewController.h */,
+				C24CB2F91F4AB1FB00610C6B /* UIImageTestViewController.m */,
+			);
+			path = UIImageTest;
+			sourceTree = "<group>";
+		};
 		CAA261CCD4A0F6E3D0C42010 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -595,6 +608,7 @@
 			files = (
 				B5A981831AB84A0E00EDFAD1 /* RandomKeyBoardView.m in Sources */,
 				23927EAB1A7F4538009ABF38 /* AppDelegate.m in Sources */,
+				C24CB2FA1F4AB1FB00610C6B /* UIImageTestViewController.m in Sources */,
 				33DC64FB1EAEEB8B008BFD65 /* ThemeManager.m in Sources */,
 				239F7F461AA042E100BC7FF1 /* CollectionTestViewController.m in Sources */,
 				334932A31E24767400C9DCF2 /* TestManager.m in Sources */,
