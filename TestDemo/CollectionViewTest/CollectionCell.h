@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 @class CollectionCell;
+
+typedef void (^SelectCellBlock)(CollectionCell *cell, BOOL isSelect);
+
 @protocol CollectionCellDelegate <NSObject>
 
 - (void)longPress:(CollectionCell *)cell;
@@ -21,6 +24,8 @@
 @property (nonatomic, strong) UILabel *appTitleLabel;
 @property (nonatomic, strong) UIButton *deleteAppButton;
 @property (nonatomic, assign) BOOL canDelete;
+
+@property (nonatomic, strong) SelectCellBlock selectBlock;
 
 //@property (nonatomic, assign) BOOL isDeleteButtonVisible;//设置删除按钮的可见性
 //@property (nonatomic, retain) NSDictionary *cellData;//设置cell数据，根据实际传值格式更改

@@ -8,6 +8,8 @@
 
 #import "CollectionTestViewController.h"
 
+#define WS(weakSelf)    __weak __typeof(&*self)weakSelf = self
+
 @interface CollectionTestViewController ()
 
 @end
@@ -77,6 +79,13 @@
 //    [cell setCellData:cellData];
     [cell setCellData:cellData withMode:isEditingMode];
 //    [cell setIndexPathID:indexPath.row];
+    
+    WS(weakSelf);
+    cell.selectBlock = ^(CollectionCell *cell, BOOL isSelect) {
+        NSIndexPath *index = [myCollectionView indexPathForCell:cell];
+        
+        //处理选择模型
+    };
     
     return cell;
 }

@@ -12,6 +12,12 @@
 
 #import "CollectionCell.h"
 
+@interface CollectionCell ()
+
+@property (nonatomic, strong) UIButton *checkButton;
+
+@end
+
 @implementation CollectionCell
 
 - (id)initWithFrame:(CGRect)frame
@@ -38,6 +44,32 @@
     [self addSubview:_appImageView];
     [self addSubview:_appTitleLabel];
     [self addSubview:_deleteAppButton];
+}
+
+- (UIButton *)checkButton
+{
+    if (!_checkButton) {
+        _checkButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _checkButton.frame = CGRectMake(40,-5,25,25);
+        _checkButton.hidden = YES;
+//        [_checkButton setBackgroundImage:[UIImage imageNamed:@"icon_checked_no"] forState:UIControlStateNormal];
+//        [_checkButton setBackgroundImage:[UIImage imageNamed:@"icon_checked_yes"] forState:UIControlStateSelected];
+
+        [_checkButton setImage:[UIImage imageNamed:@"icon_checked_no"] forState:UIControlStateNormal];
+        [_checkButton setImage:[UIImage imageNamed:@"icon_checked_no"] forState: UIControlStateHighlighted];
+        [_checkButton setImage:[UIImage imageNamed:@"icon_checked_yes"] forState:UIControlStateSelected];
+        [_checkButton setImage:[UIImage imageNamed:@"icon_checked_yes"] forState:UIControlStateSelected | UIControlStateHighlighted];
+
+        [_checkButton addTarget:self action:@selector(handleSelect:) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:_checkButton];
+    }
+    return _checkButton;
+}
+
+- (void)handleSelect:(UIButton *)button
+{
+    button.selected = !button.selected;
+    self.selectBlock(self, button.selected);
 }
 
 - (void)initGesture
