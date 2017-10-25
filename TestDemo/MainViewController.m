@@ -19,6 +19,7 @@
 #import "QCodeTestViewController.h"
 #import "NetworkTest.h"
 //#import "WebViewController.h"
+#import "CutImageViewController.h"
 
 #import "DLImage.h"
 #import "ThemeManager.h"
@@ -51,6 +52,12 @@
 //    [self.tabBarController.tabBar showBadgeOnItmIndex:0 tabbarNum:2];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = NO;
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -65,7 +72,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 13;
+    return 14;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -104,6 +111,8 @@
         cell.textLabel.text = @"UIWebViewTest";
     } else if (indexPath.row == 12) {
         cell.textLabel.text = @"SkipTest";
+    } else if (indexPath.row == 13) {
+        cell.textLabel.text = @"CutImage";
     }
     
     return cell;
@@ -196,6 +205,16 @@
         obj.appID = @"123456";
         obj.state = @"1221";
         [DLApi sendOAuthReq:obj];
+    } else if (indexPath.row == 13) {
+        CutImageViewController *vc = [[CutImageViewController alloc] initWithOriginImage:[UIImage imageNamed:@"1"]];
+        
+        vc.cutSuccessBlock = ^(UIImage *cutImage) {
+            UIImage *image = cutImage;
+            NSLog(@"%@", image);
+        };
+        
+        [vc setHidesBottomBarWhenPushed:YES];
+        [self.navigationController pushViewController:vc animated:YES];
     }
 }
 

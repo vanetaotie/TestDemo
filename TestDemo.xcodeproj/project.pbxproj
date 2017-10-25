@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2325D94F1F8B1337005C4208 /* CutImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2325D94E1F8B1337005C4208 /* CutImage.bundle */; };
 		23927EA81A7F4538009ABF38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23927EA71A7F4538009ABF38 /* main.m */; };
 		23927EAB1A7F4538009ABF38 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23927EAA1A7F4538009ABF38 /* AppDelegate.m */; };
 		23927EAD1A7F4538009ABF38 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23927EAC1A7F4538009ABF38 /* Images.xcassets */; };
@@ -22,6 +23,8 @@
 		239F7F4A1AA0470600BC7FF1 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239F7F3C1AA03ECB00BC7FF1 /* EventKit.framework */; };
 		239F7F4B1AA0470600BC7FF1 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239F7F3D1AA03ECB00BC7FF1 /* EventKitUI.framework */; };
 		239F7F531AA06E2D00BC7FF1 /* PlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 239F7F521AA06E2D00BC7FF1 /* PlayerView.m */; };
+		23F11E281F7E2DF0004E2649 /* CutImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F11E271F7E2DF0004E2649 /* CutImageViewController.m */; };
+		23F11E2B1F7E3158004E2649 /* CutImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F11E2A1F7E3158004E2649 /* CutImageView.m */; };
 		33166CAE1B0990B50033DE81 /* DLAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33166CAD1B0990B50033DE81 /* DLAlertViewController.m */; };
 		33166CB11B09AF6A0033DE81 /* DLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33166CB01B09AF6A0033DE81 /* DLAlertView.m */; };
 		3318A32A1D52CA2C003FBF6A /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3318A3291D52CA2C003FBF6A /* JavaScriptCore.framework */; };
@@ -65,6 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2325D94E1F8B1337005C4208 /* CutImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CutImage.bundle; sourceTree = "<group>"; };
 		23927EA21A7F4538009ABF38 /* TestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23927EA61A7F4538009ABF38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23927EA71A7F4538009ABF38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -93,6 +97,10 @@
 		239F7F511AA06E2D00BC7FF1 /* PlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerView.h; sourceTree = "<group>"; };
 		239F7F521AA06E2D00BC7FF1 /* PlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerView.m; sourceTree = "<group>"; };
 		239F7F541AA1A05A00BC7FF1 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		23F11E261F7E2DF0004E2649 /* CutImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CutImageViewController.h; sourceTree = "<group>"; };
+		23F11E271F7E2DF0004E2649 /* CutImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CutImageViewController.m; sourceTree = "<group>"; };
+		23F11E291F7E3158004E2649 /* CutImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CutImageView.h; sourceTree = "<group>"; };
+		23F11E2A1F7E3158004E2649 /* CutImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CutImageView.m; sourceTree = "<group>"; };
 		33166CAC1B0990B50033DE81 /* DLAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAlertViewController.h; sourceTree = "<group>"; };
 		33166CAD1B0990B50033DE81 /* DLAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAlertViewController.m; sourceTree = "<group>"; };
 		33166CAF1B09AF6A0033DE81 /* DLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAlertView.h; sourceTree = "<group>"; };
@@ -193,6 +201,7 @@
 		23927EA41A7F4538009ABF38 /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				23F11E251F7E2DD0004E2649 /* CutImage */,
 				C24CB2F71F4AB1D700610C6B /* UIImageTest */,
 				33DCA5261EB885DA008BFD65 /* Utility */,
 				33DC64F61EAEEB8B008BFD65 /* CommonResource.bundle */,
@@ -305,6 +314,18 @@
 				B574EF6E1ABC076C0046F300 /* PlayerViewController.m */,
 			);
 			path = AVPlayerTest;
+			sourceTree = "<group>";
+		};
+		23F11E251F7E2DD0004E2649 /* CutImage */ = {
+			isa = PBXGroup;
+			children = (
+				23F11E261F7E2DF0004E2649 /* CutImageViewController.h */,
+				23F11E271F7E2DF0004E2649 /* CutImageViewController.m */,
+				23F11E291F7E3158004E2649 /* CutImageView.h */,
+				23F11E2A1F7E3158004E2649 /* CutImageView.m */,
+				2325D94E1F8B1337005C4208 /* CutImage.bundle */,
+			);
+			path = CutImage;
 			sourceTree = "<group>";
 		};
 		33166CAB1B0990940033DE81 /* DLAlertViewTest */ = {
@@ -537,6 +558,7 @@
 				33FCD6201B146919008A0292 /* TestFiles in Resources */,
 				B574EF6B1ABBEA4D0046F300 /* capsLock@2x.png in Resources */,
 				239BD3121AA5B64F0028ED05 /* playerviewlib.bundle in Resources */,
+				2325D94F1F8B1337005C4208 /* CutImage.bundle in Resources */,
 				33F0B47F1D8926C7002A63E6 /* ftserver.cer in Resources */,
 				23927EAD1A7F4538009ABF38 /* Images.xcassets in Resources */,
 				33FCCA6F1DDAEE1F0001BD27 /* gwmamserver.cer in Resources */,
@@ -634,8 +656,10 @@
 				23927EA81A7F4538009ABF38 /* main.m in Sources */,
 				33ECBDF31F304C7E0063A3A8 /* DLApi.m in Sources */,
 				33FCD62C1B1D3843008A0292 /* AnimationTestView.m in Sources */,
+				23F11E281F7E2DF0004E2649 /* CutImageViewController.m in Sources */,
 				239F7F341AA018A600BC7FF1 /* FloatWindowViewController.m in Sources */,
 				33F0B47A1D88EC60002A63E6 /* NetworkTest.m in Sources */,
+				23F11E2B1F7E3158004E2649 /* CutImageView.m in Sources */,
 				33166CB11B09AF6A0033DE81 /* DLAlertView.m in Sources */,
 				33166CAE1B0990B50033DE81 /* DLAlertViewController.m in Sources */,
 				239F7F371AA018EA00BC7FF1 /* PopView.m in Sources */,
