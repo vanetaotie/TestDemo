@@ -7,6 +7,7 @@
 //
 
 #import "CollectionTestViewController.h"
+#import "EventKitTestViewController.h"
 
 #define WS(weakSelf)    __weak __typeof(&*self)weakSelf = self
 
@@ -94,8 +95,10 @@
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    downloadAlartView = [[UIAlertView alloc] initWithTitle:@"提醒" message:@"进入下载" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
-    [downloadAlartView show];
+//    downloadAlartView = [[UIAlertView alloc] initWithTitle:@"提醒" message:@"进入下载" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+//    [downloadAlartView show];
+    EventKitTestViewController *vc = [[EventKitTestViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark UICollectionViewDelegateFlowLayout

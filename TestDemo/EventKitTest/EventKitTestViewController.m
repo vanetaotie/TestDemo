@@ -10,7 +10,9 @@
 #import <EventKit/EventKit.h>
 #import <EventKitUI/EventKitUI.h>
 
-@interface EventKitTestViewController ()
+@interface EventKitTestViewController () <UIGestureRecognizerDelegate>
+
+@property (nonatomic, strong) UIButton *backBtn;     //返回按钮
 
 @end
 
@@ -24,6 +26,11 @@
     [super viewDidLoad];
     
     [self.view setBackgroundColor:[UIColor whiteColor]];
+    
+    self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
+    
+    [self.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithCustomView:[self backBtn]]];
     
     addEventBtn = [[UIButton alloc] initWithFrame:CGRectMake(100, 200, 120, 40)];
     [addEventBtn setTitle:@"添加会议事件" forState:UIControlStateNormal];
@@ -90,6 +97,25 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(UIButton *)backBtn{
+    
+    if (!_backBtn) {
+        
+        _backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _backBtn.frame = CGRectMake(0, 0, 44, 44);
+        _backBtn.backgroundColor = [UIColor clearColor];
+        [_backBtn setExclusiveTouch:YES];
+        [_backBtn setImage:[UIImage imageNamed:@"wifi"] forState:UIControlStateNormal];
+        
+        [_backBtn addTarget:self action:@selector(backAction:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _backBtn;
+}
+
+- (void)backAction:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end

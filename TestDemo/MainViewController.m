@@ -35,6 +35,14 @@
 {
     [super viewDidLoad];
     
+#ifdef __IPHONE_11_0
+    if (@available(iOS 11.0, *)) {
+        mainTableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+#endif
+    
     mainTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     [mainTableView setDelegate:self];
     [mainTableView setDataSource:self];

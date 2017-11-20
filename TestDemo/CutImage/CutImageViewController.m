@@ -17,6 +17,8 @@
 
 @property (nonatomic, strong) UIImage *originImage;
 
+@property (nonatomic, strong) UIImagePickerController *pickerController;
+
 @end
 
 @implementation CutImageViewController
@@ -44,13 +46,22 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
     self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
+    
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
     self.navigationController.navigationBarHidden = NO;
 }
+
+//- (BOOL)prefersStatusBarHidden
+//{
+//    return YES;
+//}
 
 - (void)configUI {
     self.view.backgroundColor = [UIColor blackColor];
@@ -93,13 +104,19 @@
 // 确定裁剪
 - (void)cutOkBtnClick
 {
-    UIImage *newImage = [self screenView:self.view];
+    self.pickerController = [[UIImagePickerController alloc] init];
+    self.pickerController.delegate = self;
+    self.pickerController.allowsEditing = NO;
+    self.pickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    [self.view.window.rootViewController presentViewController:self.pickerController animated:YES completion:nil];
     
-    [self cutCancleBtnClick];
-    
-    if (self.cutSuccessBlock) {
-        self.cutSuccessBlock(newImage);
-    }
+//    UIImage *newImage = [self screenView:self.view];
+//
+//    [self cutCancleBtnClick];
+//
+//    if (self.cutSuccessBlock) {
+//        self.cutSuccessBlock(newImage);
+//    }
 }
 
 // 取消裁剪
