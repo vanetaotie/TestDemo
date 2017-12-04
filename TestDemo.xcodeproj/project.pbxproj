@@ -23,6 +23,9 @@
 		239F7F4A1AA0470600BC7FF1 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239F7F3C1AA03ECB00BC7FF1 /* EventKit.framework */; };
 		239F7F4B1AA0470600BC7FF1 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239F7F3D1AA03ECB00BC7FF1 /* EventKitUI.framework */; };
 		239F7F531AA06E2D00BC7FF1 /* PlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 239F7F521AA06E2D00BC7FF1 /* PlayerView.m */; };
+		23B7AC871FC2C15E00E710CF /* CTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B7AC861FC2C15E00E710CF /* CTViewController.m */; };
+		23B7AC8A1FC2DD8800E710CF /* CTCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B7AC891FC2DD8800E710CF /* CTCollectionViewCell.m */; };
+		23B7AC8D1FC2DDB900E710CF /* CTCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B7AC8C1FC2DDB900E710CF /* CTCollectionReusableView.m */; };
 		23F11E281F7E2DF0004E2649 /* CutImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F11E271F7E2DF0004E2649 /* CutImageViewController.m */; };
 		23F11E2B1F7E3158004E2649 /* CutImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F11E2A1F7E3158004E2649 /* CutImageView.m */; };
 		33166CAE1B0990B50033DE81 /* DLAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33166CAD1B0990B50033DE81 /* DLAlertViewController.m */; };
@@ -97,6 +100,12 @@
 		239F7F511AA06E2D00BC7FF1 /* PlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerView.h; sourceTree = "<group>"; };
 		239F7F521AA06E2D00BC7FF1 /* PlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerView.m; sourceTree = "<group>"; };
 		239F7F541AA1A05A00BC7FF1 /* PlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerViewController.h; sourceTree = "<group>"; };
+		23B7AC851FC2C15E00E710CF /* CTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTViewController.h; sourceTree = "<group>"; };
+		23B7AC861FC2C15E00E710CF /* CTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTViewController.m; sourceTree = "<group>"; };
+		23B7AC881FC2DD8800E710CF /* CTCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTCollectionViewCell.h; sourceTree = "<group>"; };
+		23B7AC891FC2DD8800E710CF /* CTCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTCollectionViewCell.m; sourceTree = "<group>"; };
+		23B7AC8B1FC2DDB900E710CF /* CTCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTCollectionReusableView.h; sourceTree = "<group>"; };
+		23B7AC8C1FC2DDB900E710CF /* CTCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTCollectionReusableView.m; sourceTree = "<group>"; };
 		23F11E261F7E2DF0004E2649 /* CutImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CutImageViewController.h; sourceTree = "<group>"; };
 		23F11E271F7E2DF0004E2649 /* CutImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CutImageViewController.m; sourceTree = "<group>"; };
 		23F11E291F7E3158004E2649 /* CutImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CutImageView.h; sourceTree = "<group>"; };
@@ -201,6 +210,7 @@
 		23927EA41A7F4538009ABF38 /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				23B7AC841FC2C13D00E710CF /* CollectionView */,
 				23F11E251F7E2DD0004E2649 /* CutImage */,
 				C24CB2F71F4AB1D700610C6B /* UIImageTest */,
 				33DCA5261EB885DA008BFD65 /* Utility */,
@@ -314,6 +324,19 @@
 				B574EF6E1ABC076C0046F300 /* PlayerViewController.m */,
 			);
 			path = AVPlayerTest;
+			sourceTree = "<group>";
+		};
+		23B7AC841FC2C13D00E710CF /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				23B7AC851FC2C15E00E710CF /* CTViewController.h */,
+				23B7AC861FC2C15E00E710CF /* CTViewController.m */,
+				23B7AC881FC2DD8800E710CF /* CTCollectionViewCell.h */,
+				23B7AC891FC2DD8800E710CF /* CTCollectionViewCell.m */,
+				23B7AC8B1FC2DDB900E710CF /* CTCollectionReusableView.h */,
+				23B7AC8C1FC2DDB900E710CF /* CTCollectionReusableView.m */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		23F11E251F7E2DD0004E2649 /* CutImage */ = {
@@ -640,11 +663,14 @@
 				B5A981831AB84A0E00EDFAD1 /* RandomKeyBoardView.m in Sources */,
 				23927EAB1A7F4538009ABF38 /* AppDelegate.m in Sources */,
 				C24CB2FA1F4AB1FB00610C6B /* UIImageTestViewController.m in Sources */,
+				23B7AC871FC2C15E00E710CF /* CTViewController.m in Sources */,
 				33DC64FB1EAEEB8B008BFD65 /* ThemeManager.m in Sources */,
 				239F7F461AA042E100BC7FF1 /* CollectionTestViewController.m in Sources */,
 				334932A31E24767400C9DCF2 /* TestManager.m in Sources */,
+				23B7AC8A1FC2DD8800E710CF /* CTCollectionViewCell.m in Sources */,
 				B5A981801AB82C3700EDFAD1 /* KeyBoardViewController.m in Sources */,
 				33DCA5291EB88746008BFD65 /* UITabBar+Utility.m in Sources */,
+				23B7AC8D1FC2DDB900E710CF /* CTCollectionReusableView.m in Sources */,
 				33E8B5B91BE0A43A00A27367 /* ScrollTextViewController.m in Sources */,
 				3376D7711B6766FD00B0DE06 /* LimitInputViewController.m in Sources */,
 				23927EC71A7F457D009ABF38 /* MainViewController.m in Sources */,
