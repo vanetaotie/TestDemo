@@ -7,7 +7,7 @@
 //
 
 #import "NetworkTest.h"
-#import "AFNetWorking.h"
+#import "AFNetworking.h"
 //#import <SugerNetworkFramework/SugerHttpManager.h>
 #import "TestManager.h"
 #import <CommonCrypto/CommonDigest.h>

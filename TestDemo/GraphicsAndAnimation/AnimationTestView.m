@@ -7,6 +7,7 @@
 //
 
 #import "AnimationTestView.h"
+#import <pop/POP.h>
 
 @implementation AnimationTestView
 
