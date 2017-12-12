@@ -18,7 +18,7 @@
 #import "ScrollTextViewController.h"
 #import "QCodeTestViewController.h"
 #import "NetworkTest.h"
-//#import "WebViewController.h"
+#import "WebViewController.h"
 #import "CutImageViewController.h"
 
 #import "DLImage.h"
@@ -187,8 +187,9 @@
         QCodeTestViewController *qCodeVC = [[QCodeTestViewController alloc] init];
         [[self navigationController] pushViewController:qCodeVC animated:YES];
     } else if (indexPath.row == 11) {
-//        WebViewController *webVC = [[WebViewController alloc] init];
-//        [[self navigationController] pushViewController:webVC animated:YES];
+        WebViewController *webVC = [[WebViewController alloc] init];
+        webVC.hidesBottomBarWhenPushed = YES;
+        [[self navigationController] pushViewController:webVC animated:YES];
         
         //实例方法
 //        id webViewController;
@@ -202,11 +203,11 @@
 //        }
         
         //类方法
-        Class myClass = NSClassFromString(@"WebViewController");
-        SEL sel = NSSelectorFromString(@"testMethod:withText:");
-        if (myClass && [myClass respondsToSelector:sel]) {
-            [[myClass class] performSelector:sel withObject:@"aaa" withObject:@"bbb"];
-        }
+//        Class myClass = NSClassFromString(@"WebViewController");
+//        SEL sel = NSSelectorFromString(@"testMethod:withText:");
+//        if (myClass && [myClass respondsToSelector:sel]) {
+//            [[myClass class] performSelector:sel withObject:@"aaa" withObject:@"bbb"];
+//        }
     } else if (indexPath.row == 12) {
         [DLApi registerApp:@"123456"];
         DLApiObject *obj = [DLApiObject new];

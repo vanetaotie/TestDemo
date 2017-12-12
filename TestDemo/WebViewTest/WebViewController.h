@@ -12,6 +12,4 @@
 
 - (void)cleanWebViewCache:(NSString *)testA withText:(NSString *)testB;
 
-+ (void)testMethod:(NSString *)testA withText:(NSString *)testB;
-
 @end

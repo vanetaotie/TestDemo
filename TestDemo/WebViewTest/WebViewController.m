@@ -7,31 +7,110 @@
 //
 
 #import "WebViewController.h"
+#import <WebKit/WebKit.h>
 
-@interface WebViewController () <UIWebViewDelegate>
+@interface WebViewController () <UIWebViewDelegate, WKNavigationDelegate>
+
+@property (strong, nonatomic) UIWebView *uiWebView;
+@property (strong, nonatomic) WKWebView *wkWebView;
+
+@property (strong, nonatomic) UIScrollView *myview;
 
 @end
 
 @implementation WebViewController
-{
-    UIWebView *_myWebView;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    _myWebView = [[UIWebView alloc] initWithFrame:self.view.frame];
-    [_myWebView setDelegate:self];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://183.207.186.44:19113/test.html"]];
-    [_myWebView loadRequest:request];
-    [self.view addSubview:_myWebView];
+    [self initWKWebView];
+
+    NSString *height_str = @"37592";//37592
+    NSLog(@"string = %@, %f",height_str, self.wkWebView.frame.size.height);
+
+    CGRect frame = self.wkWebView.frame;
+    frame.size.height = [height_str floatValue];
+    self.wkWebView.frame = frame;
+
+    NSLog(@"string = %@, %f",height_str, self.wkWebView.frame.size.height);
+
+    [self requestWK];
     
-    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(100, 400, 100, 40)];
-    [btn setTitle:@"清除缓存" forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
-    [btn addTarget:self action:@selector(cleanWebViewCache) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:btn];
+    
+    
+//    [self initUIWebView];
+//
+//    NSString *height_str = @"37592";//37592
+//    NSLog(@"string = %@, %f",height_str, self.uiWebView.frame.size.height);
+//
+//    CGRect frame = self.uiWebView.frame;
+//    frame.size.height = [height_str floatValue];
+//    self.uiWebView.frame = frame;
+//
+//    NSLog(@"string = %@, %f",height_str, self.uiWebView.frame.size.height);
+//
+//    [self requestUI];
+    
+    
+    
+//    [self.view addSubview:self.myview];
+//
+//    NSString *height_str = @"37592";//37592
+//    NSLog(@"string = %@, %f",height_str, self.myview.frame.size.height);
+//
+//    CGRect frame = self.myview.frame;
+//    frame.size.height = [height_str floatValue];
+//    self.myview.frame = frame;
+//
+//    NSLog(@"string = %@, %f",height_str, self.myview.frame.size.height);
+}
+
+- (UIScrollView *)myview
+{
+    if (!_myview) {
+        _myview = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+        _myview.backgroundColor = [UIColor yellowColor];
+    }
+    return _myview;
+}
+
+#pragma mark - WKWebviewTest
+- (void)initWKWebView
+{
+    [self.view addSubview:self.wkWebView];
+}
+
+- (void)requestWK
+{
+    [_wkWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.baidu.com"]]];
+}
+
+- (WKWebView *)wkWebView
+{
+    if (!_wkWebView) {
+        _wkWebView = [[WKWebView alloc] initWithFrame:self.view.bounds];
+        _wkWebView.backgroundColor = [UIColor redColor];
+    }
+    return _wkWebView;
+}
+
+#pragma mark - UIWebviewTest
+- (void)initUIWebView
+{
+    [self.view addSubview:self.uiWebView];
+    
+//    UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(100, 400, 100, 40)];
+//    [btn setTitle:@"清除缓存" forState:UIControlStateNormal];
+//    [btn setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+//    [btn addTarget:self action:@selector(cleanWebViewCache:withText:) forControlEvents:UIControlEventTouchUpInside];
+//    [self.view addSubview:btn];
+}
+
+- (void)requestUI
+{
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.jianshu.com/p/177e44a411db"]];//http://183.207.186.44:19113/test.html
+    [self.uiWebView loadRequest:request];
 }
 
 - (void)cleanWebViewCache:(NSString *)testA withText:(NSString *)testB {
@@ -51,23 +130,18 @@
     [av show];
 }
 
-+ (void)testMethod:(NSString *)testA withText:(NSString *)testB {
-    NSLog(@"调用testMethod成功--%@--%@",testA,testB);
+- (UIWebView *)uiWebView
+{
+    if (!_uiWebView) {
+        _uiWebView = [[UIWebView alloc] initWithFrame:self.view.frame];
+        _uiWebView.backgroundColor = [UIColor blueColor];
+    }
+    return _uiWebView;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
