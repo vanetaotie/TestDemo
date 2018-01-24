@@ -23,7 +23,11 @@
     NSLog(@"yoho1");
     NSLog(@"yoho branch 1");
     NSLog(@"yoho branch 2");
-
+    
+    SwiftTest *vc = [[SwiftTest alloc] init];
+    NSLog(@"SwiftDemo:%@", [vc f1]);
+    [vc f2];
+    
     MainViewController *mainVC = [[MainViewController alloc] init];
     UINavigationController *mainNav = [[UINavigationController alloc] initWithRootViewController:mainVC];
     mainNav.tabBarItem.title = @"main";
