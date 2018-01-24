@@ -58,10 +58,10 @@
     self.navigationController.navigationBarHidden = NO;
 }
 
-//- (BOOL)prefersStatusBarHidden
-//{
-//    return YES;
-//}
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
 
 - (void)configUI {
     self.view.backgroundColor = [UIColor blackColor];
@@ -104,19 +104,13 @@
 // 确定裁剪
 - (void)cutOkBtnClick
 {
-    self.pickerController = [[UIImagePickerController alloc] init];
-    self.pickerController.delegate = self;
-    self.pickerController.allowsEditing = NO;
-    self.pickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    [self.view.window.rootViewController presentViewController:self.pickerController animated:YES completion:nil];
-    
-//    UIImage *newImage = [self screenView:self.view];
-//
-//    [self cutCancleBtnClick];
-//
-//    if (self.cutSuccessBlock) {
-//        self.cutSuccessBlock(newImage);
-//    }
+    UIImage *newImage = [self screenView:self.view];
+
+    [self cutCancleBtnClick];
+
+    if (self.cutSuccessBlock) {
+        self.cutSuccessBlock(newImage);
+    }
 }
 
 // 取消裁剪
