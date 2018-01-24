@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "GICutImageUI"
   s.version      = "0.0.1"
-  s.summary      = "A short description of GICutImageUI."
+  s.summary      = "截图UI组件测试GICutImageUI"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-  裁剪图片简单UI组件
+  裁剪图片简单UI组件，用于组件化测试
                    DESC
 
   s.homepage     = "https://github.com/vanetaotie/TestDemo"
@@ -39,7 +39,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT"
+  s.license      = "Copyright (c) 2018年 vane. All rights reserved."
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
