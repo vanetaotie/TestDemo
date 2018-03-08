@@ -15,10 +15,13 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - BaiduMapKit (3.0.0)
-  - CTMediator (12)
-  - HandyFrame (1.1.3)
-  - Masonry (1.0.2)
+  - CTMediator (13)
+  - HandyFrame (1.2.0)
+  - Masonry (1.1.0)
   - pop (1.0.10)
+  - SDWebImage (4.2.3):
+    - SDWebImage/Core (= 4.2.3)
+  - SDWebImage/Core (4.2.3)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
@@ -27,15 +30,17 @@ DEPENDENCIES:
   - HandyFrame
   - Masonry
   - pop (~> 1.0)
+  - SDWebImage (~> 4.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   BaiduMapKit: de2a726d5296d6b2dc0e974b683af73153608dcd
-  CTMediator: 83043d198b7ea73214d53375adfdd7f60edd4c1a
-  HandyFrame: 5fef3c197c383332d7d5c838b3f7a85ce2f8f9cc
-  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  CTMediator: 4cbf8ede42efc6b31715be88b78bdc9d94efa840
+  HandyFrame: 437df83ba7563c56cd55b9bd0128561995463110
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
+  SDWebImage: 791bb72962b3492327ddcac4b1880bd1b5458431
 
-PODFILE CHECKSUM: fa02880194436fe51a4c78cbb7c03f2c7e417164
+PODFILE CHECKSUM: 25060a021040dc8bb0cf8440b43fcef4630bf566
 
 COCOAPODS: 1.3.1

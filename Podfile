@@ -8,5 +8,6 @@ pod 'Masonry'
 pod 'pop', '~> 1.0'
 pod "CTMediator"
 pod "HandyFrame"
+pod 'SDWebImage', '~> 4.0'
 use_frameworks!
 end

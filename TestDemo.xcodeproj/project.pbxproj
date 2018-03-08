@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2325D94F1F8B1337005C4208 /* CutImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2325D94E1F8B1337005C4208 /* CutImage.bundle */; };
 		2345FB291FD782FA003E54A0 /* AlgorithmTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2345FB281FD782FA003E54A0 /* AlgorithmTestVC.m */; };
+		235ECC542051256700BE5DB1 /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 235ECC532051256700BE5DB1 /* BannerViewController.m */; };
+		235ECC5A2051273900BE5DB1 /* GGBannerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 235ECC572051273900BE5DB1 /* GGBannerCollectionViewCell.m */; };
+		235ECC5B2051273900BE5DB1 /* GGBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 235ECC592051273900BE5DB1 /* GGBannerView.m */; };
 		23927EA81A7F4538009ABF38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23927EA71A7F4538009ABF38 /* main.m */; };
 		23927EAB1A7F4538009ABF38 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23927EAA1A7F4538009ABF38 /* AppDelegate.m */; };
 		23927EAD1A7F4538009ABF38 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23927EAC1A7F4538009ABF38 /* Images.xcassets */; };
@@ -78,6 +81,12 @@
 		2345FB271FD782FA003E54A0 /* AlgorithmTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgorithmTestVC.h; sourceTree = "<group>"; };
 		2345FB281FD782FA003E54A0 /* AlgorithmTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlgorithmTestVC.m; sourceTree = "<group>"; };
 		2345FB2A1FD78586003E54A0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		235ECC522051256700BE5DB1 /* BannerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerViewController.h; sourceTree = "<group>"; };
+		235ECC532051256700BE5DB1 /* BannerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
+		235ECC562051273900BE5DB1 /* GGBannerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGBannerCollectionViewCell.h; sourceTree = "<group>"; };
+		235ECC572051273900BE5DB1 /* GGBannerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGBannerCollectionViewCell.m; sourceTree = "<group>"; };
+		235ECC582051273900BE5DB1 /* GGBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGBannerView.h; sourceTree = "<group>"; };
+		235ECC592051273900BE5DB1 /* GGBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGBannerView.m; sourceTree = "<group>"; };
 		23927EA21A7F4538009ABF38 /* TestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23927EA61A7F4538009ABF38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23927EA71A7F4538009ABF38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -206,6 +215,27 @@
 			path = Algorithm;
 			sourceTree = "<group>";
 		};
+		235ECC512051131100BE5DB1 /* BannerView */ = {
+			isa = PBXGroup;
+			children = (
+				235ECC552051273900BE5DB1 /* GGBannerView */,
+				235ECC522051256700BE5DB1 /* BannerViewController.h */,
+				235ECC532051256700BE5DB1 /* BannerViewController.m */,
+			);
+			path = BannerView;
+			sourceTree = "<group>";
+		};
+		235ECC552051273900BE5DB1 /* GGBannerView */ = {
+			isa = PBXGroup;
+			children = (
+				235ECC562051273900BE5DB1 /* GGBannerCollectionViewCell.h */,
+				235ECC572051273900BE5DB1 /* GGBannerCollectionViewCell.m */,
+				235ECC582051273900BE5DB1 /* GGBannerView.h */,
+				235ECC592051273900BE5DB1 /* GGBannerView.m */,
+			);
+			path = GGBannerView;
+			sourceTree = "<group>";
+		};
 		23927E991A7F4538009ABF38 = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +259,7 @@
 		23927EA41A7F4538009ABF38 /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				235ECC512051131100BE5DB1 /* BannerView */,
 				23A0FDA61FFE083400C5ADD0 /* SwiftMix */,
 				2345FB261FD782D8003E54A0 /* Algorithm */,
 				23B7AC841FC2C13D00E710CF /* CollectionView */,
@@ -680,6 +711,7 @@
 				"${BUILT_PRODUCTS_DIR}/CTMediator/CTMediator.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyFrame/HandyFrame.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -688,6 +720,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CTMediator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyFrame.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -722,6 +755,8 @@
 				3376D7651B67564F00B0DE06 /* LimitTextInput.m in Sources */,
 				33ECBDF61F304EB90063A3A8 /* DLApiObject.m in Sources */,
 				239F7F3B1AA020C300BC7FF1 /* EventKitTestViewController.m in Sources */,
+				235ECC5A2051273900BE5DB1 /* GGBannerCollectionViewCell.m in Sources */,
+				235ECC542051256700BE5DB1 /* BannerViewController.m in Sources */,
 				23927EA81A7F4538009ABF38 /* main.m in Sources */,
 				33ECBDF31F304C7E0063A3A8 /* DLApi.m in Sources */,
 				33FCD62C1B1D3843008A0292 /* AnimationTestView.m in Sources */,
@@ -732,6 +767,7 @@
 				33166CB11B09AF6A0033DE81 /* DLAlertView.m in Sources */,
 				23A0FDA91FFE087300C5ADD0 /* SwiftTest.swift in Sources */,
 				33166CAE1B0990B50033DE81 /* DLAlertViewController.m in Sources */,
+				235ECC5B2051273900BE5DB1 /* GGBannerView.m in Sources */,
 				239F7F371AA018EA00BC7FF1 /* PopView.m in Sources */,
 				2345FB291FD782FA003E54A0 /* AlgorithmTestVC.m in Sources */,
 				33FCD6261B1D37DA008A0292 /* GAndATestViewController.m in Sources */,
