@@ -10,8 +10,14 @@
 		2325D94F1F8B1337005C4208 /* CutImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2325D94E1F8B1337005C4208 /* CutImage.bundle */; };
 		2345FB291FD782FA003E54A0 /* AlgorithmTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2345FB281FD782FA003E54A0 /* AlgorithmTestVC.m */; };
 		235ECC542051256700BE5DB1 /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 235ECC532051256700BE5DB1 /* BannerViewController.m */; };
-		235ECC5A2051273900BE5DB1 /* GGBannerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 235ECC572051273900BE5DB1 /* GGBannerCollectionViewCell.m */; };
-		235ECC5B2051273900BE5DB1 /* GGBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 235ECC592051273900BE5DB1 /* GGBannerView.m */; };
+		23798E2B20513F7E00FF2934 /* ZYBannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23798E2520513F7E00FF2934 /* ZYBannerCell.m */; };
+		23798E2C20513F7E00FF2934 /* ZYBannerFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 23798E2720513F7E00FF2934 /* ZYBannerFooter.m */; };
+		23798E2D20513F7E00FF2934 /* ZYBannerView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 23798E2820513F7E00FF2934 /* ZYBannerView.bundle */; };
+		23798E2E20513F7E00FF2934 /* ZYBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23798E2A20513F7E00FF2934 /* ZYBannerView.m */; };
+		23798E342051406900FF2934 /* ad_0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23798E302051406900FF2934 /* ad_0.jpg */; };
+		23798E352051406900FF2934 /* ad_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23798E312051406900FF2934 /* ad_1.jpg */; };
+		23798E362051406900FF2934 /* ad_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23798E322051406900FF2934 /* ad_2.jpg */; };
+		23798E372051406900FF2934 /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 23798E332051406900FF2934 /* demo.gif */; };
 		23927EA81A7F4538009ABF38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23927EA71A7F4538009ABF38 /* main.m */; };
 		23927EAB1A7F4538009ABF38 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23927EAA1A7F4538009ABF38 /* AppDelegate.m */; };
 		23927EAD1A7F4538009ABF38 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23927EAC1A7F4538009ABF38 /* Images.xcassets */; };
@@ -29,9 +35,6 @@
 		239F7F531AA06E2D00BC7FF1 /* PlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 239F7F521AA06E2D00BC7FF1 /* PlayerView.m */; };
 		23A0FDA91FFE087300C5ADD0 /* SwiftTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A0FDA81FFE087300C5ADD0 /* SwiftTest.swift */; };
 		23A0FDAC1FFE305700C5ADD0 /* SwiftOCTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A0FDAB1FFE305700C5ADD0 /* SwiftOCTest.m */; };
-		23B7AC871FC2C15E00E710CF /* CTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B7AC861FC2C15E00E710CF /* CTViewController.m */; };
-		23B7AC8A1FC2DD8800E710CF /* CTCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B7AC891FC2DD8800E710CF /* CTCollectionViewCell.m */; };
-		23B7AC8D1FC2DDB900E710CF /* CTCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B7AC8C1FC2DDB900E710CF /* CTCollectionReusableView.m */; };
 		23F11E281F7E2DF0004E2649 /* CutImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F11E271F7E2DF0004E2649 /* CutImageViewController.m */; };
 		23F11E2B1F7E3158004E2649 /* CutImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F11E2A1F7E3158004E2649 /* CutImageView.m */; };
 		33166CAE1B0990B50033DE81 /* DLAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33166CAD1B0990B50033DE81 /* DLAlertViewController.m */; };
@@ -83,10 +86,17 @@
 		2345FB2A1FD78586003E54A0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		235ECC522051256700BE5DB1 /* BannerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerViewController.h; sourceTree = "<group>"; };
 		235ECC532051256700BE5DB1 /* BannerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
-		235ECC562051273900BE5DB1 /* GGBannerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGBannerCollectionViewCell.h; sourceTree = "<group>"; };
-		235ECC572051273900BE5DB1 /* GGBannerCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGBannerCollectionViewCell.m; sourceTree = "<group>"; };
-		235ECC582051273900BE5DB1 /* GGBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGBannerView.h; sourceTree = "<group>"; };
-		235ECC592051273900BE5DB1 /* GGBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGBannerView.m; sourceTree = "<group>"; };
+		23798E2420513F7E00FF2934 /* ZYBannerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYBannerCell.h; sourceTree = "<group>"; };
+		23798E2520513F7E00FF2934 /* ZYBannerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYBannerCell.m; sourceTree = "<group>"; };
+		23798E2620513F7E00FF2934 /* ZYBannerFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYBannerFooter.h; sourceTree = "<group>"; };
+		23798E2720513F7E00FF2934 /* ZYBannerFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYBannerFooter.m; sourceTree = "<group>"; };
+		23798E2820513F7E00FF2934 /* ZYBannerView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ZYBannerView.bundle; sourceTree = "<group>"; };
+		23798E2920513F7E00FF2934 /* ZYBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYBannerView.h; sourceTree = "<group>"; };
+		23798E2A20513F7E00FF2934 /* ZYBannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYBannerView.m; sourceTree = "<group>"; };
+		23798E302051406900FF2934 /* ad_0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ad_0.jpg; sourceTree = "<group>"; };
+		23798E312051406900FF2934 /* ad_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ad_1.jpg; sourceTree = "<group>"; };
+		23798E322051406900FF2934 /* ad_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ad_2.jpg; sourceTree = "<group>"; };
+		23798E332051406900FF2934 /* demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo.gif; sourceTree = "<group>"; };
 		23927EA21A7F4538009ABF38 /* TestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23927EA61A7F4538009ABF38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23927EA71A7F4538009ABF38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -119,12 +129,6 @@
 		23A0FDA81FFE087300C5ADD0 /* SwiftTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTest.swift; sourceTree = "<group>"; };
 		23A0FDAA1FFE305700C5ADD0 /* SwiftOCTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftOCTest.h; sourceTree = "<group>"; };
 		23A0FDAB1FFE305700C5ADD0 /* SwiftOCTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwiftOCTest.m; sourceTree = "<group>"; };
-		23B7AC851FC2C15E00E710CF /* CTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTViewController.h; sourceTree = "<group>"; };
-		23B7AC861FC2C15E00E710CF /* CTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTViewController.m; sourceTree = "<group>"; };
-		23B7AC881FC2DD8800E710CF /* CTCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTCollectionViewCell.h; sourceTree = "<group>"; };
-		23B7AC891FC2DD8800E710CF /* CTCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTCollectionViewCell.m; sourceTree = "<group>"; };
-		23B7AC8B1FC2DDB900E710CF /* CTCollectionReusableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTCollectionReusableView.h; sourceTree = "<group>"; };
-		23B7AC8C1FC2DDB900E710CF /* CTCollectionReusableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTCollectionReusableView.m; sourceTree = "<group>"; };
 		23F11E261F7E2DF0004E2649 /* CutImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CutImageViewController.h; sourceTree = "<group>"; };
 		23F11E271F7E2DF0004E2649 /* CutImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CutImageViewController.m; sourceTree = "<group>"; };
 		23F11E291F7E3158004E2649 /* CutImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CutImageView.h; sourceTree = "<group>"; };
@@ -218,22 +222,37 @@
 		235ECC512051131100BE5DB1 /* BannerView */ = {
 			isa = PBXGroup;
 			children = (
-				235ECC552051273900BE5DB1 /* GGBannerView */,
+				23798E2F2051406900FF2934 /* Resource */,
+				23798E2320513F7E00FF2934 /* ZYBannerView */,
 				235ECC522051256700BE5DB1 /* BannerViewController.h */,
 				235ECC532051256700BE5DB1 /* BannerViewController.m */,
 			);
 			path = BannerView;
 			sourceTree = "<group>";
 		};
-		235ECC552051273900BE5DB1 /* GGBannerView */ = {
+		23798E2320513F7E00FF2934 /* ZYBannerView */ = {
 			isa = PBXGroup;
 			children = (
-				235ECC562051273900BE5DB1 /* GGBannerCollectionViewCell.h */,
-				235ECC572051273900BE5DB1 /* GGBannerCollectionViewCell.m */,
-				235ECC582051273900BE5DB1 /* GGBannerView.h */,
-				235ECC592051273900BE5DB1 /* GGBannerView.m */,
+				23798E2420513F7E00FF2934 /* ZYBannerCell.h */,
+				23798E2520513F7E00FF2934 /* ZYBannerCell.m */,
+				23798E2620513F7E00FF2934 /* ZYBannerFooter.h */,
+				23798E2720513F7E00FF2934 /* ZYBannerFooter.m */,
+				23798E2820513F7E00FF2934 /* ZYBannerView.bundle */,
+				23798E2920513F7E00FF2934 /* ZYBannerView.h */,
+				23798E2A20513F7E00FF2934 /* ZYBannerView.m */,
 			);
-			path = GGBannerView;
+			path = ZYBannerView;
+			sourceTree = "<group>";
+		};
+		23798E2F2051406900FF2934 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				23798E302051406900FF2934 /* ad_0.jpg */,
+				23798E312051406900FF2934 /* ad_1.jpg */,
+				23798E322051406900FF2934 /* ad_2.jpg */,
+				23798E332051406900FF2934 /* demo.gif */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		23927E991A7F4538009ABF38 = {
@@ -262,7 +281,6 @@
 				235ECC512051131100BE5DB1 /* BannerView */,
 				23A0FDA61FFE083400C5ADD0 /* SwiftMix */,
 				2345FB261FD782D8003E54A0 /* Algorithm */,
-				23B7AC841FC2C13D00E710CF /* CollectionView */,
 				23F11E251F7E2DD0004E2649 /* CutImage */,
 				C24CB2F71F4AB1D700610C6B /* UIImageTest */,
 				33DCA5261EB885DA008BFD65 /* Utility */,
@@ -388,19 +406,6 @@
 				23A0FDAB1FFE305700C5ADD0 /* SwiftOCTest.m */,
 			);
 			path = SwiftMix;
-			sourceTree = "<group>";
-		};
-		23B7AC841FC2C13D00E710CF /* CollectionView */ = {
-			isa = PBXGroup;
-			children = (
-				23B7AC851FC2C15E00E710CF /* CTViewController.h */,
-				23B7AC861FC2C15E00E710CF /* CTViewController.m */,
-				23B7AC881FC2DD8800E710CF /* CTCollectionViewCell.h */,
-				23B7AC891FC2DD8800E710CF /* CTCollectionViewCell.m */,
-				23B7AC8B1FC2DDB900E710CF /* CTCollectionReusableView.h */,
-				23B7AC8C1FC2DDB900E710CF /* CTCollectionReusableView.m */,
-			);
-			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		23F11E251F7E2DD0004E2649 /* CutImage */ = {
@@ -640,14 +645,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23798E342051406900FF2934 /* ad_0.jpg in Resources */,
+				23798E372051406900FF2934 /* demo.gif in Resources */,
+				23798E362051406900FF2934 /* ad_2.jpg in Resources */,
 				23927EB01A7F4538009ABF38 /* LaunchScreen.xib in Resources */,
 				B574EF751ABFAD470046F300 /* capsLockUpper@2x.png in Resources */,
 				33DC64FA1EAEEB8B008BFD65 /* CommonResource.bundle in Resources */,
+				23798E2D20513F7E00FF2934 /* ZYBannerView.bundle in Resources */,
 				33FCD6201B146919008A0292 /* TestFiles in Resources */,
 				B574EF6B1ABBEA4D0046F300 /* capsLock@2x.png in Resources */,
 				239BD3121AA5B64F0028ED05 /* playerviewlib.bundle in Resources */,
 				2325D94F1F8B1337005C4208 /* CutImage.bundle in Resources */,
 				33F0B47F1D8926C7002A63E6 /* ftserver.cer in Resources */,
+				23798E352051406900FF2934 /* ad_1.jpg in Resources */,
 				23927EAD1A7F4538009ABF38 /* Images.xcassets in Resources */,
 				33FCCA6F1DDAEE1F0001BD27 /* gwmamserver.cer in Resources */,
 				B574EF671ABBE95C0046F300 /* deleteChar@2x.png in Resources */,
@@ -738,24 +748,22 @@
 				B5A981831AB84A0E00EDFAD1 /* RandomKeyBoardView.m in Sources */,
 				23927EAB1A7F4538009ABF38 /* AppDelegate.m in Sources */,
 				C24CB2FA1F4AB1FB00610C6B /* UIImageTestViewController.m in Sources */,
-				23B7AC871FC2C15E00E710CF /* CTViewController.m in Sources */,
 				33DC64FB1EAEEB8B008BFD65 /* ThemeManager.m in Sources */,
 				239F7F461AA042E100BC7FF1 /* CollectionTestViewController.m in Sources */,
 				334932A31E24767400C9DCF2 /* TestManager.m in Sources */,
-				23B7AC8A1FC2DD8800E710CF /* CTCollectionViewCell.m in Sources */,
 				B5A981801AB82C3700EDFAD1 /* KeyBoardViewController.m in Sources */,
 				23A0FDAC1FFE305700C5ADD0 /* SwiftOCTest.m in Sources */,
 				33DCA5291EB88746008BFD65 /* UITabBar+Utility.m in Sources */,
-				23B7AC8D1FC2DDB900E710CF /* CTCollectionReusableView.m in Sources */,
 				33E8B5B91BE0A43A00A27367 /* ScrollTextViewController.m in Sources */,
+				23798E2C20513F7E00FF2934 /* ZYBannerFooter.m in Sources */,
 				3376D7711B6766FD00B0DE06 /* LimitInputViewController.m in Sources */,
 				23927EC71A7F457D009ABF38 /* MainViewController.m in Sources */,
 				B574EF6F1ABC076C0046F300 /* PlayerViewController.m in Sources */,
 				33FCD6291B1D3833008A0292 /* GraphicsTestView.m in Sources */,
 				3376D7651B67564F00B0DE06 /* LimitTextInput.m in Sources */,
 				33ECBDF61F304EB90063A3A8 /* DLApiObject.m in Sources */,
+				23798E2B20513F7E00FF2934 /* ZYBannerCell.m in Sources */,
 				239F7F3B1AA020C300BC7FF1 /* EventKitTestViewController.m in Sources */,
-				235ECC5A2051273900BE5DB1 /* GGBannerCollectionViewCell.m in Sources */,
 				235ECC542051256700BE5DB1 /* BannerViewController.m in Sources */,
 				23927EA81A7F4538009ABF38 /* main.m in Sources */,
 				33ECBDF31F304C7E0063A3A8 /* DLApi.m in Sources */,
@@ -765,9 +773,9 @@
 				33F0B47A1D88EC60002A63E6 /* NetworkTest.m in Sources */,
 				23F11E2B1F7E3158004E2649 /* CutImageView.m in Sources */,
 				33166CB11B09AF6A0033DE81 /* DLAlertView.m in Sources */,
+				23798E2E20513F7E00FF2934 /* ZYBannerView.m in Sources */,
 				23A0FDA91FFE087300C5ADD0 /* SwiftTest.swift in Sources */,
 				33166CAE1B0990B50033DE81 /* DLAlertViewController.m in Sources */,
-				235ECC5B2051273900BE5DB1 /* GGBannerView.m in Sources */,
 				239F7F371AA018EA00BC7FF1 /* PopView.m in Sources */,
 				2345FB291FD782FA003E54A0 /* AlgorithmTestVC.m in Sources */,
 				33FCD6261B1D37DA008A0292 /* GAndATestViewController.m in Sources */,

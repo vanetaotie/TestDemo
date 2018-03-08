@@ -20,6 +20,7 @@
 #import "NetworkTest.h"
 #import "WebViewController.h"
 #import "CutImageViewController.h"
+#import "BannerViewController.h"
 
 #import "DLImage.h"
 #import "ThemeManager.h"
@@ -80,7 +81,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 14;
+    return 15;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -121,6 +122,8 @@
         cell.textLabel.text = @"SkipTest";
     } else if (indexPath.row == 13) {
         cell.textLabel.text = @"CutImage";
+    } else if (indexPath.row == 14) {
+        cell.textLabel.text = @"BannerView";
     }
     
     return cell;
@@ -222,6 +225,10 @@
             NSLog(@"%@", image);
         };
         
+        [vc setHidesBottomBarWhenPushed:YES];
+        [self.navigationController pushViewController:vc animated:YES];
+    } else if (indexPath.row == 14) {
+        BannerViewController *vc = [[BannerViewController alloc] init];
         [vc setHidesBottomBarWhenPushed:YES];
         [self.navigationController pushViewController:vc animated:YES];
     }
