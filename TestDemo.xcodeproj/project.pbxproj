@@ -62,6 +62,8 @@
 		B574EF751ABFAD470046F300 /* capsLockUpper@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B574EF741ABFAD470046F300 /* capsLockUpper@2x.png */; };
 		B5A981801AB82C3700EDFAD1 /* KeyBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A9817F1AB82C3700EDFAD1 /* KeyBoardViewController.m */; };
 		B5A981831AB84A0E00EDFAD1 /* RandomKeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A981821AB84A0E00EDFAD1 /* RandomKeyBoardView.m */; };
+		C24CB2FA1F4AB1FB00610C6B /* UIImageTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24CB2F91F4AB1FB00610C6B /* UIImageTestViewController.m */; };
+		C2617A9320916F2500CFEEDD /* HorizontalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2617A9220916F2500CFEEDD /* HorizontalViewController.m */; };
 		C9D42F76A3677742264BF9A3 /* Pods_TestDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 698D173C9C8E567866D59F88 /* Pods_TestDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -172,6 +174,10 @@
 		B5A9817F1AB82C3700EDFAD1 /* KeyBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyBoardViewController.m; sourceTree = "<group>"; };
 		B5A981811AB84A0E00EDFAD1 /* RandomKeyBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomKeyBoardView.h; sourceTree = "<group>"; };
 		B5A981821AB84A0E00EDFAD1 /* RandomKeyBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomKeyBoardView.m; sourceTree = "<group>"; };
+		C24CB2F81F4AB1FB00610C6B /* UIImageTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageTestViewController.h; sourceTree = "<group>"; };
+		C24CB2F91F4AB1FB00610C6B /* UIImageTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageTestViewController.m; sourceTree = "<group>"; };
+		C2617A9120916F2500CFEEDD /* HorizontalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HorizontalViewController.h; sourceTree = "<group>"; };
+		C2617A9220916F2500CFEEDD /* HorizontalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HorizontalViewController.m; sourceTree = "<group>"; };
 		DC46164237DCA7E733FF48F3 /* Pods-TestDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestDemo/Pods-TestDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -266,6 +272,7 @@
 		23927EA41A7F4538009ABF38 /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				C2617A9020916F0C00CFEEDD /* HorizontalView */,
 				235ECC512051131100BE5DB1 /* BannerView */,
 				23F11E251F7E2DD0004E2649 /* CutImage */,
 				33ECBDF01F304C3C0063A3A8 /* OAuth2.0 */,
@@ -516,6 +523,24 @@
 			path = KeyBoardTest;
 			sourceTree = "<group>";
 		};
+		C24CB2F71F4AB1D700610C6B /* UIImageTest */ = {
+			isa = PBXGroup;
+			children = (
+				C24CB2F81F4AB1FB00610C6B /* UIImageTestViewController.h */,
+				C24CB2F91F4AB1FB00610C6B /* UIImageTestViewController.m */,
+			);
+			path = UIImageTest;
+			sourceTree = "<group>";
+		};
+		C2617A9020916F0C00CFEEDD /* HorizontalView */ = {
+			isa = PBXGroup;
+			children = (
+				C2617A9120916F2500CFEEDD /* HorizontalViewController.h */,
+				C2617A9220916F2500CFEEDD /* HorizontalViewController.m */,
+			);
+			path = HorizontalView;
+			sourceTree = "<group>";
+		};
 		CAA261CCD4A0F6E3D0C42010 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -749,6 +774,7 @@
 				33FCD6261B1D37DA008A0292 /* GAndATestViewController.m in Sources */,
 				33FCCA6D1DD9A2130001BD27 /* WebViewController.m in Sources */,
 				239F7F531AA06E2D00BC7FF1 /* PlayerView.m in Sources */,
+				C2617A9320916F2500CFEEDD /* HorizontalViewController.m in Sources */,
 				239F7F491AA043BC00BC7FF1 /* CollectionCell.m in Sources */,
 				33AAC12A1C90FDF300AC1504 /* QCodeTestViewController.m in Sources */,
 			);

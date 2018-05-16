@@ -21,6 +21,7 @@
 #import "WebViewController.h"
 #import "CutImageViewController.h"
 #import "BannerViewController.h"
+#import "HorizontalViewController.h"
 #import "DLApi.h"
 #import "UITabBar+Utility.h"
 
@@ -53,7 +54,8 @@
                                  NSStringFromClass([WebViewController class]),
                                  NSStringFromClass([DLApi class]),
                                  NSStringFromClass([CutImageViewController class]),
-                                 NSStringFromClass([BannerViewController class])
+                                 NSStringFromClass([BannerViewController class]),
+                                 NSStringFromClass([HorizontalViewController class])
                                  ];
     
     [self.view addSubview:self.mainTableView];
@@ -176,6 +178,8 @@
     } else if ([vcTitle isEqualToString:NSStringFromClass([BannerViewController class])]) {
         vc = [[BannerViewController alloc] init];
         
+    } else if ([vcTitle isEqualToString:NSStringFromClass([HorizontalViewController class])]) {
+        vc = [[HorizontalViewController alloc] init];
     }
     
     vc.title = vcTitle;
