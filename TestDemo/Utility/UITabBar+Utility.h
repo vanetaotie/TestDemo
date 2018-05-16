@@ -15,7 +15,7 @@
  @param index 第几个控制器显示，从0开始算起
  @param tabbarNum tabbarcontroller一共多少个控制器
  */
-- (void)showBadgeOnItmIndex:(int)index tabbarNum:(int)tabbarNum;
+- (void)showBadgeOnItemIndex:(int)index tabbarNum:(int)tabbarNum;
 
 /**
  隐藏红点

@@ -40,13 +40,10 @@
 		33166CAE1B0990B50033DE81 /* DLAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33166CAD1B0990B50033DE81 /* DLAlertViewController.m */; };
 		33166CB11B09AF6A0033DE81 /* DLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33166CB01B09AF6A0033DE81 /* DLAlertView.m */; };
 		3318A32A1D52CA2C003FBF6A /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3318A3291D52CA2C003FBF6A /* JavaScriptCore.framework */; };
-		334932A31E24767400C9DCF2 /* TestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 334932A21E24767400C9DCF2 /* TestManager.m */; };
 		336137991E0BCB1B001E4A6E /* SugerNetworkFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 336137981E0BCB1B001E4A6E /* SugerNetworkFramework.framework */; };
 		3376D7651B67564F00B0DE06 /* LimitTextInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 3376D7641B67564F00B0DE06 /* LimitTextInput.m */; };
 		3376D7711B6766FD00B0DE06 /* LimitInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3376D7701B6766FD00B0DE06 /* LimitInputViewController.m */; };
 		33AAC12A1C90FDF300AC1504 /* QCodeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AAC1291C90FDF300AC1504 /* QCodeTestViewController.m */; };
-		33DC64FA1EAEEB8B008BFD65 /* CommonResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 33DC64F61EAEEB8B008BFD65 /* CommonResource.bundle */; };
-		33DC64FB1EAEEB8B008BFD65 /* ThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DC64F91EAEEB8B008BFD65 /* ThemeManager.m */; };
 		33DCA5291EB88746008BFD65 /* UITabBar+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DCA5281EB88746008BFD65 /* UITabBar+Utility.m */; };
 		33E8B5B91BE0A43A00A27367 /* ScrollTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E8B5B81BE0A43A00A27367 /* ScrollTextViewController.m */; };
 		33ECBDF31F304C7E0063A3A8 /* DLApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 33ECBDF21F304C7E0063A3A8 /* DLApi.m */; };
@@ -65,7 +62,6 @@
 		B574EF751ABFAD470046F300 /* capsLockUpper@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B574EF741ABFAD470046F300 /* capsLockUpper@2x.png */; };
 		B5A981801AB82C3700EDFAD1 /* KeyBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A9817F1AB82C3700EDFAD1 /* KeyBoardViewController.m */; };
 		B5A981831AB84A0E00EDFAD1 /* RandomKeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A981821AB84A0E00EDFAD1 /* RandomKeyBoardView.m */; };
-		C24CB2FA1F4AB1FB00610C6B /* UIImageTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24CB2F91F4AB1FB00610C6B /* UIImageTestViewController.m */; };
 		C9D42F76A3677742264BF9A3 /* Pods_TestDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 698D173C9C8E567866D59F88 /* Pods_TestDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -138,8 +134,6 @@
 		33166CAF1B09AF6A0033DE81 /* DLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAlertView.h; sourceTree = "<group>"; };
 		33166CB01B09AF6A0033DE81 /* DLAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAlertView.m; sourceTree = "<group>"; };
 		3318A3291D52CA2C003FBF6A /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		334932A11E24767400C9DCF2 /* TestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestManager.h; sourceTree = "<group>"; };
-		334932A21E24767400C9DCF2 /* TestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestManager.m; sourceTree = "<group>"; };
 		336137981E0BCB1B001E4A6E /* SugerNetworkFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SugerNetworkFramework.framework; sourceTree = "<group>"; };
 		3376D7631B67564F00B0DE06 /* LimitTextInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LimitTextInput.h; sourceTree = "<group>"; };
 		3376D7641B67564F00B0DE06 /* LimitTextInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LimitTextInput.m; sourceTree = "<group>"; };
@@ -147,10 +141,6 @@
 		3376D7701B6766FD00B0DE06 /* LimitInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LimitInputViewController.m; sourceTree = "<group>"; };
 		33AAC1281C90FDF300AC1504 /* QCodeTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCodeTestViewController.h; sourceTree = "<group>"; };
 		33AAC1291C90FDF300AC1504 /* QCodeTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCodeTestViewController.m; sourceTree = "<group>"; };
-		33DC64F61EAEEB8B008BFD65 /* CommonResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CommonResource.bundle; sourceTree = "<group>"; };
-		33DC64F71EAEEB8B008BFD65 /* DLImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLImage.h; sourceTree = "<group>"; };
-		33DC64F81EAEEB8B008BFD65 /* ThemeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeManager.h; sourceTree = "<group>"; };
-		33DC64F91EAEEB8B008BFD65 /* ThemeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeManager.m; sourceTree = "<group>"; };
 		33DCA5271EB88746008BFD65 /* UITabBar+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+Utility.h"; sourceTree = "<group>"; };
 		33DCA5281EB88746008BFD65 /* UITabBar+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+Utility.m"; sourceTree = "<group>"; };
 		33E8B5B71BE0A43A00A27367 /* ScrollTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollTextViewController.h; sourceTree = "<group>"; };
@@ -182,8 +172,6 @@
 		B5A9817F1AB82C3700EDFAD1 /* KeyBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyBoardViewController.m; sourceTree = "<group>"; };
 		B5A981811AB84A0E00EDFAD1 /* RandomKeyBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomKeyBoardView.h; sourceTree = "<group>"; };
 		B5A981821AB84A0E00EDFAD1 /* RandomKeyBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomKeyBoardView.m; sourceTree = "<group>"; };
-		C24CB2F81F4AB1FB00610C6B /* UIImageTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageTestViewController.h; sourceTree = "<group>"; };
-		C24CB2F91F4AB1FB00610C6B /* UIImageTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageTestViewController.m; sourceTree = "<group>"; };
 		DC46164237DCA7E733FF48F3 /* Pods-TestDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestDemo/Pods-TestDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -279,18 +267,9 @@
 			isa = PBXGroup;
 			children = (
 				235ECC512051131100BE5DB1 /* BannerView */,
-				23A0FDA61FFE083400C5ADD0 /* SwiftMix */,
-				2345FB261FD782D8003E54A0 /* Algorithm */,
 				23F11E251F7E2DD0004E2649 /* CutImage */,
-				C24CB2F71F4AB1D700610C6B /* UIImageTest */,
-				33DCA5261EB885DA008BFD65 /* Utility */,
-				33DC64F61EAEEB8B008BFD65 /* CommonResource.bundle */,
-				33DC64F71EAEEB8B008BFD65 /* DLImage.h */,
-				33DC64F81EAEEB8B008BFD65 /* ThemeManager.h */,
-				33DC64F91EAEEB8B008BFD65 /* ThemeManager.m */,
 				33ECBDF01F304C3C0063A3A8 /* OAuth2.0 */,
 				33FCCA6A1DD9A1F90001BD27 /* WebViewTest */,
-				33FCD61F1B146919008A0292 /* TestFiles */,
 				33AAC1271C90FDBD00AC1504 /* QCodeTest */,
 				33E8B5B61BE0A3BA00A27367 /* ScrollTextLabel */,
 				3376D7621B67562B00B0DE06 /* LimitTextInput */,
@@ -306,8 +285,12 @@
 				23927EC61A7F457D009ABF38 /* MainViewController.m */,
 				23927EA91A7F4538009ABF38 /* AppDelegate.h */,
 				23927EAA1A7F4538009ABF38 /* AppDelegate.m */,
+				23A0FDA61FFE083400C5ADD0 /* SwiftMix */,
+				2345FB261FD782D8003E54A0 /* Algorithm */,
+				33DCA5261EB885DA008BFD65 /* Utility */,
 				23927EAC1A7F4538009ABF38 /* Images.xcassets */,
 				23927EAE1A7F4538009ABF38 /* LaunchScreen.xib */,
+				33FCD61F1B146919008A0292 /* TestFiles */,
 				23927EA51A7F4538009ABF38 /* Supporting Files */,
 			);
 			path = TestDemo;
@@ -485,8 +468,6 @@
 			children = (
 				33F0B4781D88EC60002A63E6 /* NetworkTest.h */,
 				33F0B4791D88EC60002A63E6 /* NetworkTest.m */,
-				334932A11E24767400C9DCF2 /* TestManager.h */,
-				334932A21E24767400C9DCF2 /* TestManager.m */,
 			);
 			path = NetworkTest;
 			sourceTree = "<group>";
@@ -533,15 +514,6 @@
 				B5A981821AB84A0E00EDFAD1 /* RandomKeyBoardView.m */,
 			);
 			path = KeyBoardTest;
-			sourceTree = "<group>";
-		};
-		C24CB2F71F4AB1D700610C6B /* UIImageTest */ = {
-			isa = PBXGroup;
-			children = (
-				C24CB2F81F4AB1FB00610C6B /* UIImageTestViewController.h */,
-				C24CB2F91F4AB1FB00610C6B /* UIImageTestViewController.m */,
-			);
-			path = UIImageTest;
 			sourceTree = "<group>";
 		};
 		CAA261CCD4A0F6E3D0C42010 /* Pods */ = {
@@ -650,7 +622,6 @@
 				23798E362051406900FF2934 /* ad_2.jpg in Resources */,
 				23927EB01A7F4538009ABF38 /* LaunchScreen.xib in Resources */,
 				B574EF751ABFAD470046F300 /* capsLockUpper@2x.png in Resources */,
-				33DC64FA1EAEEB8B008BFD65 /* CommonResource.bundle in Resources */,
 				23798E2D20513F7E00FF2934 /* ZYBannerView.bundle in Resources */,
 				33FCD6201B146919008A0292 /* TestFiles in Resources */,
 				B574EF6B1ABBEA4D0046F300 /* capsLock@2x.png in Resources */,
@@ -747,10 +718,7 @@
 			files = (
 				B5A981831AB84A0E00EDFAD1 /* RandomKeyBoardView.m in Sources */,
 				23927EAB1A7F4538009ABF38 /* AppDelegate.m in Sources */,
-				C24CB2FA1F4AB1FB00610C6B /* UIImageTestViewController.m in Sources */,
-				33DC64FB1EAEEB8B008BFD65 /* ThemeManager.m in Sources */,
 				239F7F461AA042E100BC7FF1 /* CollectionTestViewController.m in Sources */,
-				334932A31E24767400C9DCF2 /* TestManager.m in Sources */,
 				B5A981801AB82C3700EDFAD1 /* KeyBoardViewController.m in Sources */,
 				23A0FDAC1FFE305700C5ADD0 /* SwiftOCTest.m in Sources */,
 				33DCA5291EB88746008BFD65 /* UITabBar+Utility.m in Sources */,

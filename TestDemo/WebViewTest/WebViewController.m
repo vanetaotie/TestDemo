@@ -14,8 +14,6 @@
 @property (strong, nonatomic) UIWebView *uiWebView;
 @property (strong, nonatomic) WKWebView *wkWebView;
 
-@property (strong, nonatomic) UIScrollView *myview;
-
 @end
 
 @implementation WebViewController
@@ -37,8 +35,6 @@
 
     [self requestWK];
     
-    
-    
 //    [self initUIWebView];
 //
 //    NSString *height_str = @"37592";//37592
@@ -51,28 +47,6 @@
 //    NSLog(@"string = %@, %f",height_str, self.uiWebView.frame.size.height);
 //
 //    [self requestUI];
-    
-    
-    
-//    [self.view addSubview:self.myview];
-//
-//    NSString *height_str = @"37592";//37592
-//    NSLog(@"string = %@, %f",height_str, self.myview.frame.size.height);
-//
-//    CGRect frame = self.myview.frame;
-//    frame.size.height = [height_str floatValue];
-//    self.myview.frame = frame;
-//
-//    NSLog(@"string = %@, %f",height_str, self.myview.frame.size.height);
-}
-
-- (UIScrollView *)myview
-{
-    if (!_myview) {
-        _myview = [[UIScrollView alloc] initWithFrame:self.view.bounds];
-        _myview.backgroundColor = [UIColor yellowColor];
-    }
-    return _myview;
 }
 
 #pragma mark - WKWebviewTest

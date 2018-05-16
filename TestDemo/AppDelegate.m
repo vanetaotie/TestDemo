@@ -20,46 +20,27 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    NSLog(@"yoho1");
-    NSLog(@"yoho branch 1");
-    NSLog(@"yoho branch 2");
-    
+
     SwiftTest *vc = [[SwiftTest alloc] init];
     NSLog(@"SwiftDemo:%@", [vc f1]);
     [vc f2];
     
     MainViewController *mainVC = [[MainViewController alloc] init];
     UINavigationController *mainNav = [[UINavigationController alloc] initWithRootViewController:mainVC];
-    mainNav.tabBarItem.title = @"main";
+//    mainNav.tabBarItem.title = @"main";
     
-    UIViewController *testVC = [[UIViewController alloc] init];
-    testVC.tabBarItem.title = @"test";
+//    UIViewController *testVC = [[UIViewController alloc] init];
+//    testVC.tabBarItem.title = @"test";
+//
+//    UITabBarController *mainTabBarVC = [[UITabBarController alloc] init];
+//    mainTabBarVC.viewControllers = [NSArray arrayWithObjects:mainNav, testVC, nil];
+//
+//    [mainTabBarVC.tabBar showBadgeOnItemIndex:1 tabbarNum:2];
+//
+//    UINavigationController *appNav = [[UINavigationController alloc] initWithRootViewController:mainTabBarVC];
+//    appNav.navigationBarHidden = YES;
     
-    UIViewController *testVC2 = [[UIViewController alloc] init];
-    testVC2.tabBarItem.title = @"test2";
-    
-    UITabBarController *mainTabBarVC = [[UITabBarController alloc] init];
-    mainTabBarVC.viewControllers = [NSArray arrayWithObjects:mainNav, testVC, testVC2, nil];
-    
-    [mainTabBarVC.tabBar showBadgeOnItmIndex:0 tabbarNum:3];
-    [mainTabBarVC.tabBar showBadgeOnItmIndex:1 tabbarNum:3];
-    
-    UINavigationController *appNav = [[UINavigationController alloc] initWithRootViewController:mainTabBarVC];
-    appNav.navigationBarHidden = YES;
-    //***********************语法测试***********************
-
-    int x = 12345;
-    int s = 0;
-    while (x != 0) {
-        s = s * 10 + x % 10;
-        x = x / 10;
-    }
-    
-    NSLog(@"%d",s);
-
-    //***********************语法测试***********************
-    
-    [self.window setRootViewController:appNav];
+    [self.window setRootViewController:mainNav];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     

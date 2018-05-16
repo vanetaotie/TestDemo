@@ -7,8 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <StoreKit/StoreKit.h>
 
-@interface MainViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, SKStoreProductViewControllerDelegate>
+@interface MainViewController : UIViewController 
 
 @end

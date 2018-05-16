@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "NetworkTest.h"
 #import "FloatWindowViewController.h"
 #import "EventKitTestViewController.h"
 #import "CollectionTestViewController.h"
@@ -17,48 +18,45 @@
 #import "LimitInputViewController.h"
 #import "ScrollTextViewController.h"
 #import "QCodeTestViewController.h"
-#import "NetworkTest.h"
 #import "WebViewController.h"
 #import "CutImageViewController.h"
 #import "BannerViewController.h"
-
-#import "DLImage.h"
-#import "ThemeManager.h"
-#import "UITabBar+Utility.h"
 #import "DLApi.h"
+#import "UITabBar+Utility.h"
+
+@interface MainViewController () <UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, strong) UITableView *mainTableView;
+@property (nonatomic, strong) NSArray *mainViewControllers;
+
+@end
 
 @implementation MainViewController
-{
-    UITableView *mainTableView;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-#ifdef __IPHONE_11_0
-    if (@available(iOS 11.0, *)) {
-        mainTableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
-    } else {
-        self.automaticallyAdjustsScrollViewInsets = NO;
-    }
-#endif
+    self.title = @"TestDemo";
+    self.mainViewControllers = @[
+                                 NSStringFromClass([NetworkTest class]),
+                                 NSStringFromClass([FloatWindowViewController class]),
+                                 NSStringFromClass([EventKitTestViewController class]),
+                                 NSStringFromClass([CollectionTestViewController class]),
+                                 NSStringFromClass([PlayerViewController class]),
+                                 NSStringFromClass([KeyBoardViewController class]),
+                                 NSStringFromClass([DLAlertViewController class]),
+                                 NSStringFromClass([GAndATestViewController class]),
+                                 NSStringFromClass([LimitInputViewController class]),
+                                 NSStringFromClass([ScrollTextViewController class]),
+                                 NSStringFromClass([QCodeTestViewController class]),
+                                 NSStringFromClass([WebViewController class]),
+                                 NSStringFromClass([DLApi class]),
+                                 NSStringFromClass([CutImageViewController class]),
+                                 NSStringFromClass([BannerViewController class])
+                                 ];
     
-    mainTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-    [mainTableView setDelegate:self];
-    [mainTableView setDataSource:self];
-    
-    [self.view addSubview:mainTableView];
-    
-    UIButton *addBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
-    [addBtn setImage:IMG_ACCOUNT_HEAD forState:UIControlStateNormal];
-    [addBtn setImage:[UIImage imageNamed:@"feiji"] forState:UIControlStateHighlighted];
-//    [addBtn addTarget:self action:@selector(rightBarButtonItemClip:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *backBtnItem = [[UIBarButtonItem alloc] initWithCustomView:addBtn];
-    NSArray *buttonArr = [[NSArray alloc]initWithObjects:backBtnItem, nil];
-    self.navigationItem.rightBarButtonItems = buttonArr;
-    
-//    [self.tabBarController.tabBar showBadgeOnItmIndex:0 tabbarNum:2];
+    [self.view addSubview:self.mainTableView];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -73,58 +71,39 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - UITableViewDelegate & UITableViewDataSource
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+#pragma mark - Getter & Setter
+
+- (UITableView *)mainTableView
 {
-    return 35;
+    if (!_mainTableView) {
+        _mainTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        [_mainTableView setDelegate:self];
+        [_mainTableView setDataSource:self];
+    }
+    return _mainTableView;
+}
+
+#pragma mark - UITableViewDelegate & UITableViewDataSource
+
+- (NSString *)titleForCellAtIndexPath:(NSIndexPath *)indexPath {
+    return _mainViewControllers[indexPath.row];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 15;
+    return [self.mainViewControllers count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellIdentify = @"cellIdentify";
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentify];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentify];
     }
     
-    if (indexPath.row == 0) {
-//        cell.textLabel.text = @"SKStoreProductViewController";//StoreKit
-        cell.textLabel.text = @"NetworkTest";
-    } else if (indexPath.row == 1) {
-        cell.textLabel.text = @"FloatWindow";//浮动窗口
-    } else if (indexPath.row == 2) {
-        cell.textLabel.text = @"EventKitTest";//日历事件
-    } else if (indexPath.row == 3) {
-        cell.textLabel.text = @"CollectionViewTest";
-    } else if (indexPath.row == 4) {
-        cell.textLabel.text = @"AVPlayerTest";
-    } else if (indexPath.row == 5) {
-        cell.textLabel.text = @"KeyBoardTest";
-    } else if (indexPath.row == 6) {
-        cell.textLabel.text = @"DLAlertViewTest";
-    } else if (indexPath.row == 7) {
-        cell.textLabel.text = @"GraphicAndAnimation";
-    } else if (indexPath.row == 8) {
-        cell.textLabel.text = @"LimitInputTest";
-    } else if (indexPath.row == 9) {
-        cell.textLabel.text = @"ScrollTextLabel";
-    } else if (indexPath.row == 10) {
-        cell.textLabel.text = @"QCodeTest";
-    } else if (indexPath.row == 11) {
-        cell.textLabel.text = @"UIWebViewTest";
-    } else if (indexPath.row == 12) {
-        cell.textLabel.text = @"SkipTest";
-    } else if (indexPath.row == 13) {
-        cell.textLabel.text = @"CutImage";
-    } else if (indexPath.row == 14) {
-        cell.textLabel.text = @"BannerView";
-    }
+    cell.textLabel.text = [self titleForCellAtIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }
@@ -133,111 +112,98 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    [self.tabBarController.tabBar hideBadgeOnItemIndex:0];
+    NSString *vcTitle = [self titleForCellAtIndexPath:indexPath];
     
-    if (indexPath.row == 0) {
-////        SKStoreProductViewController *storeProductVC = [[SKStoreProductViewController alloc] init];
-////        [storeProductVC setDelegate:self];
-////        [self presentViewController:storeProductVC animated:YES completion:nil];
-////        [storeProductVC loadProductWithParameters:@{SKStoreProductParameterITunesItemIdentifier:@461703208}
-////                                  completionBlock:^(BOOL result, NSError *error){
-////                                      if (error) {
-////                                          NSLog(@"Error %@ with User Info %@", error, [error userInfo]);
-////                                      }
-////                                  }];
-//        
-//        //企业级app无法使用StoreKit
-//        UIWebView *myWebView = [[UIWebView alloc] init];
-//        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://itunes.apple.com/cn/app/wan-bu/id638808347?mt=8"]];
-//        [self.view addSubview:myWebView];
-//        [myWebView loadRequest:request];
-        
+    UIViewController *vc = nil;
+    if ([vcTitle isEqualToString:NSStringFromClass([NetworkTest class])]) {
         NetworkTest *test = [[NetworkTest alloc] init];
         [test startNetworkTest];
-//        [test startTestManager];
-    } else if (indexPath.row == 1) {
-        FloatWindowViewController *floatWindowVC = [[FloatWindowViewController alloc] init];
-        [floatWindowVC setHidesBottomBarWhenPushed:YES];
-        [[self navigationController] pushViewController:floatWindowVC animated:YES];
-    } else if (indexPath.row == 2) {
-        EventKitTestViewController *eventKitTestVC = [[EventKitTestViewController alloc] init];
-        [[self navigationController] pushViewController:eventKitTestVC animated:YES];
-    } else if (indexPath.row == 3) {
-        CollectionTestViewController *collectionTestVC = [[CollectionTestViewController alloc] init];
-        [[self navigationController] pushViewController:collectionTestVC animated:YES];
-    } else if (indexPath.row == 4) {
-//        NSURL *videoUrl = [NSURL URLWithString:@"http://www.jxvdy.com/file/upload/201309/18/18-10-03-19-3.mp4"];
+        
+    } else if ([vcTitle isEqualToString:NSStringFromClass([FloatWindowViewController class])]) {
+        vc = [[FloatWindowViewController alloc] init];
+        
+    } else if ([vcTitle isEqualToString:NSStringFromClass([EventKitTestViewController class])]) {
+        vc = [[EventKitTestViewController alloc] init];
+        
+    } else if ([vcTitle isEqualToString:NSStringFromClass([CollectionTestViewController class])]) {
+        vc = [[CollectionTestViewController alloc] init];
+        
+    } else if ([vcTitle isEqualToString:NSStringFromClass([PlayerViewController class])]) {
         NSURL *videoUrl = [NSURL fileURLWithPath:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"TestFiles/test.mp4"]];
+//        NSURL *videoUrl = [NSURL URLWithString:@"http://www.jxvdy.com/file/upload/201309/18/18-10-03-19-3.mp4"];
         PlayerViewController *playerVC = [[PlayerViewController alloc] initWithUrl:videoUrl];
         [playerVC showInViewController:self];
-    } else if (indexPath.row == 5) {
+        
+    } else if ([vcTitle isEqualToString:NSStringFromClass([KeyBoardViewController class])]) {
         KeyBoardViewController *keyBoardVC = [[KeyBoardViewController alloc] init];
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:keyBoardVC];
         [self presentViewController:nav animated:YES completion:nil];
-    } else if (indexPath.row == 6) {
-        DLAlertViewController *dlAlertVC = [[DLAlertViewController alloc] init];
-        [[self navigationController] pushViewController:dlAlertVC animated:YES];
-    } else if (indexPath.row == 7) {
-        GAndATestViewController *gAndAVC = [[GAndATestViewController alloc] init];
-        [[self navigationController] pushViewController:gAndAVC animated:YES];
-    } else if (indexPath.row == 8) {
-        LimitInputViewController *limitInputVC = [[LimitInputViewController alloc] init];
-        [[self navigationController] pushViewController:limitInputVC animated:YES];
-    } else if (indexPath.row == 9) {
-        ScrollTextViewController *scrollTextVC = [[ScrollTextViewController alloc] init];
-        [[self navigationController] pushViewController:scrollTextVC animated:YES];
-    } else if (indexPath.row == 10) {
-        QCodeTestViewController *qCodeVC = [[QCodeTestViewController alloc] init];
-        [[self navigationController] pushViewController:qCodeVC animated:YES];
-    } else if (indexPath.row == 11) {
-        WebViewController *webVC = [[WebViewController alloc] init];
-        webVC.hidesBottomBarWhenPushed = YES;
-        [[self navigationController] pushViewController:webVC animated:YES];
         
-        //实例方法
-//        id webViewController;
-//        Class myClass = NSClassFromString(@"WebViewController");
-//        if (myClass) {
-//            webViewController = [myClass new];
-//        }
-//        SEL sel = NSSelectorFromString(@"cleanWebViewCache:withText:");
-//        if (webViewController && [webViewController respondsToSelector:sel]) {
-//            [webViewController performSelector:sel withObject:@"aaaaa" withObject:@"bbbbb"];
-//        }
+    } else if ([vcTitle isEqualToString:NSStringFromClass([DLAlertViewController class])]) {
+        vc = [[DLAlertViewController alloc] init];
         
-        //类方法
-//        Class myClass = NSClassFromString(@"WebViewController");
-//        SEL sel = NSSelectorFromString(@"testMethod:withText:");
-//        if (myClass && [myClass respondsToSelector:sel]) {
-//            [[myClass class] performSelector:sel withObject:@"aaa" withObject:@"bbb"];
-//        }
-    } else if (indexPath.row == 12) {
+    } else if ([vcTitle isEqualToString:NSStringFromClass([GAndATestViewController class])]) {
+        vc = [[GAndATestViewController alloc] init];
+        
+    } else if ([vcTitle isEqualToString:NSStringFromClass([LimitInputViewController class])]) {
+        vc = [[LimitInputViewController alloc] init];
+        
+    } else if ([vcTitle isEqualToString:NSStringFromClass([ScrollTextViewController class])]) {
+        vc = [[ScrollTextViewController alloc] init];
+        
+    } else if ([vcTitle isEqualToString:NSStringFromClass([QCodeTestViewController class])]) {
+        vc = [[QCodeTestViewController alloc] init];
+        
+    } else if ([vcTitle isEqualToString:NSStringFromClass([WebViewController class])]) {
+        vc = [[WebViewController alloc] init];
+//        [self testSelectorMethod];
+        
+    } else if ([vcTitle isEqualToString:NSStringFromClass([DLApi class])]) {
         [DLApi registerApp:@"123456"];
         DLApiObject *obj = [DLApiObject new];
         obj.appID = @"123456";
         obj.state = @"1221";
         [DLApi sendOAuthReq:obj];
-    } else if (indexPath.row == 13) {
-        CutImageViewController *vc = [[CutImageViewController alloc] initWithOriginImage:[UIImage imageNamed:@"1"]];
         
-        vc.cutSuccessBlock = ^(UIImage *cutImage) {
+    } else if ([vcTitle isEqualToString:NSStringFromClass([CutImageViewController class])]) {
+        CutImageViewController *cutVC = [[CutImageViewController alloc] initWithOriginImage:[UIImage imageNamed:@"1"]];
+        cutVC.cutSuccessBlock = ^(UIImage *cutImage) {
             UIImage *image = cutImage;
             NSLog(@"%@", image);
         };
+        vc = cutVC;
         
-        [vc setHidesBottomBarWhenPushed:YES];
-        [self.navigationController pushViewController:vc animated:YES];
-    } else if (indexPath.row == 14) {
-        BannerViewController *vc = [[BannerViewController alloc] init];
-        [vc setHidesBottomBarWhenPushed:YES];
-        [self.navigationController pushViewController:vc animated:YES];
+    } else if ([vcTitle isEqualToString:NSStringFromClass([BannerViewController class])]) {
+        vc = [[BannerViewController alloc] init];
+        
     }
+    
+    vc.title = vcTitle;
+    [vc setHidesBottomBarWhenPushed:YES];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
-#pragma mark - SKStoreProductViewControllerDelegate
-- (void)productViewControllerDidFinish:(SKStoreProductViewController *)viewController
+#pragma mark - OtherMethods
+
+- (void)testSelectorMethod
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    //实例方法
+    id webViewController;
+    Class myInstanceClass = NSClassFromString(@"WebViewController");
+    if (myInstanceClass) {
+        webViewController = [myInstanceClass new];
+    }
+    SEL instanceSel = NSSelectorFromString(@"cleanWebViewCache:withText:");
+    if (webViewController && [webViewController respondsToSelector:instanceSel]) {
+        [webViewController performSelector:instanceSel withObject:@"aaaaa" withObject:@"bbbbb"];
+    }
+    
+    //类方法
+    Class myClass = NSClassFromString(@"WebViewController");
+    SEL sel = NSSelectorFromString(@"testMethod:withText:");
+    if (myClass && [myClass respondsToSelector:sel]) {
+        [[myClass class] performSelector:sel withObject:@"aaa" withObject:@"bbb"];
+    }
 }
 
 @end

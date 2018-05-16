@@ -8,21 +8,11 @@
 
 #import "NetworkTest.h"
 #import "AFNetworking.h"
-//#import <SugerNetworkFramework/SugerHttpManager.h>
-#import "TestManager.h"
 #import <CommonCrypto/CommonDigest.h>
 
 @implementation NetworkTest
 {
     AFHTTPSessionManager *manager;
-}
-
-- (void)startTestManager {
-    for (int i = 0; i < 2; i++) {
-        TestManager *testManager = [[TestManager sharedClient] initWithTestBaseURL:[NSURL URLWithString:@"http://blog.cnbang.net/"]];
-//        TestManager *testManager = [TestManager sharedClient];
-        [testManager setDefaultHeader:@"aaa" value:@"bbb"];
-    }
 }
 
 //网络测试

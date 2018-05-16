@@ -10,7 +10,7 @@
 
 @implementation UITabBar (Utility)
 
-- (void)showBadgeOnItmIndex:(int)index tabbarNum:(int)tabbarNum {
+- (void)showBadgeOnItemIndex:(int)index tabbarNum:(int)tabbarNum {
     [self removeBadgeOnItemIndex:index];
     //label为小红点，并设置label属性
     UILabel *label = [[UILabel alloc]init];

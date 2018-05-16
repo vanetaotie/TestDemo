@@ -81,9 +81,10 @@
     [cell setCellData:cellData withMode:isEditingMode];
 //    [cell setIndexPathID:indexPath.row];
     
-    WS(weakSelf);
     cell.selectBlock = ^(CollectionCell *cell, BOOL isSelect) {
         NSIndexPath *index = [myCollectionView indexPathForCell:cell];
+        
+        NSLog(@"%@",index);
         
         //处理选择模型
     };
