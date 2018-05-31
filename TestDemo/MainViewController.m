@@ -119,11 +119,14 @@
         [test startNetworkTest];
         
     } else if ([vcTitle isEqualToString:NSStringFromClass([PlayerViewController class])]) {
+#if (TARGET_IPHONE_SIMULATOR)
+        return;
+#else
         NSURL *videoUrl = [NSURL fileURLWithPath:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"TestFiles/test.mp4"]];
 //        NSURL *videoUrl = [NSURL URLWithString:@"http://www.jxvdy.com/file/upload/201309/18/18-10-03-19-3.mp4"];
         PlayerViewController *playerVC = [[PlayerViewController alloc] initWithUrl:videoUrl];
         [playerVC showInViewController:self];
-        
+#endif
     } else if ([vcTitle isEqualToString:NSStringFromClass([KeyBoardViewController class])]) {
         KeyBoardViewController *keyBoardVC = [[KeyBoardViewController alloc] init];
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:keyBoardVC];
