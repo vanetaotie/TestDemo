@@ -43,7 +43,6 @@
 		336137991E0BCB1B001E4A6E /* SugerNetworkFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 336137981E0BCB1B001E4A6E /* SugerNetworkFramework.framework */; };
 		3376D7651B67564F00B0DE06 /* LimitTextInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 3376D7641B67564F00B0DE06 /* LimitTextInput.m */; };
 		3376D7711B6766FD00B0DE06 /* LimitInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3376D7701B6766FD00B0DE06 /* LimitInputViewController.m */; };
-		33AAC12A1C90FDF300AC1504 /* QCodeTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33AAC1291C90FDF300AC1504 /* QCodeTestViewController.m */; };
 		33DCA5291EB88746008BFD65 /* UITabBar+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DCA5281EB88746008BFD65 /* UITabBar+Utility.m */; };
 		33E8B5B91BE0A43A00A27367 /* ScrollTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E8B5B81BE0A43A00A27367 /* ScrollTextViewController.m */; };
 		33ECBDF31F304C7E0063A3A8 /* DLApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 33ECBDF21F304C7E0063A3A8 /* DLApi.m */; };
@@ -62,7 +61,6 @@
 		B574EF751ABFAD470046F300 /* capsLockUpper@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B574EF741ABFAD470046F300 /* capsLockUpper@2x.png */; };
 		B5A981801AB82C3700EDFAD1 /* KeyBoardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A9817F1AB82C3700EDFAD1 /* KeyBoardViewController.m */; };
 		B5A981831AB84A0E00EDFAD1 /* RandomKeyBoardView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5A981821AB84A0E00EDFAD1 /* RandomKeyBoardView.m */; };
-		C24CB2FA1F4AB1FB00610C6B /* UIImageTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C24CB2F91F4AB1FB00610C6B /* UIImageTestViewController.m */; };
 		C2617A9320916F2500CFEEDD /* HorizontalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2617A9220916F2500CFEEDD /* HorizontalViewController.m */; };
 		C9D42F76A3677742264BF9A3 /* Pods_TestDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 698D173C9C8E567866D59F88 /* Pods_TestDemo.framework */; };
 /* End PBXBuildFile section */
@@ -141,8 +139,6 @@
 		3376D7641B67564F00B0DE06 /* LimitTextInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LimitTextInput.m; sourceTree = "<group>"; };
 		3376D76F1B6766FD00B0DE06 /* LimitInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LimitInputViewController.h; sourceTree = "<group>"; };
 		3376D7701B6766FD00B0DE06 /* LimitInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LimitInputViewController.m; sourceTree = "<group>"; };
-		33AAC1281C90FDF300AC1504 /* QCodeTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCodeTestViewController.h; sourceTree = "<group>"; };
-		33AAC1291C90FDF300AC1504 /* QCodeTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QCodeTestViewController.m; sourceTree = "<group>"; };
 		33DCA5271EB88746008BFD65 /* UITabBar+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+Utility.h"; sourceTree = "<group>"; };
 		33DCA5281EB88746008BFD65 /* UITabBar+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+Utility.m"; sourceTree = "<group>"; };
 		33E8B5B71BE0A43A00A27367 /* ScrollTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollTextViewController.h; sourceTree = "<group>"; };
@@ -174,8 +170,6 @@
 		B5A9817F1AB82C3700EDFAD1 /* KeyBoardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyBoardViewController.m; sourceTree = "<group>"; };
 		B5A981811AB84A0E00EDFAD1 /* RandomKeyBoardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomKeyBoardView.h; sourceTree = "<group>"; };
 		B5A981821AB84A0E00EDFAD1 /* RandomKeyBoardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomKeyBoardView.m; sourceTree = "<group>"; };
-		C24CB2F81F4AB1FB00610C6B /* UIImageTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageTestViewController.h; sourceTree = "<group>"; };
-		C24CB2F91F4AB1FB00610C6B /* UIImageTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageTestViewController.m; sourceTree = "<group>"; };
 		C2617A9120916F2500CFEEDD /* HorizontalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HorizontalViewController.h; sourceTree = "<group>"; };
 		C2617A9220916F2500CFEEDD /* HorizontalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HorizontalViewController.m; sourceTree = "<group>"; };
 		DC46164237DCA7E733FF48F3 /* Pods-TestDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestDemo/Pods-TestDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -277,7 +271,6 @@
 				23F11E251F7E2DD0004E2649 /* CutImage */,
 				33ECBDF01F304C3C0063A3A8 /* OAuth2.0 */,
 				33FCCA6A1DD9A1F90001BD27 /* WebViewTest */,
-				33AAC1271C90FDBD00AC1504 /* QCodeTest */,
 				33E8B5B61BE0A3BA00A27367 /* ScrollTextLabel */,
 				3376D7621B67562B00B0DE06 /* LimitTextInput */,
 				33FCD6231B1D37AA008A0292 /* GraphicsAndAnimation */,
@@ -432,15 +425,6 @@
 			path = LimitTextInput;
 			sourceTree = "<group>";
 		};
-		33AAC1271C90FDBD00AC1504 /* QCodeTest */ = {
-			isa = PBXGroup;
-			children = (
-				33AAC1281C90FDF300AC1504 /* QCodeTestViewController.h */,
-				33AAC1291C90FDF300AC1504 /* QCodeTestViewController.m */,
-			);
-			path = QCodeTest;
-			sourceTree = "<group>";
-		};
 		33DCA5261EB885DA008BFD65 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -521,15 +505,6 @@
 				B5A981821AB84A0E00EDFAD1 /* RandomKeyBoardView.m */,
 			);
 			path = KeyBoardTest;
-			sourceTree = "<group>";
-		};
-		C24CB2F71F4AB1D700610C6B /* UIImageTest */ = {
-			isa = PBXGroup;
-			children = (
-				C24CB2F81F4AB1FB00610C6B /* UIImageTestViewController.h */,
-				C24CB2F91F4AB1FB00610C6B /* UIImageTestViewController.m */,
-			);
-			path = UIImageTest;
 			sourceTree = "<group>";
 		};
 		C2617A9020916F0C00CFEEDD /* HorizontalView */ = {
@@ -776,7 +751,6 @@
 				239F7F531AA06E2D00BC7FF1 /* PlayerView.m in Sources */,
 				C2617A9320916F2500CFEEDD /* HorizontalViewController.m in Sources */,
 				239F7F491AA043BC00BC7FF1 /* CollectionCell.m in Sources */,
-				33AAC12A1C90FDF300AC1504 /* QCodeTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

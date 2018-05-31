@@ -17,7 +17,6 @@
 #import "GAndATestViewController.h"
 #import "LimitInputViewController.h"
 #import "ScrollTextViewController.h"
-#import "QCodeTestViewController.h"
 #import "WebViewController.h"
 #import "CutImageViewController.h"
 #import "BannerViewController.h"
@@ -50,7 +49,6 @@
                                  NSStringFromClass([GAndATestViewController class]),
                                  NSStringFromClass([LimitInputViewController class]),
                                  NSStringFromClass([ScrollTextViewController class]),
-                                 NSStringFromClass([QCodeTestViewController class]),
                                  NSStringFromClass([WebViewController class]),
                                  NSStringFromClass([DLApi class]),
                                  NSStringFromClass([CutImageViewController class]),
@@ -115,20 +113,10 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     NSString *vcTitle = [self titleForCellAtIndexPath:indexPath];
-    
     UIViewController *vc = nil;
     if ([vcTitle isEqualToString:NSStringFromClass([NetworkTest class])]) {
         NetworkTest *test = [[NetworkTest alloc] init];
         [test startNetworkTest];
-        
-    } else if ([vcTitle isEqualToString:NSStringFromClass([FloatWindowViewController class])]) {
-        vc = [[FloatWindowViewController alloc] init];
-        
-    } else if ([vcTitle isEqualToString:NSStringFromClass([EventKitTestViewController class])]) {
-        vc = [[EventKitTestViewController alloc] init];
-        
-    } else if ([vcTitle isEqualToString:NSStringFromClass([CollectionTestViewController class])]) {
-        vc = [[CollectionTestViewController alloc] init];
         
     } else if ([vcTitle isEqualToString:NSStringFromClass([PlayerViewController class])]) {
         NSURL *videoUrl = [NSURL fileURLWithPath:[[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"TestFiles/test.mp4"]];
@@ -140,21 +128,6 @@
         KeyBoardViewController *keyBoardVC = [[KeyBoardViewController alloc] init];
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:keyBoardVC];
         [self presentViewController:nav animated:YES completion:nil];
-        
-    } else if ([vcTitle isEqualToString:NSStringFromClass([DLAlertViewController class])]) {
-        vc = [[DLAlertViewController alloc] init];
-        
-    } else if ([vcTitle isEqualToString:NSStringFromClass([GAndATestViewController class])]) {
-        vc = [[GAndATestViewController alloc] init];
-        
-    } else if ([vcTitle isEqualToString:NSStringFromClass([LimitInputViewController class])]) {
-        vc = [[LimitInputViewController alloc] init];
-        
-    } else if ([vcTitle isEqualToString:NSStringFromClass([ScrollTextViewController class])]) {
-        vc = [[ScrollTextViewController alloc] init];
-        
-    } else if ([vcTitle isEqualToString:NSStringFromClass([QCodeTestViewController class])]) {
-        vc = [[QCodeTestViewController alloc] init];
         
     } else if ([vcTitle isEqualToString:NSStringFromClass([WebViewController class])]) {
         vc = [[WebViewController alloc] init];
@@ -174,12 +147,9 @@
             NSLog(@"%@", image);
         };
         vc = cutVC;
-        
-    } else if ([vcTitle isEqualToString:NSStringFromClass([BannerViewController class])]) {
-        vc = [[BannerViewController alloc] init];
-        
-    } else if ([vcTitle isEqualToString:NSStringFromClass([HorizontalViewController class])]) {
-        vc = [[HorizontalViewController alloc] init];
+    } else {
+        //通用pushview
+        vc = [[NSClassFromString([self titleForCellAtIndexPath:indexPath]) alloc] init];
     }
     
     vc.title = vcTitle;
