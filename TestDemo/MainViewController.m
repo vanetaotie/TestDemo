@@ -23,6 +23,7 @@
 #import "HorizontalViewController.h"
 #import "DLApi.h"
 #import "UITabBar+Utility.h"
+#import "SwipCollectionViewController.h"
 
 @interface MainViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -53,7 +54,8 @@
                                  NSStringFromClass([DLApi class]),
                                  NSStringFromClass([CutImageViewController class]),
                                  NSStringFromClass([BannerViewController class]),
-                                 NSStringFromClass([HorizontalViewController class])
+                                 NSStringFromClass([HorizontalViewController class]),
+                                 NSStringFromClass([SwipCollectionViewController class])
                                  ];
     
     [self.view addSubview:self.mainTableView];
@@ -150,6 +152,15 @@
             NSLog(@"%@", image);
         };
         vc = cutVC;
+    } else if ([vcTitle isEqualToString:NSStringFromClass([SwipCollectionViewController class])]) {
+        
+        // 创建布局对象，对UICollectionView进行控制
+        UICollectionViewFlowLayout* flowLayout = [[UICollectionViewFlowLayout alloc] init];
+        
+        // 创建ViewController是设置flowLayout
+        // 如果直接创建不提供布局将包异常 UICollectionView must be initialized with a non-nil layout parameter
+        SwipCollectionViewController* viewController = [[SwipCollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
+        vc = viewController;
     } else {
         //通用pushview
         vc = [[NSClassFromString([self titleForCellAtIndexPath:indexPath]) alloc] init];

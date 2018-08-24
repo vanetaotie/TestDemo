@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2325D94F1F8B1337005C4208 /* CutImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2325D94E1F8B1337005C4208 /* CutImage.bundle */; };
 		2345FB291FD782FA003E54A0 /* AlgorithmTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2345FB281FD782FA003E54A0 /* AlgorithmTestVC.m */; };
+		2350A11320D9F574004B9CA0 /* AmountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2350A11220D9F574004B9CA0 /* AmountView.m */; };
 		235ECC542051256700BE5DB1 /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 235ECC532051256700BE5DB1 /* BannerViewController.m */; };
 		23798E2B20513F7E00FF2934 /* ZYBannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23798E2520513F7E00FF2934 /* ZYBannerCell.m */; };
 		23798E2C20513F7E00FF2934 /* ZYBannerFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 23798E2720513F7E00FF2934 /* ZYBannerFooter.m */; };
@@ -35,6 +36,9 @@
 		239F7F531AA06E2D00BC7FF1 /* PlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 239F7F521AA06E2D00BC7FF1 /* PlayerView.m */; };
 		23A0FDA91FFE087300C5ADD0 /* SwiftTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A0FDA81FFE087300C5ADD0 /* SwiftTest.swift */; };
 		23A0FDAC1FFE305700C5ADD0 /* SwiftOCTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A0FDAB1FFE305700C5ADD0 /* SwiftOCTest.m */; };
+		23DB02DF20D393EE00DBEAE8 /* SwipCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB02DE20D393EE00DBEAE8 /* SwipCollectionViewController.m */; };
+		23DB02E220D3940700DBEAE8 /* SwipCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB02E120D3940700DBEAE8 /* SwipCollectionViewCell.m */; };
+		23DB02E520D3943800DBEAE8 /* ZLCSwipeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB02E320D3943800DBEAE8 /* ZLCSwipeCollectionViewCell.m */; };
 		23F11E281F7E2DF0004E2649 /* CutImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F11E271F7E2DF0004E2649 /* CutImageViewController.m */; };
 		23F11E2B1F7E3158004E2649 /* CutImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F11E2A1F7E3158004E2649 /* CutImageView.m */; };
 		33166CAE1B0990B50033DE81 /* DLAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33166CAD1B0990B50033DE81 /* DLAlertViewController.m */; };
@@ -80,6 +84,9 @@
 		2345FB271FD782FA003E54A0 /* AlgorithmTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgorithmTestVC.h; sourceTree = "<group>"; };
 		2345FB281FD782FA003E54A0 /* AlgorithmTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlgorithmTestVC.m; sourceTree = "<group>"; };
 		2345FB2A1FD78586003E54A0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		2350A11120D9F574004B9CA0 /* AmountView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmountView.h; sourceTree = "<group>"; };
+		2350A11220D9F574004B9CA0 /* AmountView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AmountView.m; sourceTree = "<group>"; };
+		2350A11420D9F62F004B9CA0 /* Definition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Definition.h; sourceTree = "<group>"; };
 		235ECC522051256700BE5DB1 /* BannerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerViewController.h; sourceTree = "<group>"; };
 		235ECC532051256700BE5DB1 /* BannerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
 		23798E2420513F7E00FF2934 /* ZYBannerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYBannerCell.h; sourceTree = "<group>"; };
@@ -125,6 +132,12 @@
 		23A0FDA81FFE087300C5ADD0 /* SwiftTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTest.swift; sourceTree = "<group>"; };
 		23A0FDAA1FFE305700C5ADD0 /* SwiftOCTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftOCTest.h; sourceTree = "<group>"; };
 		23A0FDAB1FFE305700C5ADD0 /* SwiftOCTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwiftOCTest.m; sourceTree = "<group>"; };
+		23DB02DD20D393EE00DBEAE8 /* SwipCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwipCollectionViewController.h; sourceTree = "<group>"; };
+		23DB02DE20D393EE00DBEAE8 /* SwipCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwipCollectionViewController.m; sourceTree = "<group>"; };
+		23DB02E020D3940700DBEAE8 /* SwipCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwipCollectionViewCell.h; sourceTree = "<group>"; };
+		23DB02E120D3940700DBEAE8 /* SwipCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwipCollectionViewCell.m; sourceTree = "<group>"; };
+		23DB02E320D3943800DBEAE8 /* ZLCSwipeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLCSwipeCollectionViewCell.m; sourceTree = "<group>"; };
+		23DB02E420D3943800DBEAE8 /* ZLCSwipeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLCSwipeCollectionViewCell.h; sourceTree = "<group>"; };
 		23F11E261F7E2DF0004E2649 /* CutImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CutImageViewController.h; sourceTree = "<group>"; };
 		23F11E271F7E2DF0004E2649 /* CutImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CutImageViewController.m; sourceTree = "<group>"; };
 		23F11E291F7E3158004E2649 /* CutImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CutImageView.h; sourceTree = "<group>"; };
@@ -266,6 +279,7 @@
 		23927EA41A7F4538009ABF38 /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				23DB02DC20D393D600DBEAE8 /* SwipCollectionView */,
 				C2617A9020916F0C00CFEEDD /* HorizontalView */,
 				235ECC512051131100BE5DB1 /* BannerView */,
 				23F11E251F7E2DD0004E2649 /* CutImage */,
@@ -285,6 +299,7 @@
 				23927EC61A7F457D009ABF38 /* MainViewController.m */,
 				23927EA91A7F4538009ABF38 /* AppDelegate.h */,
 				23927EAA1A7F4538009ABF38 /* AppDelegate.m */,
+				2350A11420D9F62F004B9CA0 /* Definition.h */,
 				23A0FDA61FFE083400C5ADD0 /* SwiftMix */,
 				2345FB261FD782D8003E54A0 /* Algorithm */,
 				33DCA5261EB885DA008BFD65 /* Utility */,
@@ -389,6 +404,21 @@
 				23A0FDAB1FFE305700C5ADD0 /* SwiftOCTest.m */,
 			);
 			path = SwiftMix;
+			sourceTree = "<group>";
+		};
+		23DB02DC20D393D600DBEAE8 /* SwipCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				23DB02E420D3943800DBEAE8 /* ZLCSwipeCollectionViewCell.h */,
+				23DB02E320D3943800DBEAE8 /* ZLCSwipeCollectionViewCell.m */,
+				23DB02E020D3940700DBEAE8 /* SwipCollectionViewCell.h */,
+				23DB02E120D3940700DBEAE8 /* SwipCollectionViewCell.m */,
+				23DB02DD20D393EE00DBEAE8 /* SwipCollectionViewController.h */,
+				23DB02DE20D393EE00DBEAE8 /* SwipCollectionViewController.m */,
+				2350A11120D9F574004B9CA0 /* AmountView.h */,
+				2350A11220D9F574004B9CA0 /* AmountView.m */,
+			);
+			path = SwipCollectionView;
 			sourceTree = "<group>";
 		};
 		23F11E251F7E2DD0004E2649 /* CutImage */ = {
@@ -660,7 +690,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		185D9D63383BF2FD7BF43660 /* [CP] Copy Pods Resources */ = {
@@ -674,7 +704,7 @@
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/mapapi.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -733,16 +763,20 @@
 				23798E2B20513F7E00FF2934 /* ZYBannerCell.m in Sources */,
 				239F7F3B1AA020C300BC7FF1 /* EventKitTestViewController.m in Sources */,
 				235ECC542051256700BE5DB1 /* BannerViewController.m in Sources */,
+				23DB02E220D3940700DBEAE8 /* SwipCollectionViewCell.m in Sources */,
 				23927EA81A7F4538009ABF38 /* main.m in Sources */,
 				33ECBDF31F304C7E0063A3A8 /* DLApi.m in Sources */,
+				23DB02DF20D393EE00DBEAE8 /* SwipCollectionViewController.m in Sources */,
 				33FCD62C1B1D3843008A0292 /* AnimationTestView.m in Sources */,
 				23F11E281F7E2DF0004E2649 /* CutImageViewController.m in Sources */,
 				239F7F341AA018A600BC7FF1 /* FloatWindowViewController.m in Sources */,
 				33F0B47A1D88EC60002A63E6 /* NetworkTest.m in Sources */,
 				23F11E2B1F7E3158004E2649 /* CutImageView.m in Sources */,
+				2350A11320D9F574004B9CA0 /* AmountView.m in Sources */,
 				33166CB11B09AF6A0033DE81 /* DLAlertView.m in Sources */,
 				23798E2E20513F7E00FF2934 /* ZYBannerView.m in Sources */,
 				23A0FDA91FFE087300C5ADD0 /* SwiftTest.swift in Sources */,
+				23DB02E520D3943800DBEAE8 /* ZLCSwipeCollectionViewCell.m in Sources */,
 				33166CAE1B0990B50033DE81 /* DLAlertViewController.m in Sources */,
 				239F7F371AA018EA00BC7FF1 /* PopView.m in Sources */,
 				2345FB291FD782FA003E54A0 /* AlgorithmTestVC.m in Sources */,
