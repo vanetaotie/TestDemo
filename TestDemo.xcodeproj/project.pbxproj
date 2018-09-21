@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2325D94F1F8B1337005C4208 /* CutImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2325D94E1F8B1337005C4208 /* CutImage.bundle */; };
+		23268629212FFC550059AFC3 /* UIControl+JSA.m in Sources */ = {isa = PBXBuildFile; fileRef = 23268628212FFC550059AFC3 /* UIControl+JSA.m */; };
 		2345FB291FD782FA003E54A0 /* AlgorithmTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2345FB281FD782FA003E54A0 /* AlgorithmTestVC.m */; };
 		2350A11320D9F574004B9CA0 /* AmountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2350A11220D9F574004B9CA0 /* AmountView.m */; };
 		235ECC542051256700BE5DB1 /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 235ECC532051256700BE5DB1 /* BannerViewController.m */; };
@@ -81,6 +82,8 @@
 
 /* Begin PBXFileReference section */
 		2325D94E1F8B1337005C4208 /* CutImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CutImage.bundle; sourceTree = "<group>"; };
+		23268627212FFC550059AFC3 /* UIControl+JSA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+JSA.h"; sourceTree = "<group>"; };
+		23268628212FFC550059AFC3 /* UIControl+JSA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+JSA.m"; sourceTree = "<group>"; };
 		2345FB271FD782FA003E54A0 /* AlgorithmTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgorithmTestVC.h; sourceTree = "<group>"; };
 		2345FB281FD782FA003E54A0 /* AlgorithmTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlgorithmTestVC.m; sourceTree = "<group>"; };
 		2345FB2A1FD78586003E54A0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -460,6 +463,8 @@
 			children = (
 				33DCA5271EB88746008BFD65 /* UITabBar+Utility.h */,
 				33DCA5281EB88746008BFD65 /* UITabBar+Utility.m */,
+				23268627212FFC550059AFC3 /* UIControl+JSA.h */,
+				23268628212FFC550059AFC3 /* UIControl+JSA.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -756,6 +761,7 @@
 				23798E2C20513F7E00FF2934 /* ZYBannerFooter.m in Sources */,
 				3376D7711B6766FD00B0DE06 /* LimitInputViewController.m in Sources */,
 				23927EC71A7F457D009ABF38 /* MainViewController.m in Sources */,
+				23268629212FFC550059AFC3 /* UIControl+JSA.m in Sources */,
 				B574EF6F1ABC076C0046F300 /* PlayerViewController.m in Sources */,
 				33FCD6291B1D3833008A0292 /* GraphicsTestView.m in Sources */,
 				3376D7651B67564F00B0DE06 /* LimitTextInput.m in Sources */,
