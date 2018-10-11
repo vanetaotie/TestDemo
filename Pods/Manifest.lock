@@ -14,7 +14,6 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - BaiduMapKit (3.0.0)
   - CTMediator (25)
   - HandyFrame (1.2.0)
   - Masonry (1.1.0)
@@ -25,7 +24,6 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
-  - BaiduMapKit (~> 3.0.0)
   - CTMediator
   - HandyFrame
   - Masonry
@@ -34,13 +32,12 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  BaiduMapKit: de2a726d5296d6b2dc0e974b683af73153608dcd
   CTMediator: 830c1fc204b3a6abf2a059510c7380f56343da0f
   HandyFrame: 437df83ba7563c56cd55b9bd0128561995463110
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 
-PODFILE CHECKSUM: 25060a021040dc8bb0cf8440b43fcef4630bf566
+PODFILE CHECKSUM: c4847bf223bf13512b295c837bfb6a76b72fc202
 
 COCOAPODS: 1.2.0
