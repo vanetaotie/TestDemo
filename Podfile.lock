@@ -17,27 +17,52 @@ PODS:
   - CTMediator (25)
   - HandyFrame (1.2.0)
   - Masonry (1.1.0)
+  - MJRefresh (3.1.15.7)
   - pop (1.0.10)
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
+  - UICollectionView-ARDynamicHeightLayoutCell (1.0.3)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - CTMediator
   - HandyFrame
   - Masonry
+  - MJRefresh
   - pop (~> 1.0)
   - SDWebImage (~> 4.0)
+  - UICollectionView-ARDynamicHeightLayoutCell (from `https://github.com/AugustRush/UICollectionView-ARDynamicHeightLayoutCell.git`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - CTMediator
+    - HandyFrame
+    - Masonry
+    - MJRefresh
+    - pop
+    - SDWebImage
+
+EXTERNAL SOURCES:
+  UICollectionView-ARDynamicHeightLayoutCell:
+    :git: https://github.com/AugustRush/UICollectionView-ARDynamicHeightLayoutCell.git
+
+CHECKOUT OPTIONS:
+  UICollectionView-ARDynamicHeightLayoutCell:
+    :commit: df3af7d1f52925d061d4ac8e411780b850f08985
+    :git: https://github.com/AugustRush/UICollectionView-ARDynamicHeightLayoutCell.git
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   CTMediator: 830c1fc204b3a6abf2a059510c7380f56343da0f
   HandyFrame: 437df83ba7563c56cd55b9bd0128561995463110
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  UICollectionView-ARDynamicHeightLayoutCell: 5597bcbf30313a2413f01cbca936079d50d456d1
 
-PODFILE CHECKSUM: c4847bf223bf13512b295c837bfb6a76b72fc202
+PODFILE CHECKSUM: 3ca9f950e2aed6ab07d2afde88c67824b2fba562
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.5.3

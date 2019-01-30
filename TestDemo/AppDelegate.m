@@ -10,6 +10,7 @@
 #import "MainViewController.h"
 #import "UITabBar+Utility.h"
 #import "DLApi.h"
+#import "FlowViewController.h"
 
 @interface AppDelegate () <DLApiDelegate>
 
@@ -25,22 +26,27 @@
     NSLog(@"SwiftDemo:%@", [vc f1]);
     [vc f2];
     
+    char c1, c2;
+    c1 = 'a';
+    c2 = 97;
+    
     MainViewController *mainVC = [[MainViewController alloc] init];
     UINavigationController *mainNav = [[UINavigationController alloc] initWithRootViewController:mainVC];
-//    mainNav.tabBarItem.title = @"main";
+    mainNav.tabBarItem.title = @"main";
     
-//    UIViewController *testVC = [[UIViewController alloc] init];
-//    testVC.tabBarItem.title = @"test";
-//
-//    UITabBarController *mainTabBarVC = [[UITabBarController alloc] init];
-//    mainTabBarVC.viewControllers = [NSArray arrayWithObjects:mainNav, testVC, nil];
-//
-//    [mainTabBarVC.tabBar showBadgeOnItemIndex:1 tabbarNum:2];
-//
-//    UINavigationController *appNav = [[UINavigationController alloc] initWithRootViewController:mainTabBarVC];
-//    appNav.navigationBarHidden = YES;
+    FlowViewController *testVC = [[FlowViewController alloc] init];
+    UINavigationController *testNav = [[UINavigationController alloc] initWithRootViewController:testVC];
+    testVC.tabBarItem.title = @"test";
+
+    UITabBarController *mainTabBarVC = [[UITabBarController alloc] init];
+    mainTabBarVC.viewControllers = [NSArray arrayWithObjects:mainNav, testNav, nil];
+
+    [mainTabBarVC.tabBar showBadgeOnItemIndex:1 tabbarNum:2];
+
+    UINavigationController *appNav = [[UINavigationController alloc] initWithRootViewController:mainTabBarVC];
+    appNav.navigationBarHidden = YES;
     
-    [self.window setRootViewController:mainNav];
+    [self.window setRootViewController:appNav];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
