@@ -40,6 +40,8 @@
 		239F7F531AA06E2D00BC7FF1 /* PlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 239F7F521AA06E2D00BC7FF1 /* PlayerView.m */; };
 		23A0FDA91FFE087300C5ADD0 /* SwiftTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A0FDA81FFE087300C5ADD0 /* SwiftTest.swift */; };
 		23A0FDAC1FFE305700C5ADD0 /* SwiftOCTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A0FDAB1FFE305700C5ADD0 /* SwiftOCTest.m */; };
+		23D1FC04221A5A6C00674B4E /* ZYTextInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1FC03221A5A6C00674B4E /* ZYTextInputView.m */; };
+		23D1FC07221A5B5F00674B4E /* ZYTextInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1FC06221A5B5F00674B4E /* ZYTextInputViewController.m */; };
 		23DB02DF20D393EE00DBEAE8 /* SwipCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB02DE20D393EE00DBEAE8 /* SwipCollectionViewController.m */; };
 		23DB02E220D3940700DBEAE8 /* SwipCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB02E120D3940700DBEAE8 /* SwipCollectionViewCell.m */; };
 		23DB02E520D3943800DBEAE8 /* ZLCSwipeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB02E320D3943800DBEAE8 /* ZLCSwipeCollectionViewCell.m */; };
@@ -144,6 +146,10 @@
 		23A0FDA81FFE087300C5ADD0 /* SwiftTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTest.swift; sourceTree = "<group>"; };
 		23A0FDAA1FFE305700C5ADD0 /* SwiftOCTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftOCTest.h; sourceTree = "<group>"; };
 		23A0FDAB1FFE305700C5ADD0 /* SwiftOCTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwiftOCTest.m; sourceTree = "<group>"; };
+		23D1FC02221A5A6C00674B4E /* ZYTextInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYTextInputView.h; sourceTree = "<group>"; };
+		23D1FC03221A5A6C00674B4E /* ZYTextInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYTextInputView.m; sourceTree = "<group>"; };
+		23D1FC05221A5B5F00674B4E /* ZYTextInputViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYTextInputViewController.h; sourceTree = "<group>"; };
+		23D1FC06221A5B5F00674B4E /* ZYTextInputViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYTextInputViewController.m; sourceTree = "<group>"; };
 		23DB02DD20D393EE00DBEAE8 /* SwipCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwipCollectionViewController.h; sourceTree = "<group>"; };
 		23DB02DE20D393EE00DBEAE8 /* SwipCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwipCollectionViewController.m; sourceTree = "<group>"; };
 		23DB02E020D3940700DBEAE8 /* SwipCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwipCollectionViewCell.h; sourceTree = "<group>"; };
@@ -291,6 +297,7 @@
 		23927EA41A7F4538009ABF38 /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				23D1FC01221A5A3500674B4E /* TextInputView */,
 				2396EE43220038BD004611FE /* FlowViewDemo */,
 				23DB02DC20D393D600DBEAE8 /* SwipCollectionView */,
 				C2617A9020916F0C00CFEEDD /* HorizontalView */,
@@ -430,6 +437,17 @@
 				23A0FDAB1FFE305700C5ADD0 /* SwiftOCTest.m */,
 			);
 			path = SwiftMix;
+			sourceTree = "<group>";
+		};
+		23D1FC01221A5A3500674B4E /* TextInputView */ = {
+			isa = PBXGroup;
+			children = (
+				23D1FC02221A5A6C00674B4E /* ZYTextInputView.h */,
+				23D1FC03221A5A6C00674B4E /* ZYTextInputView.m */,
+				23D1FC05221A5B5F00674B4E /* ZYTextInputViewController.h */,
+				23D1FC06221A5B5F00674B4E /* ZYTextInputViewController.m */,
+			);
+			path = TextInputView;
 			sourceTree = "<group>";
 		};
 		23DB02DC20D393D600DBEAE8 /* SwipCollectionView */ = {
@@ -734,6 +752,12 @@
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/UICollectionView-ARDynamicHeightLayoutCell/UICollectionView_ARDynamicHeightLayoutCell.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCache/YYCache.framework",
+				"${BUILT_PRODUCTS_DIR}/YYCategories/YYCategories.framework",
+				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+				"${BUILT_PRODUCTS_DIR}/YYText/YYText.framework",
+				"${BUILT_PRODUCTS_DIR}/YYWebImage/YYWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -745,6 +769,12 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICollectionView_ARDynamicHeightLayoutCell.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYCategories.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYText.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -786,6 +816,7 @@
 				23F11E281F7E2DF0004E2649 /* CutImageViewController.m in Sources */,
 				2396EE4922003BA0004611FE /* FlowViewLayout.m in Sources */,
 				239F7F341AA018A600BC7FF1 /* FloatWindowViewController.m in Sources */,
+				23D1FC07221A5B5F00674B4E /* ZYTextInputViewController.m in Sources */,
 				33F0B47A1D88EC60002A63E6 /* NetworkTest.m in Sources */,
 				23F11E2B1F7E3158004E2649 /* CutImageView.m in Sources */,
 				2350A11320D9F574004B9CA0 /* AmountView.m in Sources */,
@@ -798,6 +829,7 @@
 				2345FB291FD782FA003E54A0 /* AlgorithmTestVC.m in Sources */,
 				33FCD6261B1D37DA008A0292 /* GAndATestViewController.m in Sources */,
 				33FCCA6D1DD9A2130001BD27 /* WebViewController.m in Sources */,
+				23D1FC04221A5A6C00674B4E /* ZYTextInputView.m in Sources */,
 				2396EE4221FF0E82004611FE /* FlowViewController.m in Sources */,
 				239F7F531AA06E2D00BC7FF1 /* PlayerView.m in Sources */,
 				C2617A9320916F2500CFEEDD /* HorizontalViewController.m in Sources */,

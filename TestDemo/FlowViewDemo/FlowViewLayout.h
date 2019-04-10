@@ -16,6 +16,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (CGFloat)flowViewLayout:(FlowViewLayout *)flowLayout heightForItemAtIndexPath:(NSIndexPath *)indexPath;
 
+/**同基础UICollectionView的代理设置**/
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(FlowViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath;
+
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(FlowViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section;
+
 @optional
 
 //列数 默认2

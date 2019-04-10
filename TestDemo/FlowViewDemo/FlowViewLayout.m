@@ -72,17 +72,27 @@ static const UIEdgeInsets FlowViewDefaultEdgeInset = {10, 10, 10, 10};
 #pragma mark - Method
 
 - (void)prepareLayout {
-    ///和init相似，必须call super的prepareLayout以保证初始化正确
+    
     [super prepareLayout];
-    ///1.首先被调用
     
     [self.attributesArray removeAllObjects];
     [self.itemArray removeAllObjects];
     
+    NSLog(@"prepareLayout");
+    
     ///获取当前collectionView对应区的item
     NSUInteger sectionCount = [self.collectionView numberOfSections];
-    NSInteger count = [self.collectionView numberOfItemsInSection:sectionCount - 1];
     
+//    for (NSInteger section = 0; section < sectionCount; section++) {
+//        NSInteger count = [self.collectionView numberOfItemsInSection:section];
+//        for (int i = 0; i < count; i++) {
+//            UICollectionViewLayoutAttributes *attributes = [self layoutAttributesForItemAtIndexPath:[NSIndexPath indexPathForRow:i inSection:section]];
+//            [self.attributesArray addObject:attributes];
+////            NSLog(@"section%ld--i%d--attributes%@", (long)section, i, attributes);
+//        }
+//    }
+    
+    NSInteger count = [self.collectionView numberOfItemsInSection:sectionCount - 1];
     for (int i = 0; i < count; i++) {
         UICollectionViewLayoutAttributes *attributes = [self layoutAttributesForItemAtIndexPath:[NSIndexPath indexPathForRow:i inSection:sectionCount - 1]];
         [self.attributesArray addObject:attributes];
@@ -91,7 +101,8 @@ static const UIEdgeInsets FlowViewDefaultEdgeInset = {10, 10, 10, 10};
 
 ///返回collectionView的内容的尺寸
 - (CGSize)collectionViewContentSize {
-    ///2.其次被调用(layoutAttributesForElementsInRect 调用后会在此调用此方法)
+    
+    NSLog(@"collectionViewContentSize");
     
     CGFloat maxContentHeight = CGRectGetMaxY([self.itemArray firstObject].frame);
     
@@ -100,23 +111,54 @@ static const UIEdgeInsets FlowViewDefaultEdgeInset = {10, 10, 10, 10};
             maxContentHeight = CGRectGetMaxY(attributes.frame);
         }
     }
-    return CGSizeMake(self.collectionView.bounds.size.width, maxContentHeight);
+    
+    NSLog(@"itemArray---%@", self.itemArray);
+    
+    return CGSizeMake(self.collectionView.bounds.size.width, maxContentHeight + self.edgeInsets.bottom);
 }
 
-///返回rect中的所有的元素的布局属性,返回的是包含UICollectionViewLayoutAttributes的NSArray
-///UICollectionViewLayoutAttributes可以是cell，追加视图或装饰视图的信息，通过不同的UICollectionViewLayoutAttributes初始化方法可以得到不同类型的
-///初始的layout的外观将由该方法返回的UICollectionViewLayoutAttributes来决定。
-
-///rect 为collectionview 的rect，（高度超出collectionview高度后，rect的height会翻倍）
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect {
-    ///3.被调用
-    return self.attributesArray;
+    
+    NSLog(@"layoutAttributesForElementsInRect");
+    
+    NSArray *attributes = [super layoutAttributesForElementsInRect:rect];
+    NSMutableArray *allAttributes = [NSMutableArray array];
+    for (UICollectionViewLayoutAttributes *attribute in attributes) {
+        
+        NSUInteger sectionCount = [self.collectionView numberOfSections];
+        if (attribute.indexPath.section != sectionCount - 1) {
+            [allAttributes addObject:attribute];
+        }
+    }
+    
+    for (UICollectionViewLayoutAttributes *att in self.attributesArray) {
+        [allAttributes addObject:att];
+    }
+    
+    NSLog(@"arr---%@", allAttributes);
+    return allAttributes;
 }
 
-///返回对应于indexPath的位置的cell的布局属性,返回指定indexPath的item的布局信息。子类必须重载该方法,该方法只能为cell提供布局信息，不能为补充视图和装饰视图提供。
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
     
+    NSLog(@"section%ld---row%ld", (long)indexPath.section, (long)indexPath.row);
+    
     UICollectionViewLayoutAttributes *attributs = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
+    
+    CGSize itemSize = CGSizeZero;
+    UIEdgeInsets edgeInsets = UIEdgeInsetsZero;
+    if (_delegate && [_delegate respondsToSelector:@selector(collectionView:layout:sizeForItemAtIndexPath:)]) {
+        itemSize = [_delegate collectionView:self.collectionView layout:self sizeForItemAtIndexPath:indexPath];
+    } else {
+        itemSize = self.itemSize;
+    }
+    if (_delegate && [_delegate respondsToSelector:@selector(collectionView:layout:insetForSectionAtIndex:)]) {
+        edgeInsets = [_delegate collectionView:self.collectionView layout:self insetForSectionAtIndex:indexPath.section];
+    } else {
+        edgeInsets = self.sectionInset;
+    }
+
+    CGFloat frontSectionHeight = 100;//?计算所有瀑布流楼层之前的高度
     
     ///item的宽度，根据左右间距和中间间距算出item宽度
     CGFloat itemWidth = (self.collectionView.bounds.size.width - (self.edgeInsets.left + self.edgeInsets.right + (self.columnCount - 1) * self.columnMargin)) /  self.columnCount;
@@ -126,7 +168,7 @@ static const UIEdgeInsets FlowViewDefaultEdgeInset = {10, 10, 10, 10};
     
     if (self.itemArray.count < self.columnCount) {
         [self.itemArray addObject:attributs];
-        CGRect itemFrame = CGRectMake(self.edgeInsets.left + (itemWidth + self.columnMargin) * (self.itemArray.count - 1), self.edgeInsets.top, itemWidth, itemHeight);
+        CGRect itemFrame = CGRectMake(self.edgeInsets.left + (itemWidth + self.columnMargin) * (self.itemArray.count - 1), self.edgeInsets.top + frontSectionHeight, itemWidth, itemHeight);
         attributs.frame = itemFrame;
     } else {
         UICollectionViewLayoutAttributes *fristAttri = [self.itemArray firstObject];
@@ -135,7 +177,7 @@ static const UIEdgeInsets FlowViewDefaultEdgeInset = {10, 10, 10, 10};
         NSInteger index = 0;
         CGRect itemFrame = CGRectMake(fristAttri.frame.origin.x, CGRectGetMaxY(fristAttri.frame) + self.rowMargin, itemWidth, itemHeight);
         for (UICollectionViewLayoutAttributes *attri in self.itemArray) {
-            if (minY>CGRectGetMaxY(attri.frame)) {
+            if (minY > CGRectGetMaxY(attri.frame)) {
                 minY = CGRectGetMaxY(attri.frame);
                 Y = minY;
                 itemFrame = CGRectMake(attri.frame.origin.x, Y + self.rowMargin, itemWidth, itemHeight);

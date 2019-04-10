@@ -24,8 +24,8 @@
     
     self.title = @"FlowTest";
     
-    NSArray<NSNumber*> *heightArray = @[@(300),@(80),@(100),@(80),@(100),@(30),@(100),@(40),@(100),@(80),@(60),@(80),@(100),@(80),@(50),@(80),@(100),@(80),@(70),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(60),@(80),@(90),@(80),@(20),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(100),@(40),@(200),@(500)];
-//    NSArray<NSNumber*> *heightArray = @[@(300),@(500),@(100)];
+//    NSArray<NSNumber*> *heightArray = @[@(300),@(80),@(100),@(80),@(100),@(30),@(100),@(40),@(100),@(80),@(60),@(80),@(100),@(80),@(50),@(80),@(100),@(80),@(70),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(60),@(80),@(90),@(80),@(20),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(100),@(80),@(100),@(40),@(200),@(500)];
+    NSArray<NSNumber*> *heightArray = @[@(300),@(500),@(100),@(200),@(500)];
     self.dataArray = heightArray;
     
     [self.view addSubview:self.collectionView];
@@ -39,7 +39,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     if (section == 0) {
-        return 1;
+        return 2;
     }
     return self.dataArray.count;
 }
@@ -59,23 +59,17 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"row-%ld", (long)indexPath.row);
+    NSLog(@"section-%ld,row-%ld", (long)indexPath.section, (long)indexPath.row);
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0) {
-        return CGSizeMake(self.view.bounds.size.width, 30);
-    }
-    return CGSizeMake(50, 50);
+    return CGSizeMake(60, 60);
 }
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
-    if (section == 0) {
-        return UIEdgeInsetsMake(10, 10, 10, 10);
-    }
-    return UIEdgeInsetsZero;
+    return UIEdgeInsetsMake(20, 20, 20, 20);
 }
 
 #pragma mark - FlowViewLayoutDelegate
@@ -91,7 +85,6 @@
     if (!_collectionView) {
         FlowViewLayout *layout = [[FlowViewLayout alloc] init];
         layout.delegate = self;
-//        layout.estimatedItemSize = CGSizeMake(30, 30);//此属性8.0以后有效，作用：类似一个占位符，当加载item时会先加载这个size，显示的时候 根据 autolayout 的约束算出自适应内容的 size；使用自定义Layout时,item会自适应但是在item上的布局无效
 
         _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
 //        _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:[[UICollectionViewFlowLayout alloc] init]];

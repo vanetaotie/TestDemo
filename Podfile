@@ -6,6 +6,11 @@ pod "AFNetworking", "~> 3.0"
 pod 'Masonry'
 pod 'MJRefresh'
 pod 'pop', '~> 1.0'
+pod 'YYModel'
+pod 'YYCache'
+pod 'YYWebImage'
+pod 'YYText'
+pod 'YYCategories'
 pod "CTMediator"
 pod "HandyFrame"
 pod 'SDWebImage', '~> 4.0'

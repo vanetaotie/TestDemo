@@ -24,6 +24,7 @@
 #import "DLApi.h"
 #import "UITabBar+Utility.h"
 #import "SwipCollectionViewController.h"
+#import "ZYTextInputViewController.h"
 
 @interface MainViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -55,7 +56,8 @@
                                  NSStringFromClass([CutImageViewController class]),
                                  NSStringFromClass([BannerViewController class]),
                                  NSStringFromClass([HorizontalViewController class]),
-                                 NSStringFromClass([SwipCollectionViewController class])
+                                 NSStringFromClass([SwipCollectionViewController class]),
+                                 NSStringFromClass([ZYTextInputViewController class])
                                  ];
     
     [self.view addSubview:self.mainTableView];
