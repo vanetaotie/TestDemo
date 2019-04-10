@@ -8,7 +8,6 @@ pod 'MJRefresh'
 pod 'pop', '~> 1.0'
 pod 'YYModel'
 pod 'YYCache'
-pod 'YYWebImage'
 pod 'YYText'
 pod 'YYCategories'
 pod "CTMediator"
