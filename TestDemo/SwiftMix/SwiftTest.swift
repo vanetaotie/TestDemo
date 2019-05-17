@@ -9,11 +9,11 @@
 import UIKit
 
 class SwiftTest: NSObject {
-    func f1() -> String {
+    @objc public func f1() -> String {
         return "Test Mix"
     }
     
-    func f2() {
+    @objc public func f2() {
         let vc = SwiftOCTest()
         let str: String = vc.swiftString
         

@@ -9,6 +9,22 @@
 #import "AnimationTestView.h"
 #import <pop/POP.h>
 
+@interface AnimationTestView ()
+
+@end
+
 @implementation AnimationTestView
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setupView];
+    }
+    return self;
+}
+
+- (void)setupView {
+    
+}
 
 @end

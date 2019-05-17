@@ -25,6 +25,10 @@
 #import "UITabBar+Utility.h"
 #import "SwipCollectionViewController.h"
 #import "ZYTextInputViewController.h"
+#import "PageViewDemoVC.h"
+
+#import "DYLeftSlipManager.h"
+#import "LeftTableViewController.h"
 
 @interface MainViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -38,6 +42,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+//    self.navigationController.hidesBarsOnSwipe = YES;
     
     self.title = @"TestDemo";
     self.mainViewControllers = @[
@@ -57,10 +62,16 @@
                                  NSStringFromClass([BannerViewController class]),
                                  NSStringFromClass([HorizontalViewController class]),
                                  NSStringFromClass([SwipCollectionViewController class]),
-                                 NSStringFromClass([ZYTextInputViewController class])
+                                 NSStringFromClass([ZYTextInputViewController class]),
+                                 NSStringFromClass([PageViewDemoVC class])
                                  ];
     
     [self.view addSubview:self.mainTableView];
+    
+    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"点击" style:UIBarButtonItemStylePlain target:self action:@selector(clickTest)];
+    [self navigationItem].rightBarButtonItem = rightItem;
+    
+//    [[DYLeftSlipManager sharedManager] setLeftViewController:[LeftTableViewController new] coverViewController:self];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -73,6 +84,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)clickTest {
+    // 代码唤出左滑视图
+    [[DYLeftSlipManager sharedManager] showLeftView];
 }
 
 #pragma mark - Getter & Setter

@@ -45,6 +45,11 @@
 		23DB02DF20D393EE00DBEAE8 /* SwipCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB02DE20D393EE00DBEAE8 /* SwipCollectionViewController.m */; };
 		23DB02E220D3940700DBEAE8 /* SwipCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB02E120D3940700DBEAE8 /* SwipCollectionViewCell.m */; };
 		23DB02E520D3943800DBEAE8 /* ZLCSwipeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB02E320D3943800DBEAE8 /* ZLCSwipeCollectionViewCell.m */; };
+		23DFF4AF227E7DD4001123FE /* PageViewDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DFF4AE227E7DD4001123FE /* PageViewDemoVC.m */; };
+		23DFF4B2227E7F5F001123FE /* SubPageViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DFF4B1227E7F5F001123FE /* SubPageViewVC.m */; };
+		23DFF4B522812321001123FE /* PageTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DFF4B422812321001123FE /* PageTabViewController.m */; };
+		23DFF4FC228C17E3001123FE /* DYLeftSlipManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DFF4F8228C17E2001123FE /* DYLeftSlipManager.m */; };
+		23DFF4FD228C17E3001123FE /* LeftTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DFF4FB228C17E2001123FE /* LeftTableViewController.m */; };
 		23F11E281F7E2DF0004E2649 /* CutImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F11E271F7E2DF0004E2649 /* CutImageViewController.m */; };
 		23F11E2B1F7E3158004E2649 /* CutImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F11E2A1F7E3158004E2649 /* CutImageView.m */; };
 		33166CAE1B0990B50033DE81 /* DLAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33166CAD1B0990B50033DE81 /* DLAlertViewController.m */; };
@@ -156,6 +161,16 @@
 		23DB02E120D3940700DBEAE8 /* SwipCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwipCollectionViewCell.m; sourceTree = "<group>"; };
 		23DB02E320D3943800DBEAE8 /* ZLCSwipeCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZLCSwipeCollectionViewCell.m; sourceTree = "<group>"; };
 		23DB02E420D3943800DBEAE8 /* ZLCSwipeCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLCSwipeCollectionViewCell.h; sourceTree = "<group>"; };
+		23DFF4AD227E7DD4001123FE /* PageViewDemoVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageViewDemoVC.h; sourceTree = "<group>"; };
+		23DFF4AE227E7DD4001123FE /* PageViewDemoVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageViewDemoVC.m; sourceTree = "<group>"; };
+		23DFF4B0227E7F5F001123FE /* SubPageViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SubPageViewVC.h; sourceTree = "<group>"; };
+		23DFF4B1227E7F5F001123FE /* SubPageViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubPageViewVC.m; sourceTree = "<group>"; };
+		23DFF4B322812321001123FE /* PageTabViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PageTabViewController.h; sourceTree = "<group>"; };
+		23DFF4B422812321001123FE /* PageTabViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageTabViewController.m; sourceTree = "<group>"; };
+		23DFF4F8228C17E2001123FE /* DYLeftSlipManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYLeftSlipManager.m; sourceTree = "<group>"; };
+		23DFF4F9228C17E2001123FE /* LeftTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftTableViewController.h; sourceTree = "<group>"; };
+		23DFF4FA228C17E2001123FE /* DYLeftSlipManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYLeftSlipManager.h; sourceTree = "<group>"; };
+		23DFF4FB228C17E2001123FE /* LeftTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftTableViewController.m; sourceTree = "<group>"; };
 		23F11E261F7E2DF0004E2649 /* CutImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CutImageViewController.h; sourceTree = "<group>"; };
 		23F11E271F7E2DF0004E2649 /* CutImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CutImageViewController.m; sourceTree = "<group>"; };
 		23F11E291F7E3158004E2649 /* CutImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CutImageView.h; sourceTree = "<group>"; };
@@ -297,6 +312,8 @@
 		23927EA41A7F4538009ABF38 /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				23DFF4F7228C17AF001123FE /* SlidePage */,
+				23DFF4AC227E7D9E001123FE /* PageViewDemo */,
 				23D1FC01221A5A3500674B4E /* TextInputView */,
 				2396EE43220038BD004611FE /* FlowViewDemo */,
 				23DB02DC20D393D600DBEAE8 /* SwipCollectionView */,
@@ -463,6 +480,30 @@
 				2350A11220D9F574004B9CA0 /* AmountView.m */,
 			);
 			path = SwipCollectionView;
+			sourceTree = "<group>";
+		};
+		23DFF4AC227E7D9E001123FE /* PageViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				23DFF4AD227E7DD4001123FE /* PageViewDemoVC.h */,
+				23DFF4AE227E7DD4001123FE /* PageViewDemoVC.m */,
+				23DFF4B322812321001123FE /* PageTabViewController.h */,
+				23DFF4B422812321001123FE /* PageTabViewController.m */,
+				23DFF4B0227E7F5F001123FE /* SubPageViewVC.h */,
+				23DFF4B1227E7F5F001123FE /* SubPageViewVC.m */,
+			);
+			path = PageViewDemo;
+			sourceTree = "<group>";
+		};
+		23DFF4F7228C17AF001123FE /* SlidePage */ = {
+			isa = PBXGroup;
+			children = (
+				23DFF4FA228C17E2001123FE /* DYLeftSlipManager.h */,
+				23DFF4F8228C17E2001123FE /* DYLeftSlipManager.m */,
+				23DFF4F9228C17E2001123FE /* LeftTableViewController.h */,
+				23DFF4FB228C17E2001123FE /* LeftTableViewController.m */,
+			);
+			path = SlidePage;
 			sourceTree = "<group>";
 		};
 		23F11E251F7E2DD0004E2649 /* CutImage */ = {
@@ -673,6 +714,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -785,6 +827,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23DFF4B2227E7F5F001123FE /* SubPageViewVC.m in Sources */,
 				B5A981831AB84A0E00EDFAD1 /* RandomKeyBoardView.m in Sources */,
 				23927EAB1A7F4538009ABF38 /* AppDelegate.m in Sources */,
 				239F7F461AA042E100BC7FF1 /* CollectionTestViewController.m in Sources */,
@@ -810,8 +853,10 @@
 				23DB02DF20D393EE00DBEAE8 /* SwipCollectionViewController.m in Sources */,
 				33FCD62C1B1D3843008A0292 /* AnimationTestView.m in Sources */,
 				23F11E281F7E2DF0004E2649 /* CutImageViewController.m in Sources */,
+				23DFF4AF227E7DD4001123FE /* PageViewDemoVC.m in Sources */,
 				2396EE4922003BA0004611FE /* FlowViewLayout.m in Sources */,
 				239F7F341AA018A600BC7FF1 /* FloatWindowViewController.m in Sources */,
+				23DFF4FC228C17E3001123FE /* DYLeftSlipManager.m in Sources */,
 				23D1FC07221A5B5F00674B4E /* ZYTextInputViewController.m in Sources */,
 				33F0B47A1D88EC60002A63E6 /* NetworkTest.m in Sources */,
 				23F11E2B1F7E3158004E2649 /* CutImageView.m in Sources */,
@@ -820,6 +865,7 @@
 				23798E2E20513F7E00FF2934 /* ZYBannerView.m in Sources */,
 				23A0FDA91FFE087300C5ADD0 /* SwiftTest.swift in Sources */,
 				23DB02E520D3943800DBEAE8 /* ZLCSwipeCollectionViewCell.m in Sources */,
+				23DFF4B522812321001123FE /* PageTabViewController.m in Sources */,
 				33166CAE1B0990B50033DE81 /* DLAlertViewController.m in Sources */,
 				239F7F371AA018EA00BC7FF1 /* PopView.m in Sources */,
 				2345FB291FD782FA003E54A0 /* AlgorithmTestVC.m in Sources */,
@@ -827,6 +873,7 @@
 				33FCCA6D1DD9A2130001BD27 /* WebViewController.m in Sources */,
 				23D1FC04221A5A6C00674B4E /* ZYTextInputView.m in Sources */,
 				2396EE4221FF0E82004611FE /* FlowViewController.m in Sources */,
+				23DFF4FD228C17E3001123FE /* LeftTableViewController.m in Sources */,
 				239F7F531AA06E2D00BC7FF1 /* PlayerView.m in Sources */,
 				C2617A9320916F2500CFEEDD /* HorizontalViewController.m in Sources */,
 				239F7F491AA043BC00BC7FF1 /* CollectionCell.m in Sources */,
@@ -965,7 +1012,7 @@
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TestDemo/SwiftMix/TestDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
@@ -994,7 +1041,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TestDemo/SwiftMix/TestDemo-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
