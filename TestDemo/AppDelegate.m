@@ -10,7 +10,12 @@
 #import "MainViewController.h"
 #import "UITabBar+Utility.h"
 #import "DLApi.h"
+#import "NSString+Utility.h"
+
+#import <CommonCrypto/CommonHMAC.h>
+
 #import "FlowViewController.h"
+#import "SpecialScrollVC.h"
 
 @interface AppDelegate () <DLApiDelegate>
 
@@ -19,6 +24,10 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSLog(@"Path---%@", paths);
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
 
@@ -30,11 +39,17 @@
     c1 = 'a';
     c2 = 97;
     
+    NSString *string = @"___VBAR_CONFIG_V1.1.0___{ssid='12345',psk='12345',reboot=1}";
+    NSString *md5String = [string zy_md5String];
+    NSString *base64String = [md5String zy_base64EncodeString];
+//    [self HMacHashWithKey:@"1234512345123451" data:string];
+    
     MainViewController *mainVC = [[MainViewController alloc] init];
     UINavigationController *mainNav = [[UINavigationController alloc] initWithRootViewController:mainVC];
     mainNav.tabBarItem.title = @"main";
     
     FlowViewController *testVC = [[FlowViewController alloc] init];
+//    SpecialScrollVC *testVC = [[SpecialScrollVC alloc] init];
     UINavigationController *testNav = [[UINavigationController alloc] initWithRootViewController:testVC];
     testVC.tabBarItem.title = @"test";
 
@@ -51,6 +66,23 @@
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+-  (NSString *)HMacHashWithKey:(NSString *)key data:(NSString *)data{
+    const char *cKey  = [key cStringUsingEncoding:NSASCIIStringEncoding];
+    const char *cData = [data cStringUsingEncoding:NSASCIIStringEncoding];
+    
+    unsigned char cHMAC[CC_SHA256_DIGEST_LENGTH];
+    
+    //关键部分
+    CCHmac(kCCHmacAlgSHA256, cKey, strlen(cKey), cData, strlen(cData), cHMAC);
+    
+    NSData *HMAC = [[NSData alloc] initWithBytes:cHMAC
+                                          length:sizeof(cHMAC)];
+    
+    //将加密结果进行一次BASE64编码。
+    NSString *hash = [HMAC base64EncodedStringWithOptions:0];
+    return hash;
 }
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {

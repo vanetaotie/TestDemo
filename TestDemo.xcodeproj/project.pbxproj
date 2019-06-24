@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		2325D94F1F8B1337005C4208 /* CutImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2325D94E1F8B1337005C4208 /* CutImage.bundle */; };
 		23268629212FFC550059AFC3 /* UIControl+JSA.m in Sources */ = {isa = PBXBuildFile; fileRef = 23268628212FFC550059AFC3 /* UIControl+JSA.m */; };
+		233306D722A11279001D7B23 /* NSString+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 233306D622A11279001D7B23 /* NSString+Utility.m */; };
 		2345FB291FD782FA003E54A0 /* AlgorithmTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2345FB281FD782FA003E54A0 /* AlgorithmTestVC.m */; };
 		2350A11320D9F574004B9CA0 /* AmountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2350A11220D9F574004B9CA0 /* AmountView.m */; };
 		235ECC542051256700BE5DB1 /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 235ECC532051256700BE5DB1 /* BannerViewController.m */; };
+		2376BB2622B378EA00088A26 /* SpecialScrollVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2376BB2522B378EA00088A26 /* SpecialScrollVC.m */; };
 		23798E2B20513F7E00FF2934 /* ZYBannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23798E2520513F7E00FF2934 /* ZYBannerCell.m */; };
 		23798E2C20513F7E00FF2934 /* ZYBannerFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 23798E2720513F7E00FF2934 /* ZYBannerFooter.m */; };
 		23798E2D20513F7E00FF2934 /* ZYBannerView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 23798E2820513F7E00FF2934 /* ZYBannerView.bundle */; };
@@ -94,6 +96,8 @@
 		2325D94E1F8B1337005C4208 /* CutImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CutImage.bundle; sourceTree = "<group>"; };
 		23268627212FFC550059AFC3 /* UIControl+JSA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControl+JSA.h"; sourceTree = "<group>"; };
 		23268628212FFC550059AFC3 /* UIControl+JSA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIControl+JSA.m"; sourceTree = "<group>"; };
+		233306D522A11279001D7B23 /* NSString+Utility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Utility.h"; sourceTree = "<group>"; };
+		233306D622A11279001D7B23 /* NSString+Utility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Utility.m"; sourceTree = "<group>"; };
 		2345FB271FD782FA003E54A0 /* AlgorithmTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgorithmTestVC.h; sourceTree = "<group>"; };
 		2345FB281FD782FA003E54A0 /* AlgorithmTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlgorithmTestVC.m; sourceTree = "<group>"; };
 		2345FB2A1FD78586003E54A0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 		2350A11420D9F62F004B9CA0 /* Definition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Definition.h; sourceTree = "<group>"; };
 		235ECC522051256700BE5DB1 /* BannerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerViewController.h; sourceTree = "<group>"; };
 		235ECC532051256700BE5DB1 /* BannerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
+		2376BB2422B378EA00088A26 /* SpecialScrollVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecialScrollVC.h; sourceTree = "<group>"; };
+		2376BB2522B378EA00088A26 /* SpecialScrollVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpecialScrollVC.m; sourceTree = "<group>"; };
 		23798E2420513F7E00FF2934 /* ZYBannerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYBannerCell.h; sourceTree = "<group>"; };
 		23798E2520513F7E00FF2934 /* ZYBannerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYBannerCell.m; sourceTree = "<group>"; };
 		23798E2620513F7E00FF2934 /* ZYBannerFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYBannerFooter.h; sourceTree = "<group>"; };
@@ -264,6 +270,15 @@
 			path = BannerView;
 			sourceTree = "<group>";
 		};
+		2376BB2322B378AB00088A26 /* SpecialScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				2376BB2422B378EA00088A26 /* SpecialScrollVC.h */,
+				2376BB2522B378EA00088A26 /* SpecialScrollVC.m */,
+			);
+			path = SpecialScrollView;
+			sourceTree = "<group>";
+		};
 		23798E2320513F7E00FF2934 /* ZYBannerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,6 +327,7 @@
 		23927EA41A7F4538009ABF38 /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				2376BB2322B378AB00088A26 /* SpecialScrollView */,
 				23DFF4F7228C17AF001123FE /* SlidePage */,
 				23DFF4AC227E7D9E001123FE /* PageViewDemo */,
 				23D1FC01221A5A3500674B4E /* TextInputView */,
@@ -547,6 +563,8 @@
 				33DCA5281EB88746008BFD65 /* UITabBar+Utility.m */,
 				23268627212FFC550059AFC3 /* UIControl+JSA.h */,
 				23268628212FFC550059AFC3 /* UIControl+JSA.m */,
+				233306D522A11279001D7B23 /* NSString+Utility.h */,
+				233306D622A11279001D7B23 /* NSString+Utility.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -848,6 +866,7 @@
 				239F7F3B1AA020C300BC7FF1 /* EventKitTestViewController.m in Sources */,
 				235ECC542051256700BE5DB1 /* BannerViewController.m in Sources */,
 				23DB02E220D3940700DBEAE8 /* SwipCollectionViewCell.m in Sources */,
+				2376BB2622B378EA00088A26 /* SpecialScrollVC.m in Sources */,
 				23927EA81A7F4538009ABF38 /* main.m in Sources */,
 				33ECBDF31F304C7E0063A3A8 /* DLApi.m in Sources */,
 				23DB02DF20D393EE00DBEAE8 /* SwipCollectionViewController.m in Sources */,
@@ -861,6 +880,7 @@
 				33F0B47A1D88EC60002A63E6 /* NetworkTest.m in Sources */,
 				23F11E2B1F7E3158004E2649 /* CutImageView.m in Sources */,
 				2350A11320D9F574004B9CA0 /* AmountView.m in Sources */,
+				233306D722A11279001D7B23 /* NSString+Utility.m in Sources */,
 				33166CB11B09AF6A0033DE81 /* DLAlertView.m in Sources */,
 				23798E2E20513F7E00FF2934 /* ZYBannerView.m in Sources */,
 				23A0FDA91FFE087300C5ADD0 /* SwiftTest.swift in Sources */,

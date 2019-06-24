@@ -21,6 +21,7 @@ static const UIEdgeInsets FlowViewDefaultEdgeInset = {10, 10, 10, 10};
 
 @property (nonatomic,strong) NSMutableArray *attributesArray;
 @property (nonatomic,strong) NSMutableArray<UICollectionViewLayoutAttributes*> *itemArray;
+@property (nonatomic,assign) CGFloat totalHeight;
 
 /** 列数*/
 - (NSInteger)columnCount;
@@ -77,33 +78,32 @@ static const UIEdgeInsets FlowViewDefaultEdgeInset = {10, 10, 10, 10};
     
     [self.attributesArray removeAllObjects];
     [self.itemArray removeAllObjects];
+    self.totalHeight = 0;
     
-    NSLog(@"prepareLayout");
-    
-    ///获取当前collectionView对应区的item
+    //获取当前collectionView对应区的item
     NSUInteger sectionCount = [self.collectionView numberOfSections];
-    
-//    for (NSInteger section = 0; section < sectionCount; section++) {
-//        NSInteger count = [self.collectionView numberOfItemsInSection:section];
-//        for (int i = 0; i < count; i++) {
-//            UICollectionViewLayoutAttributes *attributes = [self layoutAttributesForItemAtIndexPath:[NSIndexPath indexPathForRow:i inSection:section]];
-//            [self.attributesArray addObject:attributes];
-////            NSLog(@"section%ld--i%d--attributes%@", (long)section, i, attributes);
-//        }
-//    }
-    
-    NSInteger count = [self.collectionView numberOfItemsInSection:sectionCount - 1];
-    for (int i = 0; i < count; i++) {
-        UICollectionViewLayoutAttributes *attributes = [self layoutAttributesForItemAtIndexPath:[NSIndexPath indexPathForRow:i inSection:sectionCount - 1]];
-        [self.attributesArray addObject:attributes];
+    for (NSInteger section = 0; section < sectionCount; section++) {
+        NSInteger count = [self.collectionView numberOfItemsInSection:section];
+        
+        if ([self.delegate respondsToSelector:@selector(collectionView:layout:referenceSizeForHeaderInSection:)]) {
+            UICollectionViewLayoutAttributes *headerAttr = [self layoutAttributesForSupplementaryViewOfKind:UICollectionElementKindSectionHeader atIndexPath:[NSIndexPath indexPathWithIndex:section]];
+            [self.attributesArray addObject:headerAttr];
+        }
+        
+        for (int i = 0; i < count; i++) {
+            UICollectionViewLayoutAttributes *attributes = [self layoutAttributesForItemAtIndexPath:[NSIndexPath indexPathForRow:i inSection:section]];
+            [self.attributesArray addObject:attributes];
+        }
+        
+        if ([self.delegate respondsToSelector:@selector(collectionView:layout:referenceSizeForFooterInSection:)]) {
+            UICollectionViewLayoutAttributes *footerAttr = [self layoutAttributesForSupplementaryViewOfKind:UICollectionElementKindSectionFooter atIndexPath:[NSIndexPath indexPathWithIndex:section]];
+            [self.attributesArray addObject:footerAttr];
+        }
     }
 }
 
 ///返回collectionView的内容的尺寸
 - (CGSize)collectionViewContentSize {
-    
-    NSLog(@"collectionViewContentSize");
-    
     CGFloat maxContentHeight = CGRectGetMaxY([self.itemArray firstObject].frame);
     
     for (UICollectionViewLayoutAttributes *attributes in self.itemArray) {
@@ -111,82 +111,86 @@ static const UIEdgeInsets FlowViewDefaultEdgeInset = {10, 10, 10, 10};
             maxContentHeight = CGRectGetMaxY(attributes.frame);
         }
     }
-    
-    NSLog(@"itemArray---%@", self.itemArray);
-    
     return CGSizeMake(self.collectionView.bounds.size.width, maxContentHeight + self.edgeInsets.bottom);
 }
 
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect {
+    return self.attributesArray;
+}
+
+- (UICollectionViewLayoutAttributes *)layoutAttributesForSupplementaryViewOfKind:(NSString *)elementKind atIndexPath:(NSIndexPath *)indexPath {
     
-    NSLog(@"layoutAttributesForElementsInRect");
+    UICollectionViewLayoutAttributes *layoutAttrs = [UICollectionViewLayoutAttributes layoutAttributesForSupplementaryViewOfKind:elementKind withIndexPath:indexPath];
+    NSUInteger sectionCount = [self.collectionView numberOfSections];
+    CGSize viewSize;
     
-    NSArray *attributes = [super layoutAttributesForElementsInRect:rect];
-    NSMutableArray *allAttributes = [NSMutableArray array];
-    for (UICollectionViewLayoutAttributes *attribute in attributes) {
-        
-        NSUInteger sectionCount = [self.collectionView numberOfSections];
-        if (attribute.indexPath.section != sectionCount - 1) {
-            [allAttributes addObject:attribute];
+    if (elementKind == UICollectionElementKindSectionHeader) {
+        viewSize = [self.delegate collectionView:self.collectionView layout:self referenceSizeForHeaderInSection:indexPath.section];
+    } else if (elementKind == UICollectionElementKindSectionFooter){
+        if (indexPath.section == sectionCount - 1) {
+            viewSize = CGSizeZero;  //瀑布流footer不计算
+        } else {
+            viewSize = [self.delegate collectionView:self.collectionView layout:self referenceSizeForFooterInSection:indexPath.section];
         }
     }
-    
-    for (UICollectionViewLayoutAttributes *att in self.attributesArray) {
-        [allAttributes addObject:att];
-    }
-    
-    NSLog(@"arr---%@", allAttributes);
-    return allAttributes;
+    layoutAttrs.frame = CGRectMake(0, self.totalHeight, viewSize.width, viewSize.height);
+    self.totalHeight += viewSize.height;
+    return layoutAttrs;
 }
 
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    NSLog(@"section%ld---row%ld", (long)indexPath.section, (long)indexPath.row);
-    
-    UICollectionViewLayoutAttributes *attributs = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
-    
-    CGSize itemSize = CGSizeZero;
-    UIEdgeInsets edgeInsets = UIEdgeInsetsZero;
-    if (_delegate && [_delegate respondsToSelector:@selector(collectionView:layout:sizeForItemAtIndexPath:)]) {
-        itemSize = [_delegate collectionView:self.collectionView layout:self sizeForItemAtIndexPath:indexPath];
-    } else {
-        itemSize = self.itemSize;
-    }
-    if (_delegate && [_delegate respondsToSelector:@selector(collectionView:layout:insetForSectionAtIndex:)]) {
-        edgeInsets = [_delegate collectionView:self.collectionView layout:self insetForSectionAtIndex:indexPath.section];
-    } else {
-        edgeInsets = self.sectionInset;
-    }
 
-    CGFloat frontSectionHeight = 100;//?计算所有瀑布流楼层之前的高度
+    UICollectionViewLayoutAttributes *attributs = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
+    NSUInteger sectionCount = [self.collectionView numberOfSections];
     
-    ///item的宽度，根据左右间距和中间间距算出item宽度
-    CGFloat itemWidth = (self.collectionView.bounds.size.width - (self.edgeInsets.left + self.edgeInsets.right + (self.columnCount - 1) * self.columnMargin)) /  self.columnCount;
-    
-    ///item的高度
-    CGFloat itemHeight = [self.delegate flowViewLayout:self heightForItemAtIndexPath:indexPath];
-    
-    if (self.itemArray.count < self.columnCount) {
-        [self.itemArray addObject:attributs];
-        CGRect itemFrame = CGRectMake(self.edgeInsets.left + (itemWidth + self.columnMargin) * (self.itemArray.count - 1), self.edgeInsets.top + frontSectionHeight, itemWidth, itemHeight);
-        attributs.frame = itemFrame;
-    } else {
-        UICollectionViewLayoutAttributes *fristAttri = [self.itemArray firstObject];
-        CGFloat minY = CGRectGetMaxY(fristAttri.frame);
-        CGFloat Y = minY;
-        NSInteger index = 0;
-        CGRect itemFrame = CGRectMake(fristAttri.frame.origin.x, CGRectGetMaxY(fristAttri.frame) + self.rowMargin, itemWidth, itemHeight);
-        for (UICollectionViewLayoutAttributes *attri in self.itemArray) {
-            if (minY > CGRectGetMaxY(attri.frame)) {
-                minY = CGRectGetMaxY(attri.frame);
-                Y = minY;
-                itemFrame = CGRectMake(attri.frame.origin.x, Y + self.rowMargin, itemWidth, itemHeight);
-                NSInteger currentIndex = [self.itemArray indexOfObject:attri];
-                index = currentIndex;
+    if (indexPath.section == sectionCount - 1) {
+        ///item的宽度，根据左右间距和中间间距算出item宽度
+        CGFloat itemWidth = (self.collectionView.bounds.size.width - (self.edgeInsets.left + self.edgeInsets.right + (self.columnCount - 1) * self.columnMargin)) /  self.columnCount;
+        
+        ///item的高度
+        CGFloat itemHeight = [self.delegate flowViewLayout:self heightForItemAtIndexPath:indexPath];
+        
+        CGFloat y = self.totalHeight;
+        
+        if (self.itemArray.count < self.columnCount) {
+            [self.itemArray addObject:attributs];
+            CGRect itemFrame = CGRectMake(self.edgeInsets.left + (itemWidth + self.columnMargin) * (self.itemArray.count - 1), self.edgeInsets.top + y, itemWidth, itemHeight);
+            attributs.frame = itemFrame;
+        } else {
+            UICollectionViewLayoutAttributes *fristAttri = [self.itemArray firstObject];
+            CGFloat minY = CGRectGetMaxY(fristAttri.frame);
+            CGFloat Y = minY;
+            NSInteger index = 0;
+            CGRect itemFrame = CGRectMake(fristAttri.frame.origin.x, CGRectGetMaxY(fristAttri.frame) + self.rowMargin, itemWidth, itemHeight);
+            for (UICollectionViewLayoutAttributes *attri in self.itemArray) {
+                if (minY > CGRectGetMaxY(attri.frame)) {
+                    minY = CGRectGetMaxY(attri.frame);
+                    Y = minY;
+                    itemFrame = CGRectMake(attri.frame.origin.x, Y + self.rowMargin, itemWidth, itemHeight);
+                    NSInteger currentIndex = [self.itemArray indexOfObject:attri];
+                    index = currentIndex;
+                }
             }
+            attributs.frame = itemFrame;
+            [self.itemArray replaceObjectAtIndex:index withObject:attributs];
         }
-        attributs.frame = itemFrame;
-        [self.itemArray replaceObjectAtIndex:index withObject:attributs];
+        
+        return attributs;
+    } else {
+        CGSize itemSize = [self.delegate collectionView:self.collectionView layout:self sizeForItemAtIndexPath:indexPath];
+        UIEdgeInsets edgeInsets = [self.delegate collectionView:self.collectionView layout:self insetForSectionAtIndex:indexPath.section];
+        CGFloat lineSpacing = [self.delegate collectionView:self.collectionView layout:self minimumLineSpacingForSectionAtIndex:indexPath.section];
+        CGFloat interitemSpacing = [self.delegate collectionView:self.collectionView layout:self minimumInteritemSpacingForSectionAtIndex:indexPath.section];
+        
+        if (indexPath.item == 0) {
+            NSInteger itemCount = [self.collectionView numberOfItemsInSection:indexPath.section];
+            CGFloat maxCountARow = (self.collectionView.frame.size.width - edgeInsets.left - edgeInsets.right + interitemSpacing) / (itemSize.width + interitemSpacing);
+            NSInteger rowCount = ceil(itemCount / floor(maxCountARow));
+            
+            self.totalHeight += itemSize.height * rowCount + lineSpacing * (rowCount - 1) + edgeInsets.top + edgeInsets.bottom;//section高度
+        }
+        
+        return [super layoutAttributesForItemAtIndexPath:indexPath];
     }
     
     return attributs;

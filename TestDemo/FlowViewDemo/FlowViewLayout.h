@@ -16,12 +16,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (CGFloat)flowViewLayout:(FlowViewLayout *)flowLayout heightForItemAtIndexPath:(NSIndexPath *)indexPath;
 
-/**同基础UICollectionView的代理设置**/
+@optional
+
+/**同基础UICollectionView的代理设置,如有除瀑布流以外section、header、footer，必须实现**/
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(FlowViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath;
 
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(FlowViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section;
 
-@optional
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(FlowViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section;
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(FlowViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section;
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(FlowViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section;
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(FlowViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section;
 
 //列数 默认2
 - (NSInteger)columnCountInFlowViewLayout:(FlowViewLayout *)flowLayout;

@@ -71,7 +71,7 @@
     UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"点击" style:UIBarButtonItemStylePlain target:self action:@selector(clickTest)];
     [self navigationItem].rightBarButtonItem = rightItem;
     
-//    [[DYLeftSlipManager sharedManager] setLeftViewController:[LeftTableViewController new] coverViewController:self];
+    [[DYLeftSlipManager sharedManager] setLeftViewController:[LeftTableViewController new] coverViewController:self];
 }
 
 - (void)viewWillAppear:(BOOL)animated
