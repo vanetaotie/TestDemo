@@ -16,6 +16,7 @@ PODS:
     - AFNetworking/NSURLSession
   - CTMediator (25)
   - HandyFrame (1.2.0)
+  - LookinServer (0.9.3)
   - Masonry (1.1.0)
   - MJRefresh (3.1.15.7)
   - pop (1.0.10)
@@ -34,6 +35,7 @@ DEPENDENCIES:
   - AFNetworking (~> 3.0)
   - CTMediator
   - HandyFrame
+  - LookinServer
   - Masonry
   - MJRefresh
   - pop (~> 1.0)
@@ -49,6 +51,7 @@ SPEC REPOS:
     - AFNetworking
     - CTMediator
     - HandyFrame
+    - LookinServer
     - Masonry
     - MJRefresh
     - pop
@@ -71,6 +74,7 @@ SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   CTMediator: 830c1fc204b3a6abf2a059510c7380f56343da0f
   HandyFrame: 437df83ba7563c56cd55b9bd0128561995463110
+  LookinServer: 44f1b5f32743dc61068a156ff86b5b47d0a82943
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
@@ -81,6 +85,6 @@ SPEC CHECKSUMS:
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 9b5e8e5703dbced8eb25438832c984333a9d1dd0
+PODFILE CHECKSUM: 714723341a54d8703eef411b61676c3da291c188
 
 COCOAPODS: 1.5.3

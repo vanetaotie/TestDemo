@@ -22,7 +22,7 @@
     [self.view addSubview:self.tableView];
     
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.top.bottom.mas_equalTo(self);
+        make.left.right.top.bottom.mas_equalTo(self.view);
     }];
 }
 
@@ -95,6 +95,7 @@
         _tableView  = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
     }
     return _tableView;
 }
