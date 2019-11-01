@@ -11,8 +11,11 @@
 		23268629212FFC550059AFC3 /* UIControl+JSA.m in Sources */ = {isa = PBXBuildFile; fileRef = 23268628212FFC550059AFC3 /* UIControl+JSA.m */; };
 		233306D722A11279001D7B23 /* NSString+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 233306D622A11279001D7B23 /* NSString+Utility.m */; };
 		2345FB291FD782FA003E54A0 /* AlgorithmTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2345FB281FD782FA003E54A0 /* AlgorithmTestVC.m */; };
+		2350957B236C1D8D00F0039D /* UIKitTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2350957A236C1D8D00F0039D /* UIKitTestViewController.m */; };
 		2350A11320D9F574004B9CA0 /* AmountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2350A11220D9F574004B9CA0 /* AmountView.m */; };
 		235ECC542051256700BE5DB1 /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 235ECC532051256700BE5DB1 /* BannerViewController.m */; };
+		2364220C22FD21EF0076EE5B /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 2364220B22FD21EF0076EE5B /* UIViewController+Swizzling.m */; };
+		2364220F22FD21FC0076EE5B /* UIViewController+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 2364220E22FD21FC0076EE5B /* UIViewController+Test.m */; };
 		2376BB2622B378EA00088A26 /* SpecialScrollVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2376BB2522B378EA00088A26 /* SpecialScrollVC.m */; };
 		23798E2B20513F7E00FF2934 /* ZYBannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23798E2520513F7E00FF2934 /* ZYBannerCell.m */; };
 		23798E2C20513F7E00FF2934 /* ZYBannerFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 23798E2720513F7E00FF2934 /* ZYBannerFooter.m */; };
@@ -22,6 +25,8 @@
 		23798E352051406900FF2934 /* ad_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23798E312051406900FF2934 /* ad_1.jpg */; };
 		23798E362051406900FF2934 /* ad_2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 23798E322051406900FF2934 /* ad_2.jpg */; };
 		23798E372051406900FF2934 /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 23798E332051406900FF2934 /* demo.gif */; };
+		2382A8B7234DC26700D348FE /* ZYPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2382A8B6234DC26700D348FE /* ZYPasswordViewController.m */; };
+		2382A8BA234DC30C00D348FE /* ZYPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2382A8B9234DC30C00D348FE /* ZYPasswordView.m */; };
 		23927EA81A7F4538009ABF38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23927EA71A7F4538009ABF38 /* main.m */; };
 		23927EAB1A7F4538009ABF38 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23927EAA1A7F4538009ABF38 /* AppDelegate.m */; };
 		23927EAD1A7F4538009ABF38 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23927EAC1A7F4538009ABF38 /* Images.xcassets */; };
@@ -32,9 +37,7 @@
 		2396EE462200390C004611FE /* FlowViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2396EE452200390C004611FE /* FlowViewCell.m */; };
 		2396EE4922003BA0004611FE /* FlowViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 2396EE4822003BA0004611FE /* FlowViewLayout.m */; };
 		239BD3121AA5B64F0028ED05 /* playerviewlib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 239BD3111AA5B64F0028ED05 /* playerviewlib.bundle */; };
-		239F7F341AA018A600BC7FF1 /* FloatWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 239F7F331AA018A600BC7FF1 /* FloatWindowViewController.m */; };
 		239F7F371AA018EA00BC7FF1 /* PopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 239F7F361AA018EA00BC7FF1 /* PopView.m */; };
-		239F7F3B1AA020C300BC7FF1 /* EventKitTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 239F7F3A1AA020C300BC7FF1 /* EventKitTestViewController.m */; };
 		239F7F461AA042E100BC7FF1 /* CollectionTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 239F7F451AA042E100BC7FF1 /* CollectionTestViewController.m */; };
 		239F7F491AA043BC00BC7FF1 /* CollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 239F7F481AA043BC00BC7FF1 /* CollectionCell.m */; };
 		239F7F4A1AA0470600BC7FF1 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 239F7F3C1AA03ECB00BC7FF1 /* EventKit.framework */; };
@@ -43,7 +46,6 @@
 		23A0FDA91FFE087300C5ADD0 /* SwiftTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A0FDA81FFE087300C5ADD0 /* SwiftTest.swift */; };
 		23A0FDAC1FFE305700C5ADD0 /* SwiftOCTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A0FDAB1FFE305700C5ADD0 /* SwiftOCTest.m */; };
 		23D1FC04221A5A6C00674B4E /* ZYTextInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1FC03221A5A6C00674B4E /* ZYTextInputView.m */; };
-		23D1FC07221A5B5F00674B4E /* ZYTextInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1FC06221A5B5F00674B4E /* ZYTextInputViewController.m */; };
 		23DB02DF20D393EE00DBEAE8 /* SwipCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB02DE20D393EE00DBEAE8 /* SwipCollectionViewController.m */; };
 		23DB02E220D3940700DBEAE8 /* SwipCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB02E120D3940700DBEAE8 /* SwipCollectionViewCell.m */; };
 		23DB02E520D3943800DBEAE8 /* ZLCSwipeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB02E320D3943800DBEAE8 /* ZLCSwipeCollectionViewCell.m */; };
@@ -58,10 +60,7 @@
 		33166CB11B09AF6A0033DE81 /* DLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33166CB01B09AF6A0033DE81 /* DLAlertView.m */; };
 		3318A32A1D52CA2C003FBF6A /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3318A3291D52CA2C003FBF6A /* JavaScriptCore.framework */; };
 		336137991E0BCB1B001E4A6E /* SugerNetworkFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 336137981E0BCB1B001E4A6E /* SugerNetworkFramework.framework */; };
-		3376D7651B67564F00B0DE06 /* LimitTextInput.m in Sources */ = {isa = PBXBuildFile; fileRef = 3376D7641B67564F00B0DE06 /* LimitTextInput.m */; };
-		3376D7711B6766FD00B0DE06 /* LimitInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3376D7701B6766FD00B0DE06 /* LimitInputViewController.m */; };
 		33DCA5291EB88746008BFD65 /* UITabBar+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DCA5281EB88746008BFD65 /* UITabBar+Utility.m */; };
-		33E8B5B91BE0A43A00A27367 /* ScrollTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E8B5B81BE0A43A00A27367 /* ScrollTextViewController.m */; };
 		33ECBDF31F304C7E0063A3A8 /* DLApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 33ECBDF21F304C7E0063A3A8 /* DLApi.m */; };
 		33ECBDF61F304EB90063A3A8 /* DLApiObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 33ECBDF51F304EB90063A3A8 /* DLApiObject.m */; };
 		33F0B47A1D88EC60002A63E6 /* NetworkTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F0B4791D88EC60002A63E6 /* NetworkTest.m */; };
@@ -101,11 +100,17 @@
 		2345FB271FD782FA003E54A0 /* AlgorithmTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlgorithmTestVC.h; sourceTree = "<group>"; };
 		2345FB281FD782FA003E54A0 /* AlgorithmTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlgorithmTestVC.m; sourceTree = "<group>"; };
 		2345FB2A1FD78586003E54A0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		23509579236C1D8D00F0039D /* UIKitTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitTestViewController.h; sourceTree = "<group>"; };
+		2350957A236C1D8D00F0039D /* UIKitTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIKitTestViewController.m; sourceTree = "<group>"; };
 		2350A11120D9F574004B9CA0 /* AmountView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmountView.h; sourceTree = "<group>"; };
 		2350A11220D9F574004B9CA0 /* AmountView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AmountView.m; sourceTree = "<group>"; };
 		2350A11420D9F62F004B9CA0 /* Definition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Definition.h; sourceTree = "<group>"; };
 		235ECC522051256700BE5DB1 /* BannerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerViewController.h; sourceTree = "<group>"; };
 		235ECC532051256700BE5DB1 /* BannerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
+		2364220A22FD21EF0076EE5B /* UIViewController+Swizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Swizzling.h"; sourceTree = "<group>"; };
+		2364220B22FD21EF0076EE5B /* UIViewController+Swizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Swizzling.m"; sourceTree = "<group>"; };
+		2364220D22FD21FC0076EE5B /* UIViewController+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Test.h"; sourceTree = "<group>"; };
+		2364220E22FD21FC0076EE5B /* UIViewController+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Test.m"; sourceTree = "<group>"; };
 		2376BB2422B378EA00088A26 /* SpecialScrollVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecialScrollVC.h; sourceTree = "<group>"; };
 		2376BB2522B378EA00088A26 /* SpecialScrollVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpecialScrollVC.m; sourceTree = "<group>"; };
 		23798E2420513F7E00FF2934 /* ZYBannerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYBannerCell.h; sourceTree = "<group>"; };
@@ -119,6 +124,10 @@
 		23798E312051406900FF2934 /* ad_1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ad_1.jpg; sourceTree = "<group>"; };
 		23798E322051406900FF2934 /* ad_2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ad_2.jpg; sourceTree = "<group>"; };
 		23798E332051406900FF2934 /* demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo.gif; sourceTree = "<group>"; };
+		2382A8B5234DC26700D348FE /* ZYPasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYPasswordViewController.h; sourceTree = "<group>"; };
+		2382A8B6234DC26700D348FE /* ZYPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYPasswordViewController.m; sourceTree = "<group>"; };
+		2382A8B8234DC30C00D348FE /* ZYPasswordView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYPasswordView.h; sourceTree = "<group>"; };
+		2382A8B9234DC30C00D348FE /* ZYPasswordView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYPasswordView.m; sourceTree = "<group>"; };
 		23927EA21A7F4538009ABF38 /* TestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23927EA61A7F4538009ABF38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23927EA71A7F4538009ABF38 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -138,12 +147,8 @@
 		2396EE4722003BA0004611FE /* FlowViewLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlowViewLayout.h; sourceTree = "<group>"; };
 		2396EE4822003BA0004611FE /* FlowViewLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlowViewLayout.m; sourceTree = "<group>"; };
 		239BD3111AA5B64F0028ED05 /* playerviewlib.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = playerviewlib.bundle; sourceTree = "<group>"; };
-		239F7F321AA018A600BC7FF1 /* FloatWindowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FloatWindowViewController.h; sourceTree = "<group>"; };
-		239F7F331AA018A600BC7FF1 /* FloatWindowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FloatWindowViewController.m; sourceTree = "<group>"; };
 		239F7F351AA018EA00BC7FF1 /* PopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopView.h; sourceTree = "<group>"; };
 		239F7F361AA018EA00BC7FF1 /* PopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopView.m; sourceTree = "<group>"; };
-		239F7F391AA020C300BC7FF1 /* EventKitTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventKitTestViewController.h; sourceTree = "<group>"; };
-		239F7F3A1AA020C300BC7FF1 /* EventKitTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventKitTestViewController.m; sourceTree = "<group>"; };
 		239F7F3C1AA03ECB00BC7FF1 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		239F7F3D1AA03ECB00BC7FF1 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		239F7F441AA042E100BC7FF1 /* CollectionTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionTestViewController.h; sourceTree = "<group>"; };
@@ -159,8 +164,6 @@
 		23A0FDAB1FFE305700C5ADD0 /* SwiftOCTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwiftOCTest.m; sourceTree = "<group>"; };
 		23D1FC02221A5A6C00674B4E /* ZYTextInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYTextInputView.h; sourceTree = "<group>"; };
 		23D1FC03221A5A6C00674B4E /* ZYTextInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYTextInputView.m; sourceTree = "<group>"; };
-		23D1FC05221A5B5F00674B4E /* ZYTextInputViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYTextInputViewController.h; sourceTree = "<group>"; };
-		23D1FC06221A5B5F00674B4E /* ZYTextInputViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYTextInputViewController.m; sourceTree = "<group>"; };
 		23DB02DD20D393EE00DBEAE8 /* SwipCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwipCollectionViewController.h; sourceTree = "<group>"; };
 		23DB02DE20D393EE00DBEAE8 /* SwipCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwipCollectionViewController.m; sourceTree = "<group>"; };
 		23DB02E020D3940700DBEAE8 /* SwipCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwipCollectionViewCell.h; sourceTree = "<group>"; };
@@ -187,14 +190,8 @@
 		33166CB01B09AF6A0033DE81 /* DLAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAlertView.m; sourceTree = "<group>"; };
 		3318A3291D52CA2C003FBF6A /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		336137981E0BCB1B001E4A6E /* SugerNetworkFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SugerNetworkFramework.framework; sourceTree = "<group>"; };
-		3376D7631B67564F00B0DE06 /* LimitTextInput.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LimitTextInput.h; sourceTree = "<group>"; };
-		3376D7641B67564F00B0DE06 /* LimitTextInput.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LimitTextInput.m; sourceTree = "<group>"; };
-		3376D76F1B6766FD00B0DE06 /* LimitInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LimitInputViewController.h; sourceTree = "<group>"; };
-		3376D7701B6766FD00B0DE06 /* LimitInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LimitInputViewController.m; sourceTree = "<group>"; };
 		33DCA5271EB88746008BFD65 /* UITabBar+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+Utility.h"; sourceTree = "<group>"; };
 		33DCA5281EB88746008BFD65 /* UITabBar+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+Utility.m"; sourceTree = "<group>"; };
-		33E8B5B71BE0A43A00A27367 /* ScrollTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollTextViewController.h; sourceTree = "<group>"; };
-		33E8B5B81BE0A43A00A27367 /* ScrollTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollTextViewController.m; sourceTree = "<group>"; };
 		33ECBDF11F304C7E0063A3A8 /* DLApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLApi.h; sourceTree = "<group>"; };
 		33ECBDF21F304C7E0063A3A8 /* DLApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLApi.m; sourceTree = "<group>"; };
 		33ECBDF41F304EB90063A3A8 /* DLApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLApiObject.h; sourceTree = "<group>"; };
@@ -259,6 +256,19 @@
 			path = Algorithm;
 			sourceTree = "<group>";
 		};
+		23509578236C1D5D00F0039D /* UIKitTest */ = {
+			isa = PBXGroup;
+			children = (
+				23D1FC02221A5A6C00674B4E /* ZYTextInputView.h */,
+				23D1FC03221A5A6C00674B4E /* ZYTextInputView.m */,
+				239F7F351AA018EA00BC7FF1 /* PopView.h */,
+				239F7F361AA018EA00BC7FF1 /* PopView.m */,
+				23509579236C1D8D00F0039D /* UIKitTestViewController.h */,
+				2350957A236C1D8D00F0039D /* UIKitTestViewController.m */,
+			);
+			path = UIKitTest;
+			sourceTree = "<group>";
+		};
 		235ECC512051131100BE5DB1 /* BannerView */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +314,17 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		2382A8B4234DC22300D348FE /* PasswordVIew */ = {
+			isa = PBXGroup;
+			children = (
+				2382A8B5234DC26700D348FE /* ZYPasswordViewController.h */,
+				2382A8B6234DC26700D348FE /* ZYPasswordViewController.m */,
+				2382A8B8234DC30C00D348FE /* ZYPasswordView.h */,
+				2382A8B9234DC30C00D348FE /* ZYPasswordView.m */,
+			);
+			path = PasswordVIew;
+			sourceTree = "<group>";
+		};
 		23927E991A7F4538009ABF38 = {
 			isa = PBXGroup;
 			children = (
@@ -327,32 +348,29 @@
 		23927EA41A7F4538009ABF38 /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
-				2376BB2322B378AB00088A26 /* SpecialScrollView */,
-				23DFF4F7228C17AF001123FE /* SlidePage */,
+				2382A8B4234DC22300D348FE /* PasswordVIew */,
 				23DFF4AC227E7D9E001123FE /* PageViewDemo */,
-				23D1FC01221A5A3500674B4E /* TextInputView */,
-				2396EE43220038BD004611FE /* FlowViewDemo */,
 				23DB02DC20D393D600DBEAE8 /* SwipCollectionView */,
 				C2617A9020916F0C00CFEEDD /* HorizontalView */,
 				235ECC512051131100BE5DB1 /* BannerView */,
 				23F11E251F7E2DD0004E2649 /* CutImage */,
 				33ECBDF01F304C3C0063A3A8 /* OAuth2.0 */,
 				33FCCA6A1DD9A1F90001BD27 /* WebViewTest */,
-				33E8B5B61BE0A3BA00A27367 /* ScrollTextLabel */,
-				3376D7621B67562B00B0DE06 /* LimitTextInput */,
 				33FCD6231B1D37AA008A0292 /* GraphicsAndAnimation */,
 				33166CAB1B0990940033DE81 /* DLAlertViewTest */,
 				B5A9817D1AB82C1E00EDFAD1 /* KeyBoardTest */,
 				239F7F501AA06DFA00BC7FF1 /* AVPlayerTest */,
 				239F7F431AA042BB00BC7FF1 /* CollectionViewTest */,
-				239F7F381AA020A000BC7FF1 /* EventKitTest */,
-				239F7F311AA0184100BC7FF1 /* FloatWindow */,
+				23509578236C1D5D00F0039D /* UIKitTest */,
 				33F0B4771D88EC04002A63E6 /* NetworkTest */,
 				23927EC51A7F457D009ABF38 /* MainViewController.h */,
 				23927EC61A7F457D009ABF38 /* MainViewController.m */,
 				23927EA91A7F4538009ABF38 /* AppDelegate.h */,
 				23927EAA1A7F4538009ABF38 /* AppDelegate.m */,
 				2350A11420D9F62F004B9CA0 /* Definition.h */,
+				23DFF4F7228C17AF001123FE /* SlidePage */,
+				2376BB2322B378AB00088A26 /* SpecialScrollView */,
+				2396EE43220038BD004611FE /* FlowViewDemo */,
 				23A0FDA61FFE083400C5ADD0 /* SwiftMix */,
 				2345FB261FD782D8003E54A0 /* Algorithm */,
 				33DCA5261EB885DA008BFD65 /* Utility */,
@@ -406,26 +424,6 @@
 			path = FlowViewDemo;
 			sourceTree = "<group>";
 		};
-		239F7F311AA0184100BC7FF1 /* FloatWindow */ = {
-			isa = PBXGroup;
-			children = (
-				239F7F351AA018EA00BC7FF1 /* PopView.h */,
-				239F7F361AA018EA00BC7FF1 /* PopView.m */,
-				239F7F321AA018A600BC7FF1 /* FloatWindowViewController.h */,
-				239F7F331AA018A600BC7FF1 /* FloatWindowViewController.m */,
-			);
-			path = FloatWindow;
-			sourceTree = "<group>";
-		};
-		239F7F381AA020A000BC7FF1 /* EventKitTest */ = {
-			isa = PBXGroup;
-			children = (
-				239F7F391AA020C300BC7FF1 /* EventKitTestViewController.h */,
-				239F7F3A1AA020C300BC7FF1 /* EventKitTestViewController.m */,
-			);
-			path = EventKitTest;
-			sourceTree = "<group>";
-		};
 		239F7F401AA040F500BC7FF1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -470,17 +468,6 @@
 				23A0FDAB1FFE305700C5ADD0 /* SwiftOCTest.m */,
 			);
 			path = SwiftMix;
-			sourceTree = "<group>";
-		};
-		23D1FC01221A5A3500674B4E /* TextInputView */ = {
-			isa = PBXGroup;
-			children = (
-				23D1FC02221A5A6C00674B4E /* ZYTextInputView.h */,
-				23D1FC03221A5A6C00674B4E /* ZYTextInputView.m */,
-				23D1FC05221A5B5F00674B4E /* ZYTextInputViewController.h */,
-				23D1FC06221A5B5F00674B4E /* ZYTextInputViewController.m */,
-			);
-			path = TextInputView;
 			sourceTree = "<group>";
 		};
 		23DB02DC20D393D600DBEAE8 /* SwipCollectionView */ = {
@@ -545,17 +532,6 @@
 			path = DLAlertViewTest;
 			sourceTree = "<group>";
 		};
-		3376D7621B67562B00B0DE06 /* LimitTextInput */ = {
-			isa = PBXGroup;
-			children = (
-				3376D7631B67564F00B0DE06 /* LimitTextInput.h */,
-				3376D7641B67564F00B0DE06 /* LimitTextInput.m */,
-				3376D76F1B6766FD00B0DE06 /* LimitInputViewController.h */,
-				3376D7701B6766FD00B0DE06 /* LimitInputViewController.m */,
-			);
-			path = LimitTextInput;
-			sourceTree = "<group>";
-		};
 		33DCA5261EB885DA008BFD65 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
@@ -565,17 +541,12 @@
 				23268628212FFC550059AFC3 /* UIControl+JSA.m */,
 				233306D522A11279001D7B23 /* NSString+Utility.h */,
 				233306D622A11279001D7B23 /* NSString+Utility.m */,
+				2364220A22FD21EF0076EE5B /* UIViewController+Swizzling.h */,
+				2364220B22FD21EF0076EE5B /* UIViewController+Swizzling.m */,
+				2364220D22FD21FC0076EE5B /* UIViewController+Test.h */,
+				2364220E22FD21FC0076EE5B /* UIViewController+Test.m */,
 			);
 			path = Utility;
-			sourceTree = "<group>";
-		};
-		33E8B5B61BE0A3BA00A27367 /* ScrollTextLabel */ = {
-			isa = PBXGroup;
-			children = (
-				33E8B5B71BE0A43A00A27367 /* ScrollTextViewController.h */,
-				33E8B5B81BE0A43A00A27367 /* ScrollTextViewController.m */,
-			);
-			path = ScrollTextLabel;
 			sourceTree = "<group>";
 		};
 		33ECBDF01F304C3C0063A3A8 /* OAuth2.0 */ = {
@@ -855,31 +826,30 @@
 				2396EE462200390C004611FE /* FlowViewCell.m in Sources */,
 				23A0FDAC1FFE305700C5ADD0 /* SwiftOCTest.m in Sources */,
 				33DCA5291EB88746008BFD65 /* UITabBar+Utility.m in Sources */,
-				33E8B5B91BE0A43A00A27367 /* ScrollTextViewController.m in Sources */,
 				23798E2C20513F7E00FF2934 /* ZYBannerFooter.m in Sources */,
-				3376D7711B6766FD00B0DE06 /* LimitInputViewController.m in Sources */,
+				2364220F22FD21FC0076EE5B /* UIViewController+Test.m in Sources */,
+				2364220C22FD21EF0076EE5B /* UIViewController+Swizzling.m in Sources */,
 				23927EC71A7F457D009ABF38 /* MainViewController.m in Sources */,
 				23268629212FFC550059AFC3 /* UIControl+JSA.m in Sources */,
 				B574EF6F1ABC076C0046F300 /* PlayerViewController.m in Sources */,
 				33FCD6291B1D3833008A0292 /* GraphicsTestView.m in Sources */,
-				3376D7651B67564F00B0DE06 /* LimitTextInput.m in Sources */,
 				33ECBDF61F304EB90063A3A8 /* DLApiObject.m in Sources */,
 				23798E2B20513F7E00FF2934 /* ZYBannerCell.m in Sources */,
-				239F7F3B1AA020C300BC7FF1 /* EventKitTestViewController.m in Sources */,
 				235ECC542051256700BE5DB1 /* BannerViewController.m in Sources */,
 				23DB02E220D3940700DBEAE8 /* SwipCollectionViewCell.m in Sources */,
 				2376BB2622B378EA00088A26 /* SpecialScrollVC.m in Sources */,
 				23927EA81A7F4538009ABF38 /* main.m in Sources */,
 				33ECBDF31F304C7E0063A3A8 /* DLApi.m in Sources */,
 				23DB02DF20D393EE00DBEAE8 /* SwipCollectionViewController.m in Sources */,
+				2350957B236C1D8D00F0039D /* UIKitTestViewController.m in Sources */,
 				33FCD62C1B1D3843008A0292 /* AnimationTestView.m in Sources */,
+				2382A8BA234DC30C00D348FE /* ZYPasswordView.m in Sources */,
 				23F11E281F7E2DF0004E2649 /* CutImageViewController.m in Sources */,
 				23DFF4AF227E7DD4001123FE /* PageViewDemoVC.m in Sources */,
 				2396EE4922003BA0004611FE /* FlowViewLayout.m in Sources */,
-				239F7F341AA018A600BC7FF1 /* FloatWindowViewController.m in Sources */,
 				23DFF4FC228C17E3001123FE /* DYLeftSlipManager.m in Sources */,
-				23D1FC07221A5B5F00674B4E /* ZYTextInputViewController.m in Sources */,
 				33F0B47A1D88EC60002A63E6 /* NetworkTest.m in Sources */,
+				2382A8B7234DC26700D348FE /* ZYPasswordViewController.m in Sources */,
 				23F11E2B1F7E3158004E2649 /* CutImageView.m in Sources */,
 				2350A11320D9F574004B9CA0 /* AmountView.m in Sources */,
 				233306D722A11279001D7B23 /* NSString+Utility.m in Sources */,

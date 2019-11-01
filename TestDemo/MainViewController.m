@@ -8,15 +8,13 @@
 
 #import "MainViewController.h"
 #import "NetworkTest.h"
-#import "FloatWindowViewController.h"
-#import "EventKitTestViewController.h"
+#import "AlgorithmTestVC.h"
+#import "UIKitTestViewController.h"
 #import "CollectionTestViewController.h"
 #import "PlayerViewController.h"
 #import "KeyBoardViewController.h"
 #import "DLAlertViewController.h"
 #import "GAndATestViewController.h"
-#import "LimitInputViewController.h"
-#import "ScrollTextViewController.h"
 #import "WebViewController.h"
 #import "CutImageViewController.h"
 #import "BannerViewController.h"
@@ -24,9 +22,8 @@
 #import "DLApi.h"
 #import "UITabBar+Utility.h"
 #import "SwipCollectionViewController.h"
-#import "ZYTextInputViewController.h"
 #import "PageViewDemoVC.h"
-#import "AlgorithmTestVC.h"
+#import "ZYPasswordViewController.h"
 
 #import "DYLeftSlipManager.h"
 #import "LeftTableViewController.h"
@@ -43,29 +40,32 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSLog(@"mainviewcontroller");
+    
 //    self.navigationController.hidesBarsOnSwipe = YES;
     
-    self.title = @"TestDemo";
+//    self.title = @"TestDemo";
+    self.navigationItem.title = @"TestDemo";
+    self.navigationController.tabBarItem.title = @"Main";
+    
     self.mainViewControllers = @[
                                  NSStringFromClass([NetworkTest class]),
-                                 NSStringFromClass([FloatWindowViewController class]),
-                                 NSStringFromClass([EventKitTestViewController class]),
+                                 NSStringFromClass([AlgorithmTestVC class]),
+                                 NSStringFromClass([UIKitTestViewController class]),
                                  NSStringFromClass([CollectionTestViewController class]),
                                  NSStringFromClass([PlayerViewController class]),
                                  NSStringFromClass([KeyBoardViewController class]),
                                  NSStringFromClass([DLAlertViewController class]),
                                  NSStringFromClass([GAndATestViewController class]),
-                                 NSStringFromClass([LimitInputViewController class]),
-                                 NSStringFromClass([ScrollTextViewController class]),
                                  NSStringFromClass([WebViewController class]),
                                  NSStringFromClass([DLApi class]),
                                  NSStringFromClass([CutImageViewController class]),
                                  NSStringFromClass([BannerViewController class]),
                                  NSStringFromClass([HorizontalViewController class]),
                                  NSStringFromClass([SwipCollectionViewController class]),
-                                 NSStringFromClass([ZYTextInputViewController class]),
                                  NSStringFromClass([PageViewDemoVC class]),
-                                 NSStringFromClass([AlgorithmTestVC class])
+                                 NSStringFromClass([ZYPasswordViewController class])
                                  ];
     
     [self.view addSubview:self.mainTableView];

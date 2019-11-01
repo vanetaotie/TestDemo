@@ -23,6 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"SpecialScroll";
+    
     [self.view addSubview:self.scrollview];
     [self.scrollview addSubview:self.topScrollview];
     [self.scrollview addSubview:self.pageControl];

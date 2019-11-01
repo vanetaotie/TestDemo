@@ -46,11 +46,12 @@
 {
     CGPoint touchPoint = [gestureRecognizer locationInView:self];//辨识触摸位置
     if (CGRectContainsPoint(myTableView.frame, touchPoint)) {
-        //如果触摸位置在指定范围，则不响应手势
+        //如果触摸位置在指定范围，则不响应tapBackgroundView手势
         return NO;
     }
     return YES;
 }
+//*************************//
 
 #pragma mark delegate
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section

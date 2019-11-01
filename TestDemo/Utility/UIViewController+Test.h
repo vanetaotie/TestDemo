@@ -1,8 +1,8 @@
 //
-//  ZYTextInputViewController.h
+//  UIViewController+Test.h
 //  TestDemo
 //
-//  Created by vane on 2019/2/18.
+//  Created by vane on 2019/8/9.
 //  Copyright © 2019 vane.greenisland. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZYTextInputViewController : UIViewController
+@interface UIViewController (Test)
 
 @end
 
