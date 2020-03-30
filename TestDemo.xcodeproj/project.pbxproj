@@ -12,10 +12,13 @@
 		233306D722A11279001D7B23 /* NSString+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 233306D622A11279001D7B23 /* NSString+Utility.m */; };
 		2345FB291FD782FA003E54A0 /* AlgorithmTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2345FB281FD782FA003E54A0 /* AlgorithmTestVC.m */; };
 		2350957B236C1D8D00F0039D /* UIKitTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2350957A236C1D8D00F0039D /* UIKitTestViewController.m */; };
+		2350957E236FC9F200F0039D /* BDHKLabelAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 2350957D236FC9F200F0039D /* BDHKLabelAttribute.m */; };
+		23509581236FCB4800F0039D /* NSString+OpenAndClose.m in Sources */ = {isa = PBXBuildFile; fileRef = 23509580236FCB4800F0039D /* NSString+OpenAndClose.m */; };
 		2350A11320D9F574004B9CA0 /* AmountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2350A11220D9F574004B9CA0 /* AmountView.m */; };
 		235ECC542051256700BE5DB1 /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 235ECC532051256700BE5DB1 /* BannerViewController.m */; };
 		2364220C22FD21EF0076EE5B /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 2364220B22FD21EF0076EE5B /* UIViewController+Swizzling.m */; };
 		2364220F22FD21FC0076EE5B /* UIViewController+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 2364220E22FD21FC0076EE5B /* UIViewController+Test.m */; };
+		236C2FB4243197D300BE346C /* ScanTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C2FB3243197D300BE346C /* ScanTool.m */; };
 		2376BB2622B378EA00088A26 /* SpecialScrollVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2376BB2522B378EA00088A26 /* SpecialScrollVC.m */; };
 		23798E2B20513F7E00FF2934 /* ZYBannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23798E2520513F7E00FF2934 /* ZYBannerCell.m */; };
 		23798E2C20513F7E00FF2934 /* ZYBannerFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 23798E2720513F7E00FF2934 /* ZYBannerFooter.m */; };
@@ -45,6 +48,11 @@
 		239F7F531AA06E2D00BC7FF1 /* PlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 239F7F521AA06E2D00BC7FF1 /* PlayerView.m */; };
 		23A0FDA91FFE087300C5ADD0 /* SwiftTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A0FDA81FFE087300C5ADD0 /* SwiftTest.swift */; };
 		23A0FDAC1FFE305700C5ADD0 /* SwiftOCTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A0FDAB1FFE305700C5ADD0 /* SwiftOCTest.m */; };
+		23CDF3DB242DAC8D004F0CC5 /* BaseFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CDF3DA242DAC8D004F0CC5 /* BaseFilter.m */; };
+		23CDF3DE242DACA4004F0CC5 /* FilterBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CDF3DD242DACA4004F0CC5 /* FilterBar.m */; };
+		23CDF3E1242DC8BB004F0CC5 /* FilterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CDF3E0242DC8BB004F0CC5 /* FilterModel.m */; };
+		23CDF3E4242DD044004F0CC5 /* FilterTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CDF3E3242DD044004F0CC5 /* FilterTestViewController.m */; };
+		23CDF3E7242EF222004F0CC5 /* SingleFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CDF3E6242EF222004F0CC5 /* SingleFilterView.m */; };
 		23D1FC04221A5A6C00674B4E /* ZYTextInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23D1FC03221A5A6C00674B4E /* ZYTextInputView.m */; };
 		23DB02DF20D393EE00DBEAE8 /* SwipCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB02DE20D393EE00DBEAE8 /* SwipCollectionViewController.m */; };
 		23DB02E220D3940700DBEAE8 /* SwipCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DB02E120D3940700DBEAE8 /* SwipCollectionViewCell.m */; };
@@ -102,6 +110,10 @@
 		2345FB2A1FD78586003E54A0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		23509579236C1D8D00F0039D /* UIKitTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitTestViewController.h; sourceTree = "<group>"; };
 		2350957A236C1D8D00F0039D /* UIKitTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIKitTestViewController.m; sourceTree = "<group>"; };
+		2350957C236FC9F200F0039D /* BDHKLabelAttribute.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BDHKLabelAttribute.h; sourceTree = "<group>"; };
+		2350957D236FC9F200F0039D /* BDHKLabelAttribute.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BDHKLabelAttribute.m; sourceTree = "<group>"; };
+		2350957F236FCB4800F0039D /* NSString+OpenAndClose.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+OpenAndClose.h"; sourceTree = "<group>"; };
+		23509580236FCB4800F0039D /* NSString+OpenAndClose.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+OpenAndClose.m"; sourceTree = "<group>"; };
 		2350A11120D9F574004B9CA0 /* AmountView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmountView.h; sourceTree = "<group>"; };
 		2350A11220D9F574004B9CA0 /* AmountView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AmountView.m; sourceTree = "<group>"; };
 		2350A11420D9F62F004B9CA0 /* Definition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Definition.h; sourceTree = "<group>"; };
@@ -111,6 +123,8 @@
 		2364220B22FD21EF0076EE5B /* UIViewController+Swizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Swizzling.m"; sourceTree = "<group>"; };
 		2364220D22FD21FC0076EE5B /* UIViewController+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Test.h"; sourceTree = "<group>"; };
 		2364220E22FD21FC0076EE5B /* UIViewController+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Test.m"; sourceTree = "<group>"; };
+		236C2FB2243197D300BE346C /* ScanTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanTool.h; sourceTree = "<group>"; };
+		236C2FB3243197D300BE346C /* ScanTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanTool.m; sourceTree = "<group>"; };
 		2376BB2422B378EA00088A26 /* SpecialScrollVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecialScrollVC.h; sourceTree = "<group>"; };
 		2376BB2522B378EA00088A26 /* SpecialScrollVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpecialScrollVC.m; sourceTree = "<group>"; };
 		23798E2420513F7E00FF2934 /* ZYBannerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYBannerCell.h; sourceTree = "<group>"; };
@@ -162,6 +176,16 @@
 		23A0FDA81FFE087300C5ADD0 /* SwiftTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTest.swift; sourceTree = "<group>"; };
 		23A0FDAA1FFE305700C5ADD0 /* SwiftOCTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftOCTest.h; sourceTree = "<group>"; };
 		23A0FDAB1FFE305700C5ADD0 /* SwiftOCTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwiftOCTest.m; sourceTree = "<group>"; };
+		23CDF3D9242DAC8D004F0CC5 /* BaseFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseFilter.h; sourceTree = "<group>"; };
+		23CDF3DA242DAC8D004F0CC5 /* BaseFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseFilter.m; sourceTree = "<group>"; };
+		23CDF3DC242DACA4004F0CC5 /* FilterBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilterBar.h; sourceTree = "<group>"; };
+		23CDF3DD242DACA4004F0CC5 /* FilterBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilterBar.m; sourceTree = "<group>"; };
+		23CDF3DF242DC8BB004F0CC5 /* FilterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilterModel.h; sourceTree = "<group>"; };
+		23CDF3E0242DC8BB004F0CC5 /* FilterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilterModel.m; sourceTree = "<group>"; };
+		23CDF3E2242DD044004F0CC5 /* FilterTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilterTestViewController.h; sourceTree = "<group>"; };
+		23CDF3E3242DD044004F0CC5 /* FilterTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilterTestViewController.m; sourceTree = "<group>"; };
+		23CDF3E5242EF222004F0CC5 /* SingleFilterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingleFilterView.h; sourceTree = "<group>"; };
+		23CDF3E6242EF222004F0CC5 /* SingleFilterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SingleFilterView.m; sourceTree = "<group>"; };
 		23D1FC02221A5A6C00674B4E /* ZYTextInputView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZYTextInputView.h; sourceTree = "<group>"; };
 		23D1FC03221A5A6C00674B4E /* ZYTextInputView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYTextInputView.m; sourceTree = "<group>"; };
 		23DB02DD20D393EE00DBEAE8 /* SwipCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwipCollectionViewController.h; sourceTree = "<group>"; };
@@ -265,6 +289,8 @@
 				239F7F361AA018EA00BC7FF1 /* PopView.m */,
 				23509579236C1D8D00F0039D /* UIKitTestViewController.h */,
 				2350957A236C1D8D00F0039D /* UIKitTestViewController.m */,
+				2350957C236FC9F200F0039D /* BDHKLabelAttribute.h */,
+				2350957D236FC9F200F0039D /* BDHKLabelAttribute.m */,
 			);
 			path = UIKitTest;
 			sourceTree = "<group>";
@@ -278,6 +304,15 @@
 				235ECC532051256700BE5DB1 /* BannerViewController.m */,
 			);
 			path = BannerView;
+			sourceTree = "<group>";
+		};
+		236C2FB1243197AC00BE346C /* Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				236C2FB2243197D300BE346C /* ScanTool.h */,
+				236C2FB3243197D300BE346C /* ScanTool.m */,
+			);
+			path = Scanner;
 			sourceTree = "<group>";
 		};
 		2376BB2322B378AB00088A26 /* SpecialScrollView */ = {
@@ -348,6 +383,8 @@
 		23927EA41A7F4538009ABF38 /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				236C2FB1243197AC00BE346C /* Scanner */,
+				23CDF3D5242DAAD0004F0CC5 /* Filter */,
 				2382A8B4234DC22300D348FE /* PasswordVIew */,
 				23DFF4AC227E7D9E001123FE /* PageViewDemo */,
 				23DB02DC20D393D600DBEAE8 /* SwipCollectionView */,
@@ -470,6 +507,23 @@
 			path = SwiftMix;
 			sourceTree = "<group>";
 		};
+		23CDF3D5242DAAD0004F0CC5 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				23CDF3E2242DD044004F0CC5 /* FilterTestViewController.h */,
+				23CDF3E3242DD044004F0CC5 /* FilterTestViewController.m */,
+				23CDF3DC242DACA4004F0CC5 /* FilterBar.h */,
+				23CDF3DD242DACA4004F0CC5 /* FilterBar.m */,
+				23CDF3D9242DAC8D004F0CC5 /* BaseFilter.h */,
+				23CDF3DA242DAC8D004F0CC5 /* BaseFilter.m */,
+				23CDF3E5242EF222004F0CC5 /* SingleFilterView.h */,
+				23CDF3E6242EF222004F0CC5 /* SingleFilterView.m */,
+				23CDF3DF242DC8BB004F0CC5 /* FilterModel.h */,
+				23CDF3E0242DC8BB004F0CC5 /* FilterModel.m */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
 		23DB02DC20D393D600DBEAE8 /* SwipCollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -545,6 +599,8 @@
 				2364220B22FD21EF0076EE5B /* UIViewController+Swizzling.m */,
 				2364220D22FD21FC0076EE5B /* UIViewController+Test.h */,
 				2364220E22FD21FC0076EE5B /* UIViewController+Test.m */,
+				2350957F236FCB4800F0039D /* NSString+OpenAndClose.h */,
+				23509580236FCB4800F0039D /* NSString+OpenAndClose.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -822,6 +878,7 @@
 				B5A981831AB84A0E00EDFAD1 /* RandomKeyBoardView.m in Sources */,
 				23927EAB1A7F4538009ABF38 /* AppDelegate.m in Sources */,
 				239F7F461AA042E100BC7FF1 /* CollectionTestViewController.m in Sources */,
+				23509581236FCB4800F0039D /* NSString+OpenAndClose.m in Sources */,
 				B5A981801AB82C3700EDFAD1 /* KeyBoardViewController.m in Sources */,
 				2396EE462200390C004611FE /* FlowViewCell.m in Sources */,
 				23A0FDAC1FFE305700C5ADD0 /* SwiftOCTest.m in Sources */,
@@ -830,6 +887,7 @@
 				2364220F22FD21FC0076EE5B /* UIViewController+Test.m in Sources */,
 				2364220C22FD21EF0076EE5B /* UIViewController+Swizzling.m in Sources */,
 				23927EC71A7F457D009ABF38 /* MainViewController.m in Sources */,
+				2350957E236FC9F200F0039D /* BDHKLabelAttribute.m in Sources */,
 				23268629212FFC550059AFC3 /* UIControl+JSA.m in Sources */,
 				B574EF6F1ABC076C0046F300 /* PlayerViewController.m in Sources */,
 				33FCD6291B1D3833008A0292 /* GraphicsTestView.m in Sources */,
@@ -842,10 +900,12 @@
 				33ECBDF31F304C7E0063A3A8 /* DLApi.m in Sources */,
 				23DB02DF20D393EE00DBEAE8 /* SwipCollectionViewController.m in Sources */,
 				2350957B236C1D8D00F0039D /* UIKitTestViewController.m in Sources */,
+				23CDF3E7242EF222004F0CC5 /* SingleFilterView.m in Sources */,
 				33FCD62C1B1D3843008A0292 /* AnimationTestView.m in Sources */,
 				2382A8BA234DC30C00D348FE /* ZYPasswordView.m in Sources */,
 				23F11E281F7E2DF0004E2649 /* CutImageViewController.m in Sources */,
 				23DFF4AF227E7DD4001123FE /* PageViewDemoVC.m in Sources */,
+				23CDF3E4242DD044004F0CC5 /* FilterTestViewController.m in Sources */,
 				2396EE4922003BA0004611FE /* FlowViewLayout.m in Sources */,
 				23DFF4FC228C17E3001123FE /* DYLeftSlipManager.m in Sources */,
 				33F0B47A1D88EC60002A63E6 /* NetworkTest.m in Sources */,
@@ -857,17 +917,21 @@
 				23798E2E20513F7E00FF2934 /* ZYBannerView.m in Sources */,
 				23A0FDA91FFE087300C5ADD0 /* SwiftTest.swift in Sources */,
 				23DB02E520D3943800DBEAE8 /* ZLCSwipeCollectionViewCell.m in Sources */,
+				236C2FB4243197D300BE346C /* ScanTool.m in Sources */,
 				23DFF4B522812321001123FE /* PageTabViewController.m in Sources */,
 				33166CAE1B0990B50033DE81 /* DLAlertViewController.m in Sources */,
 				239F7F371AA018EA00BC7FF1 /* PopView.m in Sources */,
 				2345FB291FD782FA003E54A0 /* AlgorithmTestVC.m in Sources */,
 				33FCD6261B1D37DA008A0292 /* GAndATestViewController.m in Sources */,
 				33FCCA6D1DD9A2130001BD27 /* WebViewController.m in Sources */,
+				23CDF3E1242DC8BB004F0CC5 /* FilterModel.m in Sources */,
 				23D1FC04221A5A6C00674B4E /* ZYTextInputView.m in Sources */,
 				2396EE4221FF0E82004611FE /* FlowViewController.m in Sources */,
 				23DFF4FD228C17E3001123FE /* LeftTableViewController.m in Sources */,
 				239F7F531AA06E2D00BC7FF1 /* PlayerView.m in Sources */,
 				C2617A9320916F2500CFEEDD /* HorizontalViewController.m in Sources */,
+				23CDF3DB242DAC8D004F0CC5 /* BaseFilter.m in Sources */,
+				23CDF3DE242DACA4004F0CC5 /* FilterBar.m in Sources */,
 				239F7F491AA043BC00BC7FF1 /* CollectionCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

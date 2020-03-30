@@ -76,6 +76,7 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:index];
     }
+    cell.backgroundColor = [UIColor greenColor];
     [cell.textLabel setText:[NSString stringWithFormat:@"cell%ld",(long)indexPath.row]];
     return cell;
 }

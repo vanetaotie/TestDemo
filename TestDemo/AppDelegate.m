@@ -35,6 +35,19 @@
     SwiftTest *vc = [[SwiftTest alloc] init];
     NSLog(@"SwiftDemo:%@", [vc f1]);
     [vc f2];
+    
+    NSInteger a = NSNotFound;
+    NSInteger b = NSNotFound;
+    NSInteger c = a + b;
+    
+    if (c == NSNotFound) {
+        NSLog(@"aaaaaaa");
+    }
+    
+    if (a == NSNotFound) {
+        NSLog(@"bbbbbbb");
+    }
+    
     //语法测试
     
     MainViewController *mainVC = [[MainViewController alloc] init];

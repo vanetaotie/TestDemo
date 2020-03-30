@@ -40,7 +40,7 @@ void swizzleMethod(Class class, SEL originalSelector, SEL swizzledSelector)   {
 }
 
 - (void)aop_viewDidLoad {
-    NSLog(@"viewcontroller-----swizzling");
+//    NSLog(@"viewcontroller-----swizzling");
     
     [self aop_viewDidLoad];
 }

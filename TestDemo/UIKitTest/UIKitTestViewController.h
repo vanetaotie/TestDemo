@@ -14,4 +14,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@interface AdjustPointButton : UIButton
+
+@end
+
+@interface AdjustPointView : UIView
+
+@end
+
 NS_ASSUME_NONNULL_END
