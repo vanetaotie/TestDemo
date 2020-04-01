@@ -16,14 +16,16 @@
 @property (strong, nonatomic) AVCaptureMetadataOutput *outPut;
 @property (strong, nonatomic) AVCaptureSession *session;
 @property (weak, nonatomic) UIView *preview;
+@property (nonatomic, assign) CGRect cropRect;
 
 @end
 
 @implementation ScanTool
 
-- (instancetype)initWithPreview:(UIView *)preview {
+- (instancetype)initWithPreview:(UIView *)preview cropFrame:(CGRect)cropRect {
     if (self = [super init]) {
         self.preview = preview;
+        self.cropRect = cropRect;
     }
     return self;
 }
@@ -43,7 +45,6 @@
     
     self.outPut = [[AVCaptureMetadataOutput alloc] init];
     [self.outPut setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
-    
     
     self.session = [[AVCaptureSession alloc] init];
     [self.session setSessionPreset:AVCaptureSessionPresetHigh];
@@ -66,7 +67,7 @@
                                         AVMetadataObjectTypeEAN8Code,
                                         AVMetadataObjectTypeEAN13Code,
                                         AVMetadataObjectTypeCode128Code];
-    CGRect cropRect = CGRectMake(130, 234, 509, 509);
+    CGRect cropRect = self.cropRect;
     self.outPut.rectOfInterest = CGRectMake(cropRect.origin.y/kScreenHeight, cropRect.origin.x/kScreenWidth, cropRect.size.height/kScreenHeight, cropRect.size.width/kScreenWidth);
     
     self.previewLayer = [AVCaptureVideoPreviewLayer layerWithSession:self.session];
@@ -82,21 +83,18 @@
     [self.previewLayer removeFromSuperlayer];
 }
 
-
 #pragma mark - AVCaptureMetadataOutputObjectsDelegate
 
 - (void)captureOutput:(AVCaptureOutput *)output didOutputMetadataObjects:(NSArray<__kindof AVMetadataObject *> *)metadataObjects fromConnection:(AVCaptureConnection *)connection {
+    [self.session stopRunning];
+    NSLog(@"stop session");
+    
     NSString *stringValue = nil;
     if ([metadataObjects count] > 0){
         AVMetadataMachineReadableCodeObject * metadataObject = [metadataObjects objectAtIndex:0];
         stringValue = metadataObject.stringValue;
-        
-        if (stringValue &&
-            [_delegate respondsToSelector:@selector(didRecieveScanResult:)]) {
-            [self.session stopRunning];
-            NSLog(@"stop session");
+        if (stringValue &&[_delegate respondsToSelector:@selector(didRecieveScanResult:)]) {
             [_delegate didRecieveScanResult:stringValue];
-            _delegate = nil;
         }
     }
 }

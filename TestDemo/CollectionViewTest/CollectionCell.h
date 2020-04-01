@@ -18,7 +18,14 @@ typedef void (^SelectCellBlock)(CollectionCell *cell, BOOL isSelect);
 
 @end
 
-@interface CollectionCell : UICollectionViewCell
+
+@protocol TMTestDelegate <NSObject>
+
+- (void)testDelegateMethod;
+
+@end
+
+@interface CollectionCell : UICollectionViewCell <TMTestDelegate>
 
 @property (nonatomic, strong) UIImageView *appImageView;
 @property (nonatomic, strong) UILabel *appTitleLabel;
@@ -35,5 +42,7 @@ typedef void (^SelectCellBlock)(CollectionCell *cell, BOOL isSelect);
 //- (void)setIndexPathID:(NSUInteger)index;//根据cell设置删除按钮index
 
 - (void)setCellData:(NSDictionary *)cellData withMode:(BOOL)isEditing;
+
+- (void)testDelegateMethod2;
 
 @end

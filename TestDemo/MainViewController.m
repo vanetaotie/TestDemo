@@ -25,6 +25,7 @@
 #import "PageViewDemoVC.h"
 #import "ZYPasswordViewController.h"
 #import "FilterTestViewController.h"
+#import "ScanTestViewController.h"
 
 #import "DYLeftSlipManager.h"
 #import "LeftTableViewController.h"
@@ -67,7 +68,8 @@
                                  NSStringFromClass([SwipCollectionViewController class]),
                                  NSStringFromClass([PageViewDemoVC class]),
                                  NSStringFromClass([ZYPasswordViewController class]),
-                                 NSStringFromClass([FilterTestViewController class])
+                                 NSStringFromClass([FilterTestViewController class]),
+                                 NSStringFromClass([ScanTestViewController class])
                                  ];
     
     [self.view addSubview:self.mainTableView];

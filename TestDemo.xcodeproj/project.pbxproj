@@ -19,6 +19,7 @@
 		2364220C22FD21EF0076EE5B /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 2364220B22FD21EF0076EE5B /* UIViewController+Swizzling.m */; };
 		2364220F22FD21FC0076EE5B /* UIViewController+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 2364220E22FD21FC0076EE5B /* UIViewController+Test.m */; };
 		236C2FB4243197D300BE346C /* ScanTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C2FB3243197D300BE346C /* ScanTool.m */; };
+		236C2FCA2431F3DD00BE346C /* ScanTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C2FC92431F3DD00BE346C /* ScanTestViewController.m */; };
 		2376BB2622B378EA00088A26 /* SpecialScrollVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 2376BB2522B378EA00088A26 /* SpecialScrollVC.m */; };
 		23798E2B20513F7E00FF2934 /* ZYBannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 23798E2520513F7E00FF2934 /* ZYBannerCell.m */; };
 		23798E2C20513F7E00FF2934 /* ZYBannerFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 23798E2720513F7E00FF2934 /* ZYBannerFooter.m */; };
@@ -125,6 +126,8 @@
 		2364220E22FD21FC0076EE5B /* UIViewController+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Test.m"; sourceTree = "<group>"; };
 		236C2FB2243197D300BE346C /* ScanTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanTool.h; sourceTree = "<group>"; };
 		236C2FB3243197D300BE346C /* ScanTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanTool.m; sourceTree = "<group>"; };
+		236C2FC82431F3DD00BE346C /* ScanTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanTestViewController.h; sourceTree = "<group>"; };
+		236C2FC92431F3DD00BE346C /* ScanTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanTestViewController.m; sourceTree = "<group>"; };
 		2376BB2422B378EA00088A26 /* SpecialScrollVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecialScrollVC.h; sourceTree = "<group>"; };
 		2376BB2522B378EA00088A26 /* SpecialScrollVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpecialScrollVC.m; sourceTree = "<group>"; };
 		23798E2420513F7E00FF2934 /* ZYBannerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYBannerCell.h; sourceTree = "<group>"; };
@@ -309,6 +312,8 @@
 		236C2FB1243197AC00BE346C /* Scanner */ = {
 			isa = PBXGroup;
 			children = (
+				236C2FC82431F3DD00BE346C /* ScanTestViewController.h */,
+				236C2FC92431F3DD00BE346C /* ScanTestViewController.m */,
 				236C2FB2243197D300BE346C /* ScanTool.h */,
 				236C2FB3243197D300BE346C /* ScanTool.m */,
 			);
@@ -897,6 +902,7 @@
 				23DB02E220D3940700DBEAE8 /* SwipCollectionViewCell.m in Sources */,
 				2376BB2622B378EA00088A26 /* SpecialScrollVC.m in Sources */,
 				23927EA81A7F4538009ABF38 /* main.m in Sources */,
+				236C2FCA2431F3DD00BE346C /* ScanTestViewController.m in Sources */,
 				33ECBDF31F304C7E0063A3A8 /* DLApi.m in Sources */,
 				23DB02DF20D393EE00DBEAE8 /* SwipCollectionViewController.m in Sources */,
 				2350957B236C1D8D00F0039D /* UIKitTestViewController.m in Sources */,

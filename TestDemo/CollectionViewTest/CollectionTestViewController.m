@@ -88,6 +88,9 @@
         //处理选择模型
     };
     
+    [cell testDelegateMethod];
+    [cell testDelegateMethod2];
+    
     return cell;
 }
 

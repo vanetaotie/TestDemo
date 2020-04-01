@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (weak, nonatomic) id<ScanToolDelegate> delegate;
 
-- (instancetype)initWithPreview:(UIView *)preview;
+- (instancetype)initWithPreview:(UIView *)preview cropFrame:(CGRect)cropRect;
 - (void)showPreviewLayer;
 - (void)stopPreviewLayer;
 

@@ -127,4 +127,12 @@
 //    [_deleteAppButton setTag:index];
 //}
 
+- (void)testDelegateMethod {
+    NSLog(@"111111111");
+}
+
+- (void)testDelegateMethod2 {
+    NSLog(@"222222222");
+}
+
 @end
