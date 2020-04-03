@@ -16,6 +16,7 @@
 		23509581236FCB4800F0039D /* NSString+OpenAndClose.m in Sources */ = {isa = PBXBuildFile; fileRef = 23509580236FCB4800F0039D /* NSString+OpenAndClose.m */; };
 		2350A11320D9F574004B9CA0 /* AmountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2350A11220D9F574004B9CA0 /* AmountView.m */; };
 		235ECC542051256700BE5DB1 /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 235ECC532051256700BE5DB1 /* BannerViewController.m */; };
+		235F049D24371BF6003FA66B /* ScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 235F049C24371BF6003FA66B /* ScanView.m */; };
 		2364220C22FD21EF0076EE5B /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 2364220B22FD21EF0076EE5B /* UIViewController+Swizzling.m */; };
 		2364220F22FD21FC0076EE5B /* UIViewController+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 2364220E22FD21FC0076EE5B /* UIViewController+Test.m */; };
 		236C2FB4243197D300BE346C /* ScanTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C2FB3243197D300BE346C /* ScanTool.m */; };
@@ -120,6 +121,8 @@
 		2350A11420D9F62F004B9CA0 /* Definition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Definition.h; sourceTree = "<group>"; };
 		235ECC522051256700BE5DB1 /* BannerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerViewController.h; sourceTree = "<group>"; };
 		235ECC532051256700BE5DB1 /* BannerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
+		235F049B24371BF6003FA66B /* ScanView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanView.h; sourceTree = "<group>"; };
+		235F049C24371BF6003FA66B /* ScanView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanView.m; sourceTree = "<group>"; };
 		2364220A22FD21EF0076EE5B /* UIViewController+Swizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Swizzling.h"; sourceTree = "<group>"; };
 		2364220B22FD21EF0076EE5B /* UIViewController+Swizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Swizzling.m"; sourceTree = "<group>"; };
 		2364220D22FD21FC0076EE5B /* UIViewController+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Test.h"; sourceTree = "<group>"; };
@@ -316,6 +319,8 @@
 				236C2FC92431F3DD00BE346C /* ScanTestViewController.m */,
 				236C2FB2243197D300BE346C /* ScanTool.h */,
 				236C2FB3243197D300BE346C /* ScanTool.m */,
+				235F049B24371BF6003FA66B /* ScanView.h */,
+				235F049C24371BF6003FA66B /* ScanView.m */,
 			);
 			path = Scanner;
 			sourceTree = "<group>";
@@ -888,6 +893,7 @@
 				2396EE462200390C004611FE /* FlowViewCell.m in Sources */,
 				23A0FDAC1FFE305700C5ADD0 /* SwiftOCTest.m in Sources */,
 				33DCA5291EB88746008BFD65 /* UITabBar+Utility.m in Sources */,
+				235F049D24371BF6003FA66B /* ScanView.m in Sources */,
 				23798E2C20513F7E00FF2934 /* ZYBannerFooter.m in Sources */,
 				2364220F22FD21FC0076EE5B /* UIViewController+Test.m in Sources */,
 				2364220C22FD21EF0076EE5B /* UIViewController+Swizzling.m in Sources */,
