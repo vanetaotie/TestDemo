@@ -9,12 +9,15 @@
 #import "ScanTestViewController.h"
 #import "ScanTool.h"
 #import "ScanView.h"
+#import "ScanTestBottomView.h"
 
 @interface ScanTestViewController () <ScanToolDelegate>
 
 @property (strong, nonatomic) ScanView *scanView;
 @property (strong, nonatomic) ScanTool *scanTool;
 @property (nonatomic, assign) CGRect scanRect;
+
+@property (nonatomic, strong) ScanTestBottomView *bottomView;
 
 @end
 
@@ -27,6 +30,7 @@
     self.scanRect = CGRectMake(self.view.frame.size.width/2-100, 74, 200, 200);
     
     [self.view addSubview:self.scanView];
+    [self.view addSubview:self.bottomView];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(startScaning) name:UIApplicationWillEnterForegroundNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopScaning) name:UIApplicationDidEnterBackgroundNotification object:nil];
@@ -76,6 +80,13 @@
         _scanTool = [[ScanTool alloc] initWithPreview:self.scanView cropFrame:self.scanRect];
     }
     return _scanTool;
+}
+
+- (ScanTestBottomView *)bottomView {
+    if (!_bottomView) {
+        _bottomView = [[ScanTestBottomView alloc] initWithFrame:CGRectMake(0, kScreenHeight-328, kScreenWidth, 328)];
+    }
+    return _bottomView;
 }
 
 @end

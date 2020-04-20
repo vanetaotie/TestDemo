@@ -17,6 +17,7 @@
 		2350A11320D9F574004B9CA0 /* AmountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2350A11220D9F574004B9CA0 /* AmountView.m */; };
 		235ECC542051256700BE5DB1 /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 235ECC532051256700BE5DB1 /* BannerViewController.m */; };
 		235F049D24371BF6003FA66B /* ScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 235F049C24371BF6003FA66B /* ScanView.m */; };
+		235F04AD243733F4003FA66B /* ScanTestBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 235F04AC243733F4003FA66B /* ScanTestBottomView.m */; };
 		2364220C22FD21EF0076EE5B /* UIViewController+Swizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 2364220B22FD21EF0076EE5B /* UIViewController+Swizzling.m */; };
 		2364220F22FD21FC0076EE5B /* UIViewController+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 2364220E22FD21FC0076EE5B /* UIViewController+Test.m */; };
 		236C2FB4243197D300BE346C /* ScanTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 236C2FB3243197D300BE346C /* ScanTool.m */; };
@@ -66,6 +67,8 @@
 		23DFF4FD228C17E3001123FE /* LeftTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23DFF4FB228C17E2001123FE /* LeftTableViewController.m */; };
 		23F11E281F7E2DF0004E2649 /* CutImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F11E271F7E2DF0004E2649 /* CutImageViewController.m */; };
 		23F11E2B1F7E3158004E2649 /* CutImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F11E2A1F7E3158004E2649 /* CutImageView.m */; };
+		23FA6688243D7A6600D37785 /* ScanTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FA6687243D7A6600D37785 /* ScanTestModel.m */; };
+		23FA668B243D7BC900D37785 /* ScanTestViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 23FA668A243D7BC900D37785 /* ScanTestViewModel.m */; };
 		33166CAE1B0990B50033DE81 /* DLAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33166CAD1B0990B50033DE81 /* DLAlertViewController.m */; };
 		33166CB11B09AF6A0033DE81 /* DLAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33166CB01B09AF6A0033DE81 /* DLAlertView.m */; };
 		3318A32A1D52CA2C003FBF6A /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3318A3291D52CA2C003FBF6A /* JavaScriptCore.framework */; };
@@ -123,6 +126,8 @@
 		235ECC532051256700BE5DB1 /* BannerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
 		235F049B24371BF6003FA66B /* ScanView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanView.h; sourceTree = "<group>"; };
 		235F049C24371BF6003FA66B /* ScanView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanView.m; sourceTree = "<group>"; };
+		235F04AB243733F4003FA66B /* ScanTestBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanTestBottomView.h; sourceTree = "<group>"; };
+		235F04AC243733F4003FA66B /* ScanTestBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanTestBottomView.m; sourceTree = "<group>"; };
 		2364220A22FD21EF0076EE5B /* UIViewController+Swizzling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Swizzling.h"; sourceTree = "<group>"; };
 		2364220B22FD21EF0076EE5B /* UIViewController+Swizzling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Swizzling.m"; sourceTree = "<group>"; };
 		2364220D22FD21FC0076EE5B /* UIViewController+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Test.h"; sourceTree = "<group>"; };
@@ -214,6 +219,11 @@
 		23F11E271F7E2DF0004E2649 /* CutImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CutImageViewController.m; sourceTree = "<group>"; };
 		23F11E291F7E3158004E2649 /* CutImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CutImageView.h; sourceTree = "<group>"; };
 		23F11E2A1F7E3158004E2649 /* CutImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CutImageView.m; sourceTree = "<group>"; };
+		23FA6686243D7A6600D37785 /* ScanTestModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanTestModel.h; sourceTree = "<group>"; };
+		23FA6687243D7A6600D37785 /* ScanTestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanTestModel.m; sourceTree = "<group>"; };
+		23FA6689243D7BC900D37785 /* ScanTestViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanTestViewModel.h; sourceTree = "<group>"; };
+		23FA668A243D7BC900D37785 /* ScanTestViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanTestViewModel.m; sourceTree = "<group>"; };
+		23FA668C243D7C3600D37785 /* BlockKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockKit.h; sourceTree = "<group>"; };
 		33166CAC1B0990B50033DE81 /* DLAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAlertViewController.h; sourceTree = "<group>"; };
 		33166CAD1B0990B50033DE81 /* DLAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAlertViewController.m; sourceTree = "<group>"; };
 		33166CAF1B09AF6A0033DE81 /* DLAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAlertView.h; sourceTree = "<group>"; };
@@ -312,15 +322,53 @@
 			path = BannerView;
 			sourceTree = "<group>";
 		};
-		236C2FB1243197AC00BE346C /* Scanner */ = {
+		235F04A82437327F003FA66B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				236C2FC82431F3DD00BE346C /* ScanTestViewController.h */,
-				236C2FC92431F3DD00BE346C /* ScanTestViewController.m */,
+				235F04AB243733F4003FA66B /* ScanTestBottomView.h */,
+				235F04AC243733F4003FA66B /* ScanTestBottomView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		235F04A92437328E003FA66B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				23FA6689243D7BC900D37785 /* ScanTestViewModel.h */,
+				23FA668A243D7BC900D37785 /* ScanTestViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		235F04AA2437329A003FA66B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				23FA6686243D7A6600D37785 /* ScanTestModel.h */,
+				23FA6687243D7A6600D37785 /* ScanTestModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		235F04AE243C7467003FA66B /* ScanTools */ = {
+			isa = PBXGroup;
+			children = (
 				236C2FB2243197D300BE346C /* ScanTool.h */,
 				236C2FB3243197D300BE346C /* ScanTool.m */,
 				235F049B24371BF6003FA66B /* ScanView.h */,
 				235F049C24371BF6003FA66B /* ScanView.m */,
+			);
+			path = ScanTools;
+			sourceTree = "<group>";
+		};
+		236C2FB1243197AC00BE346C /* Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				235F04AE243C7467003FA66B /* ScanTools */,
+				235F04AA2437329A003FA66B /* Model */,
+				235F04A92437328E003FA66B /* ViewModel */,
+				235F04A82437327F003FA66B /* View */,
+				236C2FC82431F3DD00BE346C /* ScanTestViewController.h */,
+				236C2FC92431F3DD00BE346C /* ScanTestViewController.m */,
 			);
 			path = Scanner;
 			sourceTree = "<group>";
@@ -611,6 +659,7 @@
 				2364220E22FD21FC0076EE5B /* UIViewController+Test.m */,
 				2350957F236FCB4800F0039D /* NSString+OpenAndClose.h */,
 				23509580236FCB4800F0039D /* NSString+OpenAndClose.m */,
+				23FA668C243D7C3600D37785 /* BlockKit.h */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -904,6 +953,8 @@
 				33FCD6291B1D3833008A0292 /* GraphicsTestView.m in Sources */,
 				33ECBDF61F304EB90063A3A8 /* DLApiObject.m in Sources */,
 				23798E2B20513F7E00FF2934 /* ZYBannerCell.m in Sources */,
+				23FA6688243D7A6600D37785 /* ScanTestModel.m in Sources */,
+				235F04AD243733F4003FA66B /* ScanTestBottomView.m in Sources */,
 				235ECC542051256700BE5DB1 /* BannerViewController.m in Sources */,
 				23DB02E220D3940700DBEAE8 /* SwipCollectionViewCell.m in Sources */,
 				2376BB2622B378EA00088A26 /* SpecialScrollVC.m in Sources */,
@@ -913,6 +964,7 @@
 				23DB02DF20D393EE00DBEAE8 /* SwipCollectionViewController.m in Sources */,
 				2350957B236C1D8D00F0039D /* UIKitTestViewController.m in Sources */,
 				23CDF3E7242EF222004F0CC5 /* SingleFilterView.m in Sources */,
+				23FA668B243D7BC900D37785 /* ScanTestViewModel.m in Sources */,
 				33FCD62C1B1D3843008A0292 /* AnimationTestView.m in Sources */,
 				2382A8BA234DC30C00D348FE /* ZYPasswordView.m in Sources */,
 				23F11E281F7E2DF0004E2649 /* CutImageViewController.m in Sources */,
