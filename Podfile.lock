@@ -14,22 +14,20 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - CTMediator (25)
+  - CTMediator (44)
   - HandyFrame (1.2.0)
-  - LookinServer (0.9.3)
+  - LookinServer (1.0.0)
   - Masonry (1.1.0)
-  - MJRefresh (3.1.15.7)
-  - pop (1.0.10)
-  - SDWebImage (4.4.2):
-    - SDWebImage/Core (= 4.4.2)
-  - SDWebImage/Core (4.4.2)
-  - UICollectionView-ARDynamicHeightLayoutCell (1.0.3)
+  - MJRefresh (3.5.0)
+  - pop (1.0.12)
+  - SDWebImage (4.4.8):
+    - SDWebImage/Core (= 4.4.8)
+  - SDWebImage/Core (4.4.8)
   - YYCache (1.0.4)
   - YYCategories (1.0.4):
     - YYCategories/no-arc (= 1.0.4)
   - YYCategories/no-arc (1.0.4)
   - YYModel (1.0.4)
-  - YYText (1.0.7)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
@@ -40,14 +38,12 @@ DEPENDENCIES:
   - MJRefresh
   - pop (~> 1.0)
   - SDWebImage (~> 4.0)
-  - UICollectionView-ARDynamicHeightLayoutCell (from `https://github.com/AugustRush/UICollectionView-ARDynamicHeightLayoutCell.git`)
   - YYCache
   - YYCategories
   - YYModel
-  - YYText
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
     - CTMediator
     - HandyFrame
@@ -59,32 +55,20 @@ SPEC REPOS:
     - YYCache
     - YYCategories
     - YYModel
-    - YYText
-
-EXTERNAL SOURCES:
-  UICollectionView-ARDynamicHeightLayoutCell:
-    :git: https://github.com/AugustRush/UICollectionView-ARDynamicHeightLayoutCell.git
-
-CHECKOUT OPTIONS:
-  UICollectionView-ARDynamicHeightLayoutCell:
-    :commit: df3af7d1f52925d061d4ac8e411780b850f08985
-    :git: https://github.com/AugustRush/UICollectionView-ARDynamicHeightLayoutCell.git
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  CTMediator: 830c1fc204b3a6abf2a059510c7380f56343da0f
+  CTMediator: 933dba523da87bf875e4a7e8728945fbc512f1d2
   HandyFrame: 437df83ba7563c56cd55b9bd0128561995463110
-  LookinServer: 44f1b5f32743dc61068a156ff86b5b47d0a82943
+  LookinServer: 0002891cd3cec5e082a910e897dfe71b4f06b89e
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
-  pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
-  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
-  UICollectionView-ARDynamicHeightLayoutCell: 5597bcbf30313a2413f01cbca936079d50d456d1
+  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
+  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
+  SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
-  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 714723341a54d8703eef411b61676c3da291c188
+PODFILE CHECKSUM: 5e55a9eb280a654dd37b2749cd05e92f04e6c8b9
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.9.1

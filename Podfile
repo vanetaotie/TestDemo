@@ -8,12 +8,12 @@ pod 'MJRefresh'
 pod 'pop', '~> 1.0'
 pod 'YYModel'
 pod 'YYCache'
-pod 'YYText'
+#pod 'YYText'
 pod 'YYCategories'
 pod "CTMediator"
 pod "HandyFrame"
 pod 'SDWebImage', '~> 4.0'
-pod 'UICollectionView-ARDynamicHeightLayoutCell', :git => 'https://github.com/AugustRush/UICollectionView-ARDynamicHeightLayoutCell.git'
+#pod 'UICollectionView-ARDynamicHeightLayoutCell', :git => 'https://github.com/AugustRush/UICollectionView-ARDynamicHeightLayoutCell.git'
 pod 'LookinServer', :configurations => ['Debug']
 use_frameworks!
 end
