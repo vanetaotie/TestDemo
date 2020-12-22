@@ -28,6 +28,7 @@ PODS:
     - YYCategories/no-arc (= 1.0.4)
   - YYCategories/no-arc (1.0.4)
   - YYModel (1.0.4)
+  - YYText (1.0.7)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
@@ -41,6 +42,7 @@ DEPENDENCIES:
   - YYCache
   - YYCategories
   - YYModel
+  - YYText
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -55,6 +57,7 @@ SPEC REPOS:
     - YYCache
     - YYCategories
     - YYModel
+    - YYText
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -68,7 +71,8 @@ SPEC CHECKSUMS:
   YYCache: 8105b6638f5e849296c71f331ff83891a4942952
   YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: 5e55a9eb280a654dd37b2749cd05e92f04e6c8b9
+PODFILE CHECKSUM: 6c6262840f0424bfe541b15c5dfaec634469619d
 
 COCOAPODS: 1.9.1
