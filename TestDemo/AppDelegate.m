@@ -32,21 +32,21 @@
     // Override point for customization after application launch.
 
     //语法测试
-    SwiftTest *vc = [[SwiftTest alloc] init];
-    NSLog(@"SwiftDemo:%@", [vc f1]);
-    [vc f2];
-    
-    NSInteger a = NSNotFound;
-    NSInteger b = NSNotFound;
-    NSInteger c = a + b;
-    
-    if (c == NSNotFound) {
-        NSLog(@"aaaaaaa");
-    }
-    
-    if (a == NSNotFound) {
-        NSLog(@"bbbbbbb");
-    }
+//    SwiftTest *vc = [[SwiftTest alloc] init];
+//    NSLog(@"SwiftDemo:%@", [vc f1]);
+//    [vc f2];
+//
+//    NSInteger a = NSNotFound;
+//    NSInteger b = NSNotFound;
+//    NSInteger c = a + b;
+//
+//    if (c == NSNotFound) {
+//        NSLog(@"aaaaaaa");
+//    }
+//
+//    if (a == NSNotFound) {
+//        NSLog(@"bbbbbbb");
+//    }
     
     //语法测试
     
@@ -55,19 +55,18 @@
     
     FlowViewController *waterflowVC = [[FlowViewController alloc] init];
     UINavigationController *waterflowNav = [[UINavigationController alloc] initWithRootViewController:waterflowVC];
+    waterflowNav.tabBarItem.title = @"FlowTest";
     
     SpecialScrollVC *spScrollVC = [[SpecialScrollVC alloc] init];
     UINavigationController *spScrollNav = [[UINavigationController alloc] initWithRootViewController:spScrollVC];
+    spScrollNav.tabBarItem.title = @"SpecialScroll";
 
     UITabBarController *mainTabBarVC = [[UITabBarController alloc] init];
     mainTabBarVC.viewControllers = [NSArray arrayWithObjects:mainNav, waterflowNav, spScrollNav, nil];
 
     [mainTabBarVC.tabBar showBadgeOnItemIndex:1 tabbarNum:2];
-
-    UINavigationController *appNav = [[UINavigationController alloc] initWithRootViewController:mainTabBarVC];
-    appNav.navigationBarHidden = YES;
     
-    [self.window setRootViewController:appNav];
+    [self.window setRootViewController:mainTabBarVC];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     

@@ -24,6 +24,12 @@
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.right.top.bottom.mas_equalTo(self.view);
     }];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"KZBadgeWillUpdateNotificationName" object:nil userInfo:@{ @"badge": @(0) }];
+}
+
+- (void)dealloc {
+    NSLog(@"11111");
 }
 
 - (void)didReceiveMemoryWarning {

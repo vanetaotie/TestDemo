@@ -10,9 +10,9 @@ pod 'YYModel'
 pod 'YYCache'
 pod 'YYText'
 pod 'YYCategories'
-pod "CTMediator"
+#pod "CTMediator"
 pod "HandyFrame"
 pod 'SDWebImage', '~> 4.0'
-pod 'LookinServer', :configurations => ['Debug']
+#pod 'LookinServer', :configurations => ['Debug']
 use_frameworks!
 end

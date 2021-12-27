@@ -83,6 +83,7 @@
 		33FCD6261B1D37DA008A0292 /* GAndATestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FCD6251B1D37DA008A0292 /* GAndATestViewController.m */; };
 		33FCD6291B1D3833008A0292 /* GraphicsTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FCD6281B1D3833008A0292 /* GraphicsTestView.m */; };
 		33FCD62C1B1D3843008A0292 /* AnimationTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FCD62B1B1D3843008A0292 /* AnimationTestView.m */; };
+		8122427C2779654C00C6C945 /* DynamicLibTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8122427B2779654C00C6C945 /* DynamicLibTestVC.m */; };
 		B574EF671ABBE95C0046F300 /* deleteChar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B574EF661ABBE95C0046F300 /* deleteChar@2x.png */; };
 		B574EF6B1ABBEA4D0046F300 /* capsLock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B574EF6A1ABBEA4D0046F300 /* capsLock@2x.png */; };
 		B574EF6F1ABC076C0046F300 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B574EF6E1ABC076C0046F300 /* PlayerViewController.m */; };
@@ -250,6 +251,8 @@
 		33FCD62B1B1D3843008A0292 /* AnimationTestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationTestView.m; sourceTree = "<group>"; };
 		5AC49E93A86483F91B43BF97 /* Pods-TestDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestDemo/Pods-TestDemo.release.xcconfig"; sourceTree = "<group>"; };
 		698D173C9C8E567866D59F88 /* Pods_TestDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8122427A2779654C00C6C945 /* DynamicLibTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicLibTestVC.h; sourceTree = "<group>"; };
+		8122427B2779654C00C6C945 /* DynamicLibTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicLibTestVC.m; sourceTree = "<group>"; };
 		B574EF661ABBE95C0046F300 /* deleteChar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deleteChar@2x.png"; sourceTree = "<group>"; };
 		B574EF6A1ABBEA4D0046F300 /* capsLock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "capsLock@2x.png"; sourceTree = "<group>"; };
 		B574EF6E1ABC076C0046F300 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
@@ -439,6 +442,7 @@
 		23927EA41A7F4538009ABF38 /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				812242792779652000C6C945 /* DynamicLibTest */,
 				236C2FB1243197AC00BE346C /* Scanner */,
 				23CDF3D5242DAAD0004F0CC5 /* Filter */,
 				2382A8B4234DC22300D348FE /* PasswordVIew */,
@@ -704,6 +708,15 @@
 			path = GraphicsAndAnimation;
 			sourceTree = "<group>";
 		};
+		812242792779652000C6C945 /* DynamicLibTest */ = {
+			isa = PBXGroup;
+			children = (
+				8122427A2779654C00C6C945 /* DynamicLibTestVC.h */,
+				8122427B2779654C00C6C945 /* DynamicLibTestVC.m */,
+			);
+			path = DynamicLibTest;
+			sourceTree = "<group>";
+		};
 		B574EF631ABBC9E70046F300 /* image */ = {
 			isa = PBXGroup;
 			children = (
@@ -890,9 +903,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TestDemo/Pods-TestDemo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${BUILT_PRODUCTS_DIR}/CTMediator/CTMediator.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyFrame/HandyFrame.framework",
-				"${PODS_ROOT}/LookinServer/LookinServer.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -905,9 +916,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CTMediator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyFrame.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LookinServer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -945,6 +954,7 @@
 				23927EC71A7F457D009ABF38 /* MainViewController.m in Sources */,
 				2350957E236FC9F200F0039D /* BDHKLabelAttribute.m in Sources */,
 				23268629212FFC550059AFC3 /* UIControl+JSA.m in Sources */,
+				8122427C2779654C00C6C945 /* DynamicLibTestVC.m in Sources */,
 				B574EF6F1ABC076C0046F300 /* PlayerViewController.m in Sources */,
 				33FCD6291B1D3833008A0292 /* GraphicsTestView.m in Sources */,
 				33ECBDF61F304EB90063A3A8 /* DLApiObject.m in Sources */,

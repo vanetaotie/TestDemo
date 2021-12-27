@@ -26,6 +26,7 @@
 #import "ZYPasswordViewController.h"
 #import "FilterTestViewController.h"
 #import "ScanTestViewController.h"
+#import "DynamicLibTestVC.h"
 
 #import "DYLeftSlipManager.h"
 #import "LeftTableViewController.h"
@@ -69,15 +70,16 @@
                                  NSStringFromClass([PageViewDemoVC class]),
                                  NSStringFromClass([ZYPasswordViewController class]),
                                  NSStringFromClass([FilterTestViewController class]),
-                                 NSStringFromClass([ScanTestViewController class])
+                                 NSStringFromClass([ScanTestViewController class]),
+                                 NSStringFromClass([DynamicLibTestVC class]),
                                  ];
     
     [self.view addSubview:self.mainTableView];
     
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"点击" style:UIBarButtonItemStylePlain target:self action:@selector(clickTest)];
-    [self navigationItem].rightBarButtonItem = rightItem;
-    
-    [[DYLeftSlipManager sharedManager] setLeftViewController:[LeftTableViewController new] coverViewController:self];
+//    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"点击" style:UIBarButtonItemStylePlain target:self action:@selector(clickTest)];
+//    [self navigationItem].rightBarButtonItem = rightItem;
+//
+//    [[DYLeftSlipManager sharedManager] setLeftViewController:[LeftTableViewController new] coverViewController:self];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -92,10 +94,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)clickTest {
-    // 代码唤出左滑视图
-    [[DYLeftSlipManager sharedManager] showLeftView];
-}
+//- (void)clickTest {
+//    // 代码唤出左滑视图
+//    [[DYLeftSlipManager sharedManager] showLeftView];
+//}
 
 #pragma mark - Getter & Setter
 
