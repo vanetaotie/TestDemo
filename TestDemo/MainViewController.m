@@ -30,6 +30,7 @@
 
 #import "DYLeftSlipManager.h"
 #import "LeftTableViewController.h"
+#import "IndicatorViewController.h"
 
 @interface MainViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -72,6 +73,7 @@
                                  NSStringFromClass([FilterTestViewController class]),
                                  NSStringFromClass([ScanTestViewController class]),
                                  NSStringFromClass([DynamicLibTestVC class]),
+                                 NSStringFromClass([IndicatorViewController class]),
                                  ];
     
     [self.view addSubview:self.mainTableView];

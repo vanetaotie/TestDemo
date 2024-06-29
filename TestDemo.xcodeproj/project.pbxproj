@@ -84,6 +84,7 @@
 		33FCD6291B1D3833008A0292 /* GraphicsTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FCD6281B1D3833008A0292 /* GraphicsTestView.m */; };
 		33FCD62C1B1D3843008A0292 /* AnimationTestView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33FCD62B1B1D3843008A0292 /* AnimationTestView.m */; };
 		8122427C2779654C00C6C945 /* DynamicLibTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8122427B2779654C00C6C945 /* DynamicLibTestVC.m */; };
+		81B427E52C2FBE1600B03E7C /* IndicatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B427E42C2FBE1600B03E7C /* IndicatorViewController.m */; };
 		B574EF671ABBE95C0046F300 /* deleteChar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B574EF661ABBE95C0046F300 /* deleteChar@2x.png */; };
 		B574EF6B1ABBEA4D0046F300 /* capsLock@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B574EF6A1ABBEA4D0046F300 /* capsLock@2x.png */; };
 		B574EF6F1ABC076C0046F300 /* PlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B574EF6E1ABC076C0046F300 /* PlayerViewController.m */; };
@@ -253,6 +254,8 @@
 		698D173C9C8E567866D59F88 /* Pods_TestDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8122427A2779654C00C6C945 /* DynamicLibTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicLibTestVC.h; sourceTree = "<group>"; };
 		8122427B2779654C00C6C945 /* DynamicLibTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicLibTestVC.m; sourceTree = "<group>"; };
+		81B427E32C2FBE1600B03E7C /* IndicatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IndicatorViewController.h; sourceTree = "<group>"; };
+		81B427E42C2FBE1600B03E7C /* IndicatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IndicatorViewController.m; sourceTree = "<group>"; };
 		B574EF661ABBE95C0046F300 /* deleteChar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "deleteChar@2x.png"; sourceTree = "<group>"; };
 		B574EF6A1ABBEA4D0046F300 /* capsLock@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "capsLock@2x.png"; sourceTree = "<group>"; };
 		B574EF6E1ABC076C0046F300 /* PlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerViewController.m; sourceTree = "<group>"; };
@@ -442,6 +445,7 @@
 		23927EA41A7F4538009ABF38 /* TestDemo */ = {
 			isa = PBXGroup;
 			children = (
+				81B427E22C2FBDCB00B03E7C /* IndicatorView */,
 				812242792779652000C6C945 /* DynamicLibTest */,
 				236C2FB1243197AC00BE346C /* Scanner */,
 				23CDF3D5242DAAD0004F0CC5 /* Filter */,
@@ -717,6 +721,15 @@
 			path = DynamicLibTest;
 			sourceTree = "<group>";
 		};
+		81B427E22C2FBDCB00B03E7C /* IndicatorView */ = {
+			isa = PBXGroup;
+			children = (
+				81B427E32C2FBE1600B03E7C /* IndicatorViewController.h */,
+				81B427E42C2FBE1600B03E7C /* IndicatorViewController.m */,
+			);
+			path = IndicatorView;
+			sourceTree = "<group>";
+		};
 		B574EF631ABBC9E70046F300 /* image */ = {
 			isa = PBXGroup;
 			children = (
@@ -978,6 +991,7 @@
 				23CDF3E4242DD044004F0CC5 /* FilterTestViewController.m in Sources */,
 				2396EE4922003BA0004611FE /* FlowViewLayout.m in Sources */,
 				23DFF4FC228C17E3001123FE /* DYLeftSlipManager.m in Sources */,
+				81B427E52C2FBE1600B03E7C /* IndicatorViewController.m in Sources */,
 				33F0B47A1D88EC60002A63E6 /* NetworkTest.m in Sources */,
 				2382A8B7234DC26700D348FE /* ZYPasswordViewController.m in Sources */,
 				23F11E2B1F7E3158004E2649 /* CutImageView.m in Sources */,
@@ -1130,7 +1144,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TestDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = TestDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = vane.Test;
@@ -1161,7 +1175,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/TestDemo/PrefixHeader.pch";
 				INFOPLIST_FILE = TestDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = vane.Test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
